@@ -4,7 +4,7 @@ This repository is for discussing proposals relating to the Interop
 2022 project.
 
 The overall process and timeline for decision making is given by [wpt
-RFC 99](https://github.com/web-platform-tests/rfcs/blob/compat_2022/rfcs/compat_2022.md).
+RFC 99](https://github.com/web-platform-tests/rfcs/blob/compat_2022/rfcs/interop_2022.md).
 
 For each proposed Interop 2022 focus area:
  * First check for an existing issue covering that area. We are aiming
