@@ -1,6 +1,6 @@
 ---
 name: Proposal
-about: Termplate for proposed features to include in compat 2022
+about: Termplate for proposed features to include in Interop 2022
 title: ''
 labels: proposal
 assignees: ''
