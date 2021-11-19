@@ -25,3 +25,7 @@ For each proposed Interop 2022 focus area:
 
   - Links to any existing discussion or vendor signals e.g. in browser
     project bug trackers.
+
+## Join the discussion
+
+* [Real-time chat room](https://app.element.io/#/room/#interop2022:matrix.org): the `interop2022:matrix.org` matrix channel
