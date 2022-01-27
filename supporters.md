@@ -2,8 +2,10 @@ The following is a running list of organizations, and individuals outside of org
 
 Status: **early draft, likely incomplete or needs editing**!
 
-1. Google
-2. Apple
-3. Mozilla
-4. Igalia
-5. Microsoft
+This list is in alphabetical order.
+
+1. Apple
+2. Google
+3. Igalia
+4. Microsoft
+5. Mozilla
