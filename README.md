@@ -28,4 +28,4 @@ For each proposed Interop 2022 focus area:
 
 ## Join the discussion
 
-* [Real-time chat room](https://app.element.io/#/room/#interop2022:matrix.org): the `interop2022:matrix.org` matrix channel
+* [Real-time chat room](https://app.element.io/#/room/#interop2022:matrix.org): the `#interop2022:matrix.org` Matrix channel
