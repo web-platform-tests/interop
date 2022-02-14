@@ -9,3 +9,4 @@ This list is in alphabetical order.
 3. Google
 4. Microsoft
 5. Mozilla
+6. Igalia
