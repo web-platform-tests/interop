@@ -1,0 +1,26 @@
+name: Proposal
+description: Proposal for feature to include in Interop 2023
+labels: proposal
+body:
+- type: markdown
+  attributes:
+    value: |
+      Thanks for taking the time to make a proposal for Interop 2023!
+
+      Please see the [Interop 2023 README](https://github.com/web-platform-tests/interop/blob/main/2023/README.md) for advice on how to make a proposal and what to expect from the process.
+- type: textarea
+  attributes:
+    label: Description
+    description: Brief description of the feature
+- type: textarea
+  attributes:
+    label: Specification
+    description: Links to the specification(s) for the feature
+- type: textarea
+  attributes:
+    label: Tests
+    description: Links to web-platform-tests (on https://wpt.fyi) for the feature (this can be all tests, not a curated list)
+- type: textarea
+  attributes:
+    label: Rationale
+    description: Reasons for including the feature, including links to supporting data where available
