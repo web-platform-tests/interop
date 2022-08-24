@@ -23,7 +23,7 @@ Before making a proposal, here's what to expect:
 
 The process for making and driving a proposal is:
 
-- **September 15 to October 15**: [File a proposal issue](https://github.com/web-platform-tests/interop/issues/new?assignees=&labels=proposal&template=proposal.md) and fill in as many details as you can. There is no required part of a rationale, but a few dimensions to consider are:
+- **September 15 to October 15**: [File a proposal issue](https://github.com/web-platform-tests/interop/issues/new?labels=proposal&template=proposal.yml) and fill in as many details as you can. There is no required part of a rationale, but a few dimensions to consider are:
   - Web developer sentiment from polls or surveys, for example, [MDN surveys](https://insights.developer.mozilla.org/) or [State of CSS](https://stateofcss.com/).
   - Browser bugs or browser bug statistics, for example, [Chromium](https://bugs.chromium.org/), [Gecko](https://bugzilla.mozilla.org/),  or [WebKit](https://bugs.webkit.org/).
   - Current usage of the feature, for example, [Chrome use counters](https://www.chromestatus.com/metrics/feature/popularity) or [HTTP Archive](https://httparchive.org/). 
