@@ -25,10 +25,17 @@ The Interop effort is subject to the [WPT code of conduct](https://github.com/we
 
 Substantive changes to this charter are done via the [web-platform-tests RFC process](https://github.com/web-platform-tests/rfcs).
 
-## Supporters
+## Team Members
 
-The following is a running list of organizations that make up the Interop Team. This list is in alphabetical order.
+The following organizations make up the Interop Team, in alphabetical order:
 
-TODO: insert here and delete supporters.md
+* Apple
+* Bocoup
+* Google
+* Igalia
+* Microsoft
+* Mozilla
 
-If your organization has a track record of contributions to the web platform and wishes to be listed, please send a PR to add the new entry.
+## Joining the Team
+
+If your organization has a track record of contributions to the web platform you can request to join the Interop Team. Broad participation is welcome, but the existing team will make a decision based on consensus. There are also [other ways of contributing](./CONTRIBUTING.md).

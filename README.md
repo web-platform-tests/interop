@@ -29,6 +29,6 @@ For each proposed Interop 2022 focus area:
 
 ## Getting involved
 
-TODO: Ways to contribute other than joining the Interop Team. Proposals. In between proposal periods: write tests, file bugs, file issues, gather evidence for next time.
+Please see the [contribution guide](./CONTRIBUTING.md) for ways to contribute to the interop project.
 
 You're also welcome to join the conversation in the [`#interop2022:matrix.org` Matrix channel](https://app.element.io/#/room/#interop2022:matrix.org)!
