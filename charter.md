@@ -1,6 +1,6 @@
 # Interop Team Charter
 
-The Interop Team exists to make the web more interoperable in key areas, prioritized by web developer and user needs. This team is part of [the web-platform-tests project](https://github.com/web-platform-tests/wpt), the main test suite for the web platform.
+The Interop Team aims to make the web more interoperable in key areas, prioritized by web developer and user needs. This team is part of [the web-platform-tests project](https://github.com/web-platform-tests/wpt), the main test suite for the web platform.
 
 The team is responsible for maintaining [Compat 2021](https://wpt.fyi/compat2021), [Interop 2022](https://wpt.fyi/interop-2022), and defining future interoperability efforts and metrics.
 
@@ -8,8 +8,8 @@ The team is responsible for maintaining [Compat 2021](https://wpt.fyi/compat2021
 
 The team works by prioritizing specific web platform features. The minimum requirements for a feature to be in scope are:
 
-- The feature is defined, at least partially, by a specification developed by an organization like the W3C, WHATWG, TC39, Khronos, etc.
-- The feature can be tested in a test suite like [web-platform-tests](https://github.com/web-platform-tests/wpt), [Test262](https://github.com/tc39/test262), etc.
+- The feature is defined by a specification from the [IETF](https://www.ietf.org/), [Khronos Group](https://www.khronos.org/), [TC39](https://tc39.es/), [W3C](https://www.w3.org/), or [WHATWG](https://whatwg.org/). Other specifications can be considered on a case-by-case basis.
+- The feature can be tested in [web-platform-tests](https://github.com/web-platform-tests/wpt). Other test suites can be considered on a case-by-case basis.
 
 Browser features that don't affect web developers, like bookmarks, are out of scope.
 
