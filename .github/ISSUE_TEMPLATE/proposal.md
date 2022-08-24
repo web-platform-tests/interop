@@ -1,11 +1,16 @@
 ---
 name: Proposal
-about: Termplate for proposed features to include in Interop 2022
+about: Termplate for proposed features to include in Interop 2023
 title: ''
 labels: proposal
 assignees: ''
 
 ---
+
+<!--
+See the Interop 2023 README for advice on how to make a proposal:
+https://github.com/web-platform-tests/interop/blob/main/2023/README.md
+-->
 
 **Description**
 Brief description of the feature
