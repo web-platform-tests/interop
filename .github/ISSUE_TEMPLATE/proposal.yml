@@ -11,16 +11,21 @@ body:
 - type: textarea
   attributes:
     label: Description
-    description: Brief description of the feature
+    description: Brief description of the feature. Try to be clear about what parts of the feature and included and not.
 - type: textarea
   attributes:
     label: Specification
-    description: Links to the specification(s) for the feature
+    description: Specification for the feature. The feature should be defined by the [IETF](https://www.ietf.org/), [Khronos Group](https://www.khronos.org/), [TC39](https://tc39.es/), [W3C](https://www.w3.org/), or [WHATWG](https://whatwg.org/). Other specifications will be considered on a case-by-case basis.
 - type: textarea
   attributes:
     label: Tests
-    description: Links to web-platform-tests (on https://wpt.fyi) for the feature (this can be all tests, not a curated list)
+    description: Tests for the feature in web-platform-tests, on the [wpt.fyi](https://wpt.fyi/) dashboard. Other test suites will be considered on a case-by-case basis.
 - type: textarea
   attributes:
     label: Rationale
-    description: Reasons for including the feature, including links to supporting data where available
+    description: |
+      Reasons for including the feature. A few dimensions to consider are:
+
+      - Web developer sentiment from polls or surveys, for example, [MDN surveys](https://insights.developer.mozilla.org/) or [State of CSS](https://stateofcss.com/).
+      - Browser bugs or browser bug statistics, for example, [Chromium](https://bugs.chromium.org/), [Gecko](https://bugzilla.mozilla.org/),  or [WebKit](https://bugs.webkit.org/).
+      - Current usage of the feature, for example, [Chrome use counters](https://www.chromestatus.com/metrics/feature/popularity) or [HTTP Archive](https://httparchive.org/).
