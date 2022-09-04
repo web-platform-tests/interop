@@ -46,6 +46,6 @@ The following organizations make up the Interop Team, in alphabetical order:
 
 ## Joining and Leaving the Team
 
-If your organization has a track record of contributions to the web-platform-tests project, you may request to join the Interop Team. The decision will be made by the current team based on consensus.
+If your organization has a track record of contributions to the web-platform-tests project, you may request to join the Interop Team by contacting interop@web-platform-tests.org. The decision will be made by the current team based on consensus.
 
 Team members can be removed by their own request or the consensus of the entire team.
