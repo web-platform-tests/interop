@@ -15,7 +15,16 @@ body:
 - type: textarea
   attributes:
     label: Specification
-    description: Specification for the feature. The feature should be defined by the [IETF](https://www.ietf.org/), [Khronos Group](https://www.khronos.org/), [TC39](https://tc39.es/), [W3C](https://www.w3.org/), or [WHATWG](https://whatwg.org/). Other specifications will be considered on a case-by-case basis.
+    description: |
+      Specification for the feature. The feature should be defined by a standards-track specification from the following organizations:
+
+      - [IETF](https://www.ietf.org/) (Standard Track)
+      - [Khronos Group](https://www.khronos.org/)
+      - [TC39](https://tc39.es/) (Stage 2+)
+      - [W3C](https://www.w3.org/) (Recommendation Track)
+      - [WHATWG](https://whatwg.org/)
+
+      Other specifications will be considered on a case-by-case basis.
 - type: textarea
   attributes:
     label: Tests
