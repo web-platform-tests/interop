@@ -2,18 +2,22 @@
 
 The Interop Team aims to make the web more interoperable in key areas, prioritized by web developer and user needs. This team is part of [the web-platform-tests project](https://github.com/web-platform-tests/wpt), the main test suite for the web platform.
 
-The team is responsible for maintaining [Compat 2021](https://wpt.fyi/compat2021), [Interop 2022](https://wpt.fyi/interop-2022), and defining future interoperability efforts and metrics.
-
 ## Scope
 
-The team works by prioritizing specific web platform features. The minimum requirements for a feature to be in scope are:
+The output of the Interop project is metrics designed to measure and improve the interoperability of the web platform.
 
-- The feature is defined by a specification from the [IETF](https://www.ietf.org/), [Khronos Group](https://www.khronos.org/), [TC39](https://tc39.es/), [W3C](https://www.w3.org/), or [WHATWG](https://whatwg.org/). Other specifications can be considered on a case-by-case basis.
-- The feature can be tested by automated tests in [web-platform-tests](https://github.com/web-platform-tests/wpt). Manual tests and other test suites can be considered on a case-by-case basis.
+These metrics are expected to be comprised of:
+
+- Groups of automated tests that can be used to automatically compute an interoperability score for specific platform features in implementations.
+- Work to improve the interoperability of the platform that cannot be measured through test pass rates and is scored by consensus decision.
+
+The team is responsible for maintaining [Compat 2021](https://wpt.fyi/compat2021), [Interop 2022](https://wpt.fyi/interop-2022), and defining future interoperability efforts and metrics.
+
+### Out of Scope
+
+This is not a venue for standardization, and work on new platform features is out of scope. However the group may liaise with existing standards groups to help progress work which affects the interoperability of the platform, or the ability to test and measure interoperability of existing features.
 
 Browser features that don't affect web developers, like bookmarks, are out of scope.
-
-Writing specifications is not in scope, but the team can liaise with and work within other working groups to make progress in key areas.
 
 ## Governance
 
