@@ -23,10 +23,7 @@ Before making a proposal, here's what to expect:
 
 The process for making and driving a proposal is:
 
-- **September 15 to October 15**: [File a proposal issue](https://github.com/web-platform-tests/interop/issues/new?labels=proposal&template=proposal.yml) and fill in as many details as you can. There is no required part of a rationale, but a few dimensions to consider are:
-  - Web developer sentiment from polls or surveys, for example, [MDN surveys](https://insights.developer.mozilla.org/) or [State of CSS](https://stateofcss.com/).
-  - Browser bugs or browser bug statistics, for example, [Chromium](https://bugs.chromium.org/), [Gecko](https://bugzilla.mozilla.org/),  or [WebKit](https://bugs.webkit.org/).
-  - Current usage of the feature, for example, [Chrome use counters](https://www.chromestatus.com/metrics/feature/popularity) or [HTTP Archive](https://httparchive.org/).
+- **September 15 to October 15**: [File a proposal issue](https://github.com/web-platform-tests/interop/issues/new?labels=proposal&template=proposal.yml) and fill in as many details as you can.
 - **October 16 to October 30**: The Interop team review and discuss proposals. During this time some refinements to the proposal can still be made. After this point no further action is required, but continued participation is certainly welcome, particularly to answer any questions.
 - **November 1 to November 30**: The Interop team decide, by consensus, which proposals to accept. Accepted proposals will require a pull request to document the accepted proposal in the repository. Help with this is appreciated, but not required.
 
