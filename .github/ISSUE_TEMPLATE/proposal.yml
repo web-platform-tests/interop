@@ -11,7 +11,7 @@ body:
 - type: textarea
   attributes:
     label: Description
-    description: Brief description of the feature. Try to be clear about what parts of the feature and included and not.
+    description: Brief description of the feature. Try to be clear about what parts of the feature are included and not.
 - type: textarea
   attributes:
     label: Specification
