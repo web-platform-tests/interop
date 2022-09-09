@@ -28,7 +28,7 @@ body:
 - type: textarea
   attributes:
     label: Tests
-    description: Tests for the feature in web-platform-tests, on the [wpt.fyi](https://wpt.fyi/) dashboard. Other test suites will be considered on a case-by-case basis.
+    description: Tests for the feature in web-platform-tests on [wpt.fyi](https://wpt.fyi/), or in Test262 on [test262.report](https://test262.report/).
 - type: textarea
   attributes:
     label: Rationale
