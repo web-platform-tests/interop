@@ -17,7 +17,7 @@ If you've had problems using a feature on the web because of differences between
 
 Before making a proposal, here's what to expect:
 
-- Only features which have high quality specifications and tests are in scope. Interop 2023 is not a venue for specifying new features, that work happens in working groups within organizations such as W3C and WHATWG.
+- Only features which have high quality specifications and tests are in scope. Interop 2023 is not a venue for specifying new features; that work happens in working groups within organizations such as W3C and WHATWG.
 - Interop 2023 is not a process for making browser vendors work on things they're opposed to. Decisions are made by consensus, so highly contentious features are unlikely to be accepted.
 - Even great proposals may ultimately not be accepted, since we have to prioritize.
 
