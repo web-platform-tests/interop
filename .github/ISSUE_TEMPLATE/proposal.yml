@@ -36,5 +36,6 @@ body:
       Reasons for including the feature. A few dimensions to consider are:
 
       - Web developer sentiment from polls or surveys, for example, [MDN surveys](https://insights.developer.mozilla.org/) or [State of CSS](https://stateofcss.com/).
+      - Examples of sites or libraries working around a missing feature or browser bug.
       - Browser bugs or browser bug statistics, for example, [Chromium](https://bugs.chromium.org/), [Gecko](https://bugzilla.mozilla.org/),  or [WebKit](https://bugs.webkit.org/).
       - Current usage of the feature, for example, [Chrome use counters](https://www.chromestatus.com/metrics/feature/popularity) or [HTTP Archive](https://httparchive.org/).
