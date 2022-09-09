@@ -1,5 +1,7 @@
 # Interop 2023
 
+**Interop 2023 has not yet launched and this documentation is still being finalized. Please do not submit proposals yet.**
+
 Interop 2023 aims to make the web more interoperable in key areas, prioritized by web developer and user needs. The team is formed of browser vendors and other contributors to the web platform, and is part of [the web-platform-tests project](https://github.com/web-platform-tests/wpt).
 
 Similar to [Interop 2022](https://wpt.fyi/interop-2022), this will be a public metric based on the progress of selected focus areas and investigation efforts. The overall timeline for the planning process is:
@@ -12,6 +14,8 @@ Similar to [Interop 2022](https://wpt.fyi/interop-2022), this will be a public m
 If you would like to make a proposal or contribute in other ways, read on.
 
 ## Making a proposal
+
+**Interop 2023 has not yet launched and this documentation is still being finalized. Please do not submit proposals yet.**
 
 If you've had problems using a feature on the web because of differences between browsers, or because it isn't implemented in all browsers, it may be a good proposal for Interop 2023!
 
