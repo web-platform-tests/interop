@@ -23,8 +23,6 @@ body:
       - [TC39](https://tc39.es/) (Stage 2+)
       - [W3C](https://www.w3.org/) (Recommendation Track)
       - [WHATWG](https://whatwg.org/)
-
-      Other specifications will be considered on a case-by-case basis.
 - type: textarea
   attributes:
     label: Tests
