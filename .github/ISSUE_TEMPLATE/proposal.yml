@@ -5,6 +5,8 @@ body:
 - type: markdown
   attributes:
     value: |
+      **Interop 2023 has not yet launched and this documentation is still being finalized. Please do not submit proposals yet.**
+ 
       Thanks for taking the time to make a proposal for Interop 2023!
 
       Please see the [Interop 2023 README](https://github.com/web-platform-tests/interop/blob/main/2023/README.md) for the timeline and what to expect from the process.
