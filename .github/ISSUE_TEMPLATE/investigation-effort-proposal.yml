@@ -30,4 +30,4 @@ body:
     description: |
       Please describe the steps necessary to get this feature to a state of high quality specification and tests. Link to existing spec and tests, and describe what needs to be done, ideally as a set of distinct tasks. If there are open-ended questions about the behavior that require investigation, try to still capture this as a set of tasks, such as "test existing behavior", "update specification", and "update tests".
 
-      Any standards work must be done in the appropriate standards group, and those doing the work need to join those groups. Interop 2023 is not a venue for specifying new features.
+      Any standards work must be done in the appropriate standards group, and those doing the work need to join that group. Interop 2023 is not a venue for specifying new features.
