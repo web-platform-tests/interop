@@ -27,7 +27,7 @@ Before making a proposal, here's what to expect:
 The process for making and driving a proposal is:
 
 - **September 15 to October 15**: Submit your [Focus Area](https://github.com/web-platform-tests/interop/issues/new?template=focus-area-proposal.yml) or [Investigation Effort](https://github.com/web-platform-tests/interop/issues/new?template=investigation-effort-proposal.yml) proposal and fill in as many details as you can.
-- **October 16 to October 30**: The Interop team review and discuss proposals. During this time some refinements to the proposal can still be made. After this point no further action is required, but continued participation is certainly welcome, particularly to answer any questions.
+- **October 16 to October 31**: The Interop team review and discuss proposals. During this time some refinements to the proposal can still be made. After this point no further action is required, but continued participation is certainly welcome, particularly to answer any questions.
 - **November 1 to November 30**: The Interop team decide, by consensus, which proposals to accept. Accepted proposals will require a pull request to document the accepted proposal in the repository. Help with this is appreciated, but not required.
 
 ## After a proposal is accepted
