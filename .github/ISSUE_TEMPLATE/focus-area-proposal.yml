@@ -9,7 +9,7 @@ body:
 
       Please see the [Interop 2023 README](https://github.com/web-platform-tests/interop/blob/main/2023/README.md) for the timeline and what to expect from the process.
 
-      If this feature does not have a high quality specification and tests, an [Investigation Effort](https://github.com/web-platform-tests/interop/issues/new?template=investigation-effort-proposal.yml) may be more appropriate.
+      If this feature is widely implemented, but lacks a high quality specification or tests, an [Investigation Effort](https://github.com/web-platform-tests/interop/issues/new?template=investigation-effort-proposal.yml) may be more appropriate.
 - type: textarea
   attributes:
     label: Description
