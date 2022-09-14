@@ -1,0 +1,18 @@
+name: Test Change Proposal
+description: Proposal to change, add, or remove tests for an Interop 2022 focus area
+labels: test-change-proposal
+body:
+- type: markdown
+  attributes:
+    value: |
+      Thanks for taking the time to make a suggest an improvement to the Interop 2022 test suite!
+
+      Please see the [Interop 2022 RFC](https://github.com/web-platform-tests/rfcs/blob/master/rfcs/interop_2022.md#updating-the-tests) for details on how test change proposals are handled.
+- type: textarea
+  attributes:
+    label: Test List
+    description: Links to the tests on https://wpt.fyi that you're proposing to change, add, or remove.
+- type: textarea
+  attributes:
+    label: Rationale
+    description: Justification for the changes
