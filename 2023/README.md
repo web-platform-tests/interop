@@ -1,12 +1,12 @@
 # Interop 2023
 
-Interop 2023 is a project of Web Platform Tests (WPT). Used by many browser engineering teams, [WPT](https://web-platform-tests.org/) is an automated [test suite](https://github.com/web-platform-tests/wpt) for the web standards created within the WHATWG, W3C, and other standards organizations. 
+Interop 2023 is an effort to increase interoperability across browsers in key technical areas that are of high priority to web developers and for user needs. It's part of the [web-platform-tests](https://github.com/web-platform-tests/wpt) (WPT) project, an automated test suite for web standards, used by many browser engineering teams.
 
-The aim of the annual Interop project is to increase interoperability across browsers in key technical areas that are of high priority to web developers and for user needs. Interop is run by a steering committee of representatives from the companies that make substantial contributions to browser rendering engines. 
+Interop is run by a team of representatives from the companies that make substantial contributions to browser rendering engines.
 
-Similar to [Interop 2022](https://wpt.fyi/interop-2022), the tests selected are continuously run on WPT’s automated testing infrastructure. The test pass rates for each browser rendering engine are displayed on the Interop Dashboard — displaying the percentage of passing tests in each chosen area, and an overall total score. The Interop Dashboard also displays scores for group progress on particular Investigation Projects selected for the the Interop team to work on throughout the year.
+Similar to [Interop 2022](https://wpt.fyi/interop-2022), the tests selected are continuously run on automated testing infrastructure. The test pass rates for each browser rendering engine will be displayed on the Interop 2023 Dashboard — displaying the percentage of passing tests in each chosen area, and an overall total score. The dashboard will also display scores for group progress on particular Investigation Efforts selected for the the Interop team to work on throughout the year.
 
-Interop is tightly focused on 1) technology that can be tested on WPT’s current infrastructure; and 2) technology that is already specified on web standards. This is not a place to invent new web technology, or solve complex problems that need web standards. That works should happen in the standards bodies. 
+Interop 2023 is tightly focused on technology that is already specified in web standards. This is not a place to invent new web technology, nor solve complex problems that need web standards. That work should happen in the standards bodies. 
 
 The overall timeline for the planning process is:
 
