@@ -1,8 +1,14 @@
 # Interop 2023
 
-Interop 2023 aims to make the web more interoperable in key areas, prioritized by web developer and user needs. The team is formed of browser vendors and other contributors to the web platform, and is part of [the web-platform-tests project](https://github.com/web-platform-tests/wpt).
+Interop 2023 is a project of Web Platform Tests (WPT). Used by many browser engineering teams, [WPT](https://web-platform-tests.org/) is an automated [test suite](https://github.com/web-platform-tests/wpt) for the web standards created within the WHATWG, W3C, and other standards organizations. 
 
-Similar to [Interop 2022](https://wpt.fyi/interop-2022), this will be a public metric based on the progress of selected focus areas and investigation efforts. The overall timeline for the planning process is:
+The aim of the annual Interop project is to increase interoperability across browsers in key technical areas that are of high priority to web developers and for user needs. Interop is run by a steering committee of representatives from the companies that make substantial contributions to browser rendering engines. 
+
+Similar to [Interop 2022](https://wpt.fyi/interop-2022), the tests selected are continuously run on WPT’s automated testing infrastructure. The test pass rates for each browser rendering engine are displayed on the Interop Dashboard — displaying the percentage of passing tests in each chosen area, and an overall total score. The Interop Dashboard also displays scores for group progress on particular Investigation Projects selected for the the Interop team to work on throughout the year.
+
+Interop is tightly focused on 1) technology that can be tested on WPT’s current infrastructure; and 2) technology that is already specified on web standards. This is not a place to invent new web technology, or solve complex problems that need web standards. That works should happen in the standards bodies. 
+
+The overall timeline for the planning process is:
 
 - Public call for proposals beginning September 15.
 - Proposal review by the team, with an opportunity for refinement.
