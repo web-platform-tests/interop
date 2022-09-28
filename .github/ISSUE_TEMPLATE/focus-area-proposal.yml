@@ -18,7 +18,7 @@ body:
   attributes:
     label: Rationale
     description: |
-      Reasons for including the feature. A few dimensions to consider are:
+      Reasons for including the feature. This should primarily be about web developer and/or end user impact of improving interoperability of this feature. A few dimensions to consider are:
 
       - Web developer sentiment from polls or surveys, for example, [MDN surveys](https://insights.developer.mozilla.org/) or [State of CSS](https://stateofcss.com/).
       - Examples of sites or libraries working around a missing feature or browser bug.
