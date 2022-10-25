@@ -1,6 +1,6 @@
 # Interop 2022
 
-_This is a copy of the [Interop 2022 RFC](https://github.com/web-platform-tests/rfcs/blob/master/rfcs/interop_2022.md)._
+_This is a copy of the [Interop 2022 RFC](https://github.com/web-platform-tests/rfcs/blob/master/rfcs/interop_2022.md) with some minor updates._
 
 ## Summary
 
@@ -17,6 +17,8 @@ See the [Interop 2022 repo](https://github.com/web-platform-tests/interop-2022) 
 
 10 new focus areas are part of Interop 2022, as well as 5 from Interop 2021.
 
+All tests: [view all tests on wpt.fyi](https://wpt.fyi/results/?label=master&label=experimental&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2021-aspect-ratio%20or%20label%3Ainterop-2021-flexbox%20or%20label%3Ainterop-2021-grid%20or%20label%3Ainterop-2021-position-sticky%20or%20label%3Ainterop-2021-transforms%20or%20label%3Ainterop-2022-cascade%20or%20label%3Ainterop-2022-color%20or%20label%3Ainterop-2022-contain%20or%20label%3Ainterop-2022-dialog%20or%20label%3Ainterop-2022-forms%20or%20label%3Ainterop-2022-scrolling%20or%20label%3Ainterop-2022-subgrid%20or%20label%3Ainterop-2022-text%20or%20label%3Ainterop-2022-viewport%20or%20label%3Ainterop-2022-webcompat).
+
 ### Cascade Layers
 
 Proposal: [interop-2022/#5](https://github.com/web-platform-tests/interop-2022/issues/5)  
@@ -32,7 +34,6 @@ Tests: [`interop-2022-color`](https://wpt.fyi/results/?label=master&label=experi
 Proposal: [interop-2022/#19](https://github.com/web-platform-tests/interop-2022/issues/19)  
 Tests: [`interop-2022-contain`](https://wpt.fyi/results/?label=master&label=experimental&product=chrome&product=firefox&product=safari&aligned&q=label%3Ainterop-2022-contain)
 
-
 ### Dialog Element
 
 Proposal: [interop-2022/#12](https://github.com/web-platform-tests/interop-2022/issues/12)  
@@ -42,7 +43,6 @@ Tests: [`interop-2022-dialog`](https://wpt.fyi/results/?label=master&label=exper
 
 Proposal: [interop-2022/#11](https://github.com/web-platform-tests/interop-2022/issues/11)  
 Tests: [`interop-2022-forms`](https://wpt.fyi/results/?label=master&label=experimental&product=chrome&product=firefox&product=safari&aligned&q=label%3Ainterop-2022-forms)
-
 
 ### Scrolling
 
@@ -80,8 +80,6 @@ The 5 focus areas from Interop 2021 are carried forward and included in the metr
 - [`interop-2021-grid`](https://wpt.fyi/results/?label=master&label=experimental&product=chrome&product=firefox&product=safari&aligned&q=label%3Ainterop-2021-grid)
 - [`interop-2021-position-sticky`](https://wpt.fyi/results/?label=master&label=experimental&product=chrome&product=firefox&product=safari&aligned&q=label%3Ainterop-2021-position-sticky)
 - [`interop-2021-transforms`](https://wpt.fyi/results/?label=master&label=experimental&product=chrome&product=firefox&product=safari&aligned&q=label%3Ainterop-2021-transforms)
-
-[Query for `interop-2021-*`](https://wpt.fyi/results/?label=master&label=experimental&product=chrome&product=firefox&product=safari&aligned&q=label%3Ainterop-2021-aspect-ratio%20or%20label%3Ainterop-2021-flexbox%20or%20label%3Ainterop-2021-grid%20or%20label%3Ainterop-2021-position-sticky%20or%20label%3Ainterop-2021-transforms)
 
 ### Updating the tests
 
