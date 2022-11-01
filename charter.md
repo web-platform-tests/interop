@@ -50,4 +50,4 @@ The Interop Team is made up of organization with a track record of contributions
 
 Organization my apply to join the team by contacting interop@web-platform-tests.org. New members will be added with a consensus decision of existing members.
 
-Existing members may leave the team at any time without further obligation. If a member is no longer active in the team, they can be removed by consensus amongst the other team members.
+Existing members may leave the team at any time without further obligation.
