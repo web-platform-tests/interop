@@ -13,6 +13,8 @@ The overall timeline for the planning process is:
 - Selection of proposals by the team, based on consensus.
 - Public launch in early 2023.
 
+A more detailed timeline is available in the [Interop 2023 RFC](https://github.com/web-platform-tests/rfcs/blob/master/rfcs/interop_2023.md) and below.
+
 If you would like to make a proposal or contribute in other ways, read on.
 
 ## Making a proposal
@@ -33,6 +35,8 @@ The process for making and driving a proposal is:
 - **September 15 to October 15**: Submit your [Focus Area](https://github.com/web-platform-tests/interop/issues/new?template=focus-area-proposal.yml) or [Investigation Effort](https://github.com/web-platform-tests/interop/issues/new?template=investigation-effort-proposal.yml) proposal and fill in as many details as you can.
 - **October 16 to October 31**: The Interop team review and discuss proposals. During this time some refinements to the proposal can still be made. After this point no further action is required, but continued participation is certainly welcome, particularly to answer any questions.
 - **November 1 to November 30**: The Interop team decide, by consensus, which proposals to accept. Accepted proposals will require a pull request to document the accepted proposal in the repository. Help with this is appreciated, but not required.
+
+The [Interop 2023 RFC]([https://github.com/web-platform-tests/rfcs/blob/master/rfcs/interop_2023.md](https://github.com/web-platform-tests/rfcs/blob/master/rfcs/interop_2023.md#proposal-selection)) describes the proposal selection in more detail.
 
 ## After a proposal is accepted
 
