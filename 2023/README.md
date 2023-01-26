@@ -53,6 +53,4 @@ Ultimately, the outcome we hope for is that interoperability significantly impro
 
 ## Other ways to contribute
 
-TODO
-
 You're also welcome to join the conversation in the [`#interop20xx:matrix.org` Matrix channel](https://app.element.io/#/room/#interop2022:matrix.org)!
