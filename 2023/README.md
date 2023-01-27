@@ -1,4 +1,5 @@
 # Interop 2023
+
 Interop 2023 is an effort to increase interoperability across browsers in key technical areas that are of high priority to web developers and end users. This effort is part of the [web-platform-tests](https://github.com/web-platform-tests/wpt) (WPT) project — an automated test suite for web standards — and run by a team of representatives from companies that make substantial contributions to browser rendering engines (including Apple, Bocoup, Google, Igalia, Microsoft, and Mozilla).
 
 The process we went through to arrive at our priority list for Interop 2023 is available in the [planning process](planning-process.md) document.
@@ -7,7 +8,9 @@ Similar to [Interop 2022](https://wpt.fyi/interop-2022), the tests we selected w
 
 Interop 2023 is tightly focused on technology that is already specified in web standards.
 
+
 ## Dashboard
+
 Our dashboard lives at [wpt.fyi/interop-2023](https://wpt.fyi/interop-2023). It computes an interop score as the percentage of tests in WPT that pass in all three browser engines.
 
 
@@ -107,8 +110,9 @@ Enable testing for font stack capabilities and enable additional expressiveness 
 The &lt;form> HTML element represents a document section containing interactive controls for submitting information.
 
 [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
-[Tests](https://wpt.fyi/results/?label=experimental&label=master&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2022-forms%20or%20label%3Ainterop-2023-forms)
+
 [Spec](https://html.spec.whatwg.org/multipage/forms.html#the-form-element)
+
 [Tests](https://wpt.fyi/results/?label=experimental&label=master&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2022-forms%20or%20label%3Ainterop-2023-forms)
 
 ### Grid
@@ -256,20 +260,25 @@ Web Components is a suite of different technologies allowing you to create reusa
 
 [MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
 
-
 [Tests](https://wpt.fyi/results/?label=experimental&label=master&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2023-webcomponents)
 
 
 ## Investigation Efforts
+
 An investigation efforts consists of a set of tasks that will bring the feature up to the bar required for a Focus Area in the future. If this involves any standards work, that work must be done in the appropriate standards group, and those doing the work need to join that group.
 
 The following investigation areas were selected for Interop 2023.
 
+
 ### Accessibility Testing
+
 This investigation area involves working towards generating consistent accessibility tries from the same DOM + CSS.
 
+
 ### Mobile Testing
+
 This investigation area involves doing the infrastructure work required to allow WPT Interop to accept future Interop proposals that test mobile-specific functionality which can't be scored using the current desktop-only wpt CI.
+
 
 ## Join the conversation
 
