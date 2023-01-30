@@ -41,7 +41,7 @@ Authors can specify an image to be used in place of the border-style. In this ca
 
 ### Container Queries in CSS
 
-CSS containment provides a way to isolate parts of a page and declare to the browser these parts are independent from the rest of the page in terms of styles and layout. ([Container Queries](https://github.com/web-platform-tests/interop/issues/133)).
+Container queries allow us to look at a container size and apply styles to the contents based on the size of their container rather than the viewport or other device characteristics. If the container has less space in the surrounding context, you can hide certain elements or use smaller fonts, for example. ([Container Queries](https://github.com/web-platform-tests/interop/issues/133)).
 
 [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Container_Queries)
 
