@@ -225,6 +225,21 @@ Pointer events are DOM events that are fired for a pointing device. They are des
 [Tests](https://wpt.fyi/results/?label=experimental&label=master&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2023-events)
 
 
+### Scrolling
+
+TODO
+
+
+### Subgrid
+
+TODO
+
+
+### Transforms 
+
+TODO
+
+
 ### URL
 
 The URL interface is used to parse, construct, normalize, and encode URLs. It works by providing properties which allow you to easily read and modify the components of a URL. This focus area is to get all browsers to agree on an implementation of URLs as defined in the URL Standard.
