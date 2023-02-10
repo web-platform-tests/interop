@@ -225,6 +225,38 @@ Pointer events are DOM events that are fired for a pointing device. They are des
 [Tests](https://wpt.fyi/results/?label=experimental&label=master&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2023-events)
 
 
+### Scrolling
+
+The scroll-behavior, overscroll-behavior and scroll-snap CSS properties and the CSSOM View scroll-related APIs allow authors to influence how scrolling behaves.
+
+[MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior)
+
+[Spec](https://drafts.csswg.org/css-overflow-3/#propdef-scroll-behavior)
+
+[Tests](https://wpt.fyi/results/css?label=master&label=experimental&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2022-scrolling)
+
+
+### Subgrid
+
+Subgrid makes it possible to nest grids while having the items of the nested grid line up with the main grid.
+
+[MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
+
+[Spec](https://drafts.csswg.org/css-grid-2/)
+
+[Tests](https://wpt.fyi/results/css/css-grid/subgrid?label=master&label=experimental&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2022-subgrid)
+
+### Transforms 
+
+The transform CSS property lets you rotate, scale, skew, or translate an element.
+
+[MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)
+
+[Spec](https://w3c.github.io/csswg-drafts/css-transforms-2/#transform-functions)
+
+[Tests](https://wpt.fyi/results/css/css-transforms?label=master&label=experimental&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2021-transforms)
+
+
 ### URL
 
 The URL interface is used to parse, construct, normalize, and encode URLs. It works by providing properties which allow you to easily read and modify the components of a URL. This focus area is to get all browsers to agree on an implementation of URLs as defined in the URL Standard.
