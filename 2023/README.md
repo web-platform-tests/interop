@@ -227,17 +227,34 @@ Pointer events are DOM events that are fired for a pointing device. They are des
 
 ### Scrolling
 
-TODO
+The scroll-behavior, overscroll-behavior and scroll-snap CSS properties and the CSSOM View scroll-related APIs allow authors to influence how scrolling behaves.
+
+[MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior)
+
+[Spec](https://drafts.csswg.org/css-overflow-3/#propdef-scroll-behavior)
+
+[Tests](https://wpt.fyi/results/css?label=master&label=experimental&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2022-scrolling)
 
 
 ### Subgrid
 
-TODO
+Subgrid makes it possible to nest grids while having the items of the nested grid line up with the main grid.
 
+[MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
+
+[Spec](https://drafts.csswg.org/css-grid-2/)
+
+[Tests](https://wpt.fyi/results/css/css-grid/subgrid?label=master&label=experimental&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2022-subgrid)
 
 ### Transforms 
 
-TODO
+The transform CSS property lets you rotate, scale, skew, or translate an element.
+
+[MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)
+
+[Spec](https://w3c.github.io/csswg-drafts/css-transforms-2/#transform-functions)
+
+[Tests](https://wpt.fyi/results/css/css-transforms?label=master&label=experimental&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2021-transforms)
 
 
 ### URL
