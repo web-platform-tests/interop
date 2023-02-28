@@ -16,7 +16,7 @@ Our dashboard lives at [wpt.fyi/interop-2023](https://wpt.fyi/interop-2023). It 
 
 ## Focus Areas
 
-The folloing features were selected for Interop 2023. Descriptions are taken from issue proposal submissions and MDN documentation.
+The following features were selected for Interop 2023. Descriptions are taken from issue proposal submissions and MDN documentation.
 
 
 ### Border Image in CSS
