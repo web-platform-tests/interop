@@ -29,6 +29,10 @@ Initially the team will produce one set of interop metrics per year. This may be
 
 If at any time the team is unable to reach consensus on which features to include in its metrics, or the set of features which has consensus is considered insufficient to fulfill the goals of the team, the effort will be paused until the situation can be resolved.
 
+### Extended Scope
+
+The team may also work on additional metrics or data visualizations to provide insights for a broader set of features, aimed at making the web more interoperable. For example, evolving the [Browser Specific Failures](https://github.com/web-platform-tests/results-analysis/blob/main/browser-specific-failures.js) metric is in this extended scope.
+
 ### Out of Scope
 
 This is not a venue for standardization, and work on new platform features is out of scope. However the group may liaise with existing standards groups to help progress work which affects the interoperability of the platform, or the ability to test and measure interoperability of existing features.
