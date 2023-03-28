@@ -6,7 +6,7 @@ The Interop Team aims to make the web more interoperable in key areas, prioritiz
 
 The team makes decisions based on consensus, which is defined as support from at least two participating organizations and no opposition. Decisions can be made both in the repository and in meetings, as long as consensus can be established.
 
-The chair of the team is responsible for organizing meetings, driving discussions to a conclusion, and recording decisions. The team elects an individual as the chair based on consensus once per calendar year. There's no term limit; the same individual can be reelected as chair.
+The chair of the team is responsible for organizing meetings, driving discussions to a conclusion, and recording decisions. The team appoints an individual as the chair based on consensus once per calendar year. There's no term limit; the same individual can be reappointed as chair.
 
 Meeting time and agenda should be announced by the chair at least 48 hours in advance, and meeting minutes posted in the repository.
 
@@ -28,10 +28,6 @@ The team is responsible for maintaining [Compat 2021](https://wpt.fyi/compat2021
 Initially the team will produce one set of interop metrics per year. This may be changed in the future by consensus decision.
 
 If at any time the team is unable to reach consensus on which features to include in its metrics, or the set of features which has consensus is considered insufficient to fulfill the goals of the team, the effort will be paused until the situation can be resolved.
-
-### Extended Scope
-
-The team may also work on additional metrics or data visualizations to provide insights for a broader set of features, aimed at making the web more interoperable. For example, evolving the [Browser Specific Failures](https://github.com/web-platform-tests/results-analysis/blob/main/browser-specific-failures.js) metric is in this extended scope.
 
 ### Out of Scope
 
