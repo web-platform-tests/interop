@@ -23,7 +23,7 @@ These metrics are expected to be comprised of:
 - Groups of automated tests that can be used to automatically compute an interoperability score for specific platform features in implementations.
 - Work to improve the interoperability of the platform that cannot be measured through test pass rates and is scored by consensus decision.
 
-The team is responsible for maintaining [Compat 2021](https://wpt.fyi/compat2021), [Interop 2022](https://wpt.fyi/interop-2022), and defining future interoperability efforts and metrics.
+The team is responsible for maintaining [Interop 2021](https://wpt.fyi/interop-2021), [2022](https://wpt.fyi/interop-2022), [2023](https://wpt.fyi/interop-2023), and defining future interoperability efforts and metrics.
 
 Initially the team will produce one set of interop metrics per year. This may be changed in the future by consensus decision.
 
