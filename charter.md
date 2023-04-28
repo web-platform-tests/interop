@@ -48,7 +48,7 @@ The following organizations make up the Interop Team, in alphabetical order:
 
 ## Joining and Leaving the Team
 
-The Interop Team is made up of organization with a track record of contributions to the web-platform-tests project.
+The Interop Team is made up of organizations with a track record of contributions to the web-platform-tests project.
 
 Organization my apply to join the team by contacting interop@web-platform-tests.org. New members will be added with a consensus decision of existing members.
 
