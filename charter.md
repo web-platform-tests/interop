@@ -10,13 +10,13 @@ The chair of the team is responsible for organizing meetings, driving discussion
 
 Meeting time and agenda should be announced by the chair at least 48 hours in advance, and meeting minutes posted in the repository.
 
-The Interop effort is subject to the [WPT code of conduct](https://github.com/web-platform-tests/wpt/blob/master/CODE_OF_CONDUCT.md).
+The Interop Team's work is subject to the [WPT code of conduct](https://github.com/web-platform-tests/wpt/blob/master/CODE_OF_CONDUCT.md).
 
 Substantive changes to this charter are done via the [web-platform-tests RFC process](https://github.com/web-platform-tests/rfcs).
 
 ## Scope
 
-The output of the Interop project is metrics designed to measure and improve the interoperability of the web platform.
+The Interop Team's work is metrics designed to measure and improve the interoperability of the web platform.
 
 These metrics are expected to be comprised of:
 
