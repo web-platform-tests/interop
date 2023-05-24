@@ -6,7 +6,7 @@ The Interop Team aims to make the web more interoperable in key areas, prioritiz
 
 The team makes decisions based on consensus, which is defined as support from at least two participating organizations and no opposition. Decisions can be made both in the repository and in meetings, as long as consensus can be established.
 
-The chair of the team is responsible for organizing meetings, driving discussions to a conclusion, and recording decisions. The team appoints an individual as the chair based on consensus at a minimum once per calendar year. There's no term limit; the same individual can be reappointed as chair.
+The chair of the team is responsible for organizing meetings, driving discussions to a conclusion, and recording decisions. The team appoints an individual as the chair based on consensus at a minimum once per calendar year. There's no term limit; the same individual can be reappointed as chair. If the team is unable to meet due to absence of a chair, the Core Team may appoint one directly.
 
 Meeting time and agenda should be announced by the chair at least 48 hours in advance, and meeting minutes posted in the repository.
 
