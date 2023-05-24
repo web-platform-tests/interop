@@ -27,6 +27,8 @@ These metrics are expected to be comprised of:
 
 The team is responsible for maintaining [Interop 2021](https://wpt.fyi/interop-2021), [2022](https://wpt.fyi/interop-2022), [2023](https://wpt.fyi/interop-2023), and defining future interoperability efforts and metrics.
 
+If the Team is unable reach consensus to publish any new metrics, and has been unable to reach consensus for three months, the Team's functions revert to the Core Team and this charter is annulled.
+
 ### Out of Scope
 
 This is not a venue for standardization, and work on new platform features is out of scope. However the group may liaise with existing standards groups to help progress work which affects the interoperability of the platform, or the ability to test and measure interoperability of existing features.
