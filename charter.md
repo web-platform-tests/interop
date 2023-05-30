@@ -12,6 +12,8 @@ Meeting time and agenda should be announced by the chair at least 48 hours in ad
 
 The Interop Team's work is subject to the [WPT code of conduct](https://github.com/web-platform-tests/wpt/blob/master/CODE_OF_CONDUCT.md).
 
+All contributions are licensed under the terms in [CONTRIBUTING.md](https://github.com/web-platform-tests/wpt/blob/master/CONTRIBUTING.md).
+
 Substantive changes to this charter are done via the [web-platform-tests RFC process](https://github.com/web-platform-tests/rfcs).
 
 ## Scope
