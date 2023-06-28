@@ -31,7 +31,7 @@ If the Team is unable reach consensus to publish any new metrics, and has been u
 
 ### Out of Scope
 
-This is not a venue for standardization, and work on new platform features is out of scope. However the group may liaise with existing standards groups to help progress work which affects the interoperability of the platform, or the ability to test and measure interoperability of existing features.
+This is not a venue for standardization work. Further, the team will avoid creating metrics which depend on significant standards work. However, this does not preclude the team from liaising with existing standards groups to help progress work which affects the interoperability of the platform, or the ability to test and measure interoperability of existing features (including features whose specification is determined to be ready-for-implementation but where there is yet to be any implementation).
 
 Browser features that don't affect web developers, like bookmarks, are out of scope.
 
