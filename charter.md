@@ -6,7 +6,7 @@ The Interop Team aims to make the web more interoperable in key areas, prioritiz
 
 The team makes decisions based on consensus, which is defined as support from at least two participating organizations and no opposition. Decisions can be made both in the repository and in meetings, as long as consensus can be established.
 
-The chair of the team is responsible for organizing meetings, driving discussions to a conclusion, and recording decisions. The team appoints an individual as the chair based on consensus at a minimum once per calendar year. There's no term limit; the same individual can be reappointed as chair. If the team is unable to meet due to absence of a chair, the Core Team may appoint one directly.
+The chair of the team is responsible for organizing meetings, driving discussions to a conclusion, and recording decisions. The team appoints an individual as the chair based on consensus at a minimum once per calendar year. The term limit for the chair will be 1 year and the same individual can be reappointed as chair, if there is consensus. If the team is unable to meet due to absence of a chair, the Core Team may appoint one directly.
 
 Meeting time and agenda should be announced by the chair at least 48 hours in advance, and meeting minutes posted in the repository.
 
@@ -18,7 +18,7 @@ Substantive changes to this charter are done via the [web-platform-tests RFC pro
 
 ## Scope
 
-The Interop Team's work is metrics designed to measure and improve the interoperability of the web platform.
+The Interop Team's scope includes metrics designed to measure and improve the interoperability of the web platform. These metrics are published once consensus to do so has been reached.
 
 These metrics are expected to be comprised of:
 
