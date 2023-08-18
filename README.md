@@ -1,6 +1,6 @@
 # The Interop Project
 
-Welcome to the Interop project, an ongoing effort to make the web more interoperable in key areas, prioritized by web developer and user needs. This is part of [the web-platform-tests project](https://github.com/web-platform-tests/wpt), the main test suite for the web platform.
+Welcome to the Interop Project, an ongoing effort to make the web more interoperable in key areas, prioritized by web developer and user needs. This is part of [the web-platform-tests project](https://github.com/web-platform-tests/wpt), the main test suite for the web platform, and worked on by the [Interop Team](./supporters.md).
 
 Please see the [Interop 2023](./2023/README.md) for the current iteration of the project!
 
@@ -36,22 +36,22 @@ If there is a particular blocker making it hard to test a certain feature, that 
 
 ### **Guidance for Prioritizing Focus Area proposals**
 
-We should prioritize areas where web developers have had problems using them because of differences between browsers, or because they aren’t implemented in all browsers. There are many sources for such information:
+Beyond the above requirements, in line with the above goal, areas where web developers have had problems using them should be prioritized, whether that is because of differences between browsers, or because they aren’t implemented in all browsers. There are many potential sources for information about such areas, including but not limited to:
 
-* Perhaps there are issues filed about such problems in the Chromium, Gecko, or WebKit bug trackers.
-* Perhaps there are many complaints about this feature in public discussions on sites like Stack Overflow.
-* Perhaps this feature ranks in high-demand or as a pain-point consistently in polls and surveys of web developers.
-* Perhaps there are documented examples of sites or libraries working around the fact that it is missing or not interoperable.
+* Issues filed about such problems in the Chromium, Gecko, or WebKit bug trackers.
+* Complaints about this feature in public discussions on sites like Stack Overflow.
+* Ranking as a high-demand feature or as a pain-point consistently in polls and surveys of web developers.
+* Documented examples of sites or libraries working around the fact that a feature is missing or not interoperable.
 
-When assessing the prioritization of existing web technology, it can be helpful to assess how often the technology is being used currently. (Such thinking should also consider important technology might not be in popular use if a lack of interoperability is a painful barrier.)
+When assessing the prioritization of existing web technology, it can be helpful to assess how often the technology is being used currently. However, one should also consider if important technology might not be in popular use due to lack of interoperability. Potential sources of data include but are not limited to:
 
-* The feature has high usage via Chrome use counters.
-* The feature has high usage via HTTP Archive.
-* The feature has a high number of mentions on developer resources like Stack Overflow.
+* Browser use counters.
+* Usage recorded via HTTP Archive crawls.
+* Number of mentions on developer resources like Stack Overflow.
 
 There are also guiding values that should be taken into consideration, beyond pure demand:
 
-* This feature has a positive impact on accessibility.
-* This feature has a positive impact on internationalization.
-* This feature has a positive impact on privacy.
-* This feature has a positive impact on security.
+* The feature has a positive impact on accessibility.
+* The feature has a positive impact on internationalization.
+* The feature has a positive impact on privacy.
+* The feature has a positive impact on security.
