@@ -43,7 +43,7 @@ body:
     description: |
       Tests for the feature in web-platform-tests on [wpt.fyi](https://wpt.fyi/).
 
-      These are the tests that will be used to score progress in this Focus Area. If the tests are not yet ready link to evidence of the tests being worked on (e.g. a PR in the web-platform-tests repository or an issue in a vendor bugtracker).
+      These are the tests that will be used to score progress in this Focus Area. If the tests are not yet ready, link to evidence of the tests being worked on (e.g. a PR in the web-platform-tests repository or an issue in a vendor bug tracker).
 - type: markdown
   attributes:
     value: "## Supporting Evidence
@@ -67,7 +67,7 @@ body:
   attributes:
     label: Browser bug reports
     description: |
-      Browser bugs or browser bug statistics, for example, [Chromium](https://bugs.chromium.org/), [Gecko](https://bugzilla.mozilla.org/),  or [WebKit](https://bugs.webkit.org/).
+      Browser bugs or browser bug statistics, for example, [Chromium](https://bugs.chromium.org/), [Gecko](https://bugzilla.mozilla.org/), or [WebKit](https://bugs.webkit.org/).
 - type: textarea
   attributes:
     label: Developer discussions
