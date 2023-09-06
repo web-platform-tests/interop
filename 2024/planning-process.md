@@ -47,7 +47,7 @@ A fourth week will allow for continued discussion and refinement of already-subm
 
 ## Focus Area Selection
 
-### Elimination Round 1 : Disqualification
+### Elimination Round 1: Disqualification
 
 After the Call of Proposals Period has ended, the Interop Team will finalize an official list of all Focus Area proposals.
 
