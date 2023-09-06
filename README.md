@@ -13,7 +13,7 @@ The goal of the Interop Project is to improve the web by making it easier to mak
 
 This is done by increasing the amount of “interoperability” between browsers — when each browser engine has implemented the same technology the exact same way, as bug-free as possible.
 
-Today’s browsers have made a commitment to implement web technology according to a shared web standard, created in organizations such as the W3C or WHATWG, where technologies such as CSS and HTML are officially defined.
+Today’s browsers have made a commitment to implement web technology according to a shared web standard, created in organizations such as the [W3C](https://w3.org) or [WHATWG](https://whatwg.org), where technologies such as CSS and HTML are officially defined.
 
 There is a seemingly infinite amount of work that browser engineering teams could be focused on. The Interop Project provides incentives to focus on the specific and practical work that will help web developers most in the coming year.
 
