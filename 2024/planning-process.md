@@ -42,7 +42,7 @@ As soon as each proposal is submitted as a GitHub issue, discussion of that prop
 
 At the end of the three weeks, the deadline will end the period when brand new proposals can be submitted.
 
-A fourth week will allow for continued discussion and refinement. The deadline at the end of the fourth week ends the opportunity to significantly change the scope of the proposal.  The proposal will be evaluated on its state at that time.
+A fourth week will allow for continued discussion and refinement of already-submitted proposals. The deadline at the end of the fourth week ends the opportunity to significantly change the scope of proposals.  The proposals will be evaluated on their state at that time.
 
 
 ## Focus Area Selection
