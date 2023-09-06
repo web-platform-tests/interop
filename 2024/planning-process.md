@@ -29,7 +29,7 @@ An open call for proposals will begin on a specific date, and run for three week
         1. [IETF](https://www.ietf.org/) (Standard Track)
         2. [Khronos Group](https://www.khronos.org/)
         3. [TC39](https://tc39.es/) (Stage 2+)
-        4. [W3C](https://www.w3.org/) (Recommendation Track)
+        4. [W3C](https://www.w3.org/) ([Recommendation Track](https://www.w3.org/2023/Process-20230612/#rec-track))
         5. [WHATWG](https://whatwg.org/)
     3. Describe the benefit to web developers and the web itself
     4. Link to existing tests (if any) and/or describe plan to create needed tests
