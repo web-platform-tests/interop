@@ -24,7 +24,7 @@ An open call for proposals will begin on a specific date, and run for three week
 4. Focus Area proposals must:
     1. Name a specific web technology.
         1. This can be a web technology that has not yet been implemented in any or all browser engines.
-        2. Or this can be a web technology that has already been implemented in all three engines, but those implementations have multiple test failures that reveal a lack of compliance to the web standard, causing a lack of interoperability.
+        2. Or this can be a web technology that has already been implemented in all three engines, but those implementations have test failures that reveal a lack of compliance to the web standard, causing a lack of interoperability.
     2. The feature must be defined in a sufficiently mature standards-track web specification from one the following organizations. Please provide link to the web standard.
         1. [IETF](https://www.ietf.org/) (Standard Track)
         2. [Khronos Group](https://www.khronos.org/)
