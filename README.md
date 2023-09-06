@@ -19,7 +19,7 @@ There is a seemingly infinite amount of work that browser engineering teams coul
 
 ## Scope
 
-The Interop Project is a collaboration between organizations that implement web technology in browser engines. It’s a shared agreement to prioritize work on certain web technologies to improve interoperability. And to keep track of that work by using automated tests to score how much progress each participating browser has made reaching the shared goals.
+The Interop Project is a collaboration between organizations that implement web technology in browser engines. It defines a metric based on a set of web technologies that we collectively believe to be important to improve interoperability. This metric publicly keeps track of that work by using automated tests to score how much progress each participating browser has made reaching the shared goals.
 
 There are many fantastic ideas for what the web could become. But the Interop Project is not the place to begin making those dreams a reality. This is a place to focus on interoperable implementations of ideas that have already been defined in detail in web standards. And it’s a place to focus on interoperability through the use of automated tests to evaluate whether or not a particular browser matches what the web standard says it should be doing. In order for this to be possible, the Interop Project only focuses on specific kinds of web technology.
 
@@ -49,7 +49,7 @@ When assessing the prioritization of existing web technology, it can be helpful 
 * Usage recorded via HTTP Archive crawls.
 * Number of mentions on developer resources like Stack Overflow.
 
-There are also guiding values that should be taken into consideration, beyond pure demand:
+There are also guiding values that should be taken into consideration:
 
 * The feature has a positive impact on accessibility.
 * The feature has a positive impact on internationalization.
