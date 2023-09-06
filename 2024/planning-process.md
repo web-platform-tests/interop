@@ -49,7 +49,7 @@ A fourth week will allow for continued discussion and refinement of already-subm
 
 ### Elimination Round 1 : Disqualification
 
-After the Call of Proposals Period has ended, the organizing committee will finalize an official list of all Focus Area proposals.
+After the Call of Proposals Period has ended, the Interop Team will finalize an official list of all Focus Area proposals.
 
 Any Focus Area proposal that does not meet the minimum publicly-stated selection criteria will be considered for preliminary elimination. For example:
 
@@ -96,7 +96,7 @@ NOTE: in the past, “Exclude” was a way to express many different kinds of se
 
 ## Interop 2023 Evaluation
 
-During the same period organizations are making Round 3 decisions, the organizing committee should evaluate the status of Interop 2023, and decide which Focus Areas will be retired, and which will be carried over.
+During the same period organizations are making Round 3 decisions, the Interop Team should evaluate the status of Interop 2023, and decide which Focus Areas will be retired, and which will be carried over.
 
 \[XXX]
 
