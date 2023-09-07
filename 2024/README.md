@@ -2,8 +2,16 @@
 
 # Interop 2024
 
-Interop 2024 is an effort to increase interoperability across browsers in key technical areas that are of high priority to web developers and end users. This effort is part of the [web-platform-tests](https://github.com/web-platform-tests/wpt) (WPT) project — an automated test suite for web standards — and run by a team of representatives from companies that make substantial contributions to browser rendering engines (including Apple, Bocoup, Google, Igalia, Microsoft, and Mozilla).
+Interop 2024 is an effort to increase interoperability across browsers in key technical areas that are of high priority to web developers and end users. More details on the project is available in the [Interop project readme](https://github.com/web-platform-tests/interop/blob/main/README.md).
 
-Similar to [Interop 2023](https://wpt.fyi/interop-2023), the tests we selected will be continuously run on automated testing infrastructure. The test pass rates for each browser rendering engine will be displayed on the Interop 2024 Dashboard (available in Q1 2024) — displaying the percentage of passing tests in each chosen area, and an overall total score of tests that pass in every browser. The dashboard will also display scores for group progress on particular Investigation Efforts selected for the Interop team to work on throughout the year.
+## Timeline
 
-More details to follow closer to launch of Interop 2024.
+Interop 2024 will open for proposals on September 14, 2023 and the overall timeline will be as given below:
+- Public call for proposals - September 14, 2023 to October 5, 2023
+- Proposal review by the Interop team, with an opportunity for refinement
+- Selection of proposals by the Interop team, based on consensus
+- Public launch in January 2024
+
+## Focus Area Proposals
+
+If you would like to make a proposal for Interop 2024, please review the [requirements](https://github.com/web-platform-tests/interop/blob/main/README.md#requirements-for-focus-area-proposals) and [guidance](https://github.com/web-platform-tests/interop/blob/main/README.md#guidance-for-prioritizing-focus-area-proposals) provided in the Interop readme. An updated template for focus area proposal submissions will be shared on September 14, 2023.
