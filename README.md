@@ -4,6 +4,9 @@ Welcome to the Interop Project, an ongoing effort to make the web more interoper
 
 Please see the [Interop 2023](./2023/README.md) for the current iteration of the project!
 
+## Interop 2024
+
+Interop 2024 will open for proposals between Sep 14 and Oct 5, and the Interop Team will evaluate proposals in the following months. Interop 2024 and the set of accepted proposals will be announced in January 2024. Please see the [Interop 2024 Process](./2024/planning-process.md) for details.
 
 ## The Purpose of the Interop Project
 
