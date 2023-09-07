@@ -18,7 +18,7 @@ This is done by increasing the amount of “interoperability” between browsers
 
 Today’s browsers have made a commitment to implement web technology according to a shared web standard, created in organizations such as the [W3C](https://w3.org) or [WHATWG](https://whatwg.org), where technologies such as CSS and HTML are officially defined.
 
-There is a seemingly infinite amount of work that browser engineering teams could be focused on. The Interop Project provides incentives to focus on the specific and practical work that will help web developers most in the coming year.
+There is a seemingly infinite amount of work that browser engineering teams could be focused on. The Interop Project provides incentives to focus on the specific and practical work that will have the most positive impact on the web platform in the coming year.
 
 ## Scope
 
