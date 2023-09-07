@@ -41,10 +41,11 @@ If there is a particular blocker making it hard to test a certain feature, that 
 
 Beyond the above requirements, in line with the above goal, areas where web developers have had problems using them should be prioritized, whether that is because of differences between browsers, or because they aren’t implemented in all browsers. There are many potential sources for information about such areas, including but not limited to:
 
-* Issues filed about such problems in the Chromium, Gecko, or WebKit bug trackers.
+* Issues filed about such problems in the [Chromium](https://crbug.com/), [Gecko](https://bugzilla.mozilla.org/), or [WebKit](https://bugs.webkit.org/) bug trackers.
 * Complaints about this feature in public discussions on sites like Stack Overflow.
 * Ranking as a high-demand feature or as a pain-point consistently in polls and surveys of web developers.
 * Documented examples of sites or libraries working around the fact that a feature is missing or not interoperable.
+* Compat issues that affect users on existing sites, such as those reported on [webcompat.com](https://webcompat.com/).
 
 When assessing the prioritization of existing web technology, it can be helpful to assess how often the technology is being used currently. However, one should also consider if important technology might not be in popular use due to lack of interoperability. Potential sources of data include but are not limited to:
 
