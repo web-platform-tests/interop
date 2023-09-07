@@ -2,7 +2,7 @@
 
 ## Process
 
-### Timeline — 10 weeks total
+### Timeline
 
 1. Call for Proposal Period — three weeks (Sep 14 – Oct 5)
 2. Continued discussion and refinement of proposals — one week (Oct 5 – Oct 12)
@@ -10,7 +10,7 @@
 4. Elimination Round 2: Reduction — two weeks (Oct 19 – Nov 2)
 5. Elimination Round 3: Prioritization — three weeks (Nov 2 – Nov 30, exc. North America Thanksgiving)
 
-
+Interop 2024 and the set of accepted proposals will be announced in January 2024.
 
 ### Call for Proposal Period
 
