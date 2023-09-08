@@ -2,7 +2,7 @@
 
 # Interop 2024
 
-Interop 2024 is an effort to increase interoperability across browsers in key technical areas that are of high priority to web developers and end users. More details on the project is available in the [Interop project readme](https://github.com/web-platform-tests/interop/blob/main/README.md).
+Interop 2024 is an effort to increase interoperability across browsers in key technical areas that are of high priority to web developers and end users. More details on the project is available in the [Interop Project README](https://github.com/web-platform-tests/interop/blob/main/README.md).
 
 ## Timeline
 
