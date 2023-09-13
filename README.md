@@ -1,6 +1,6 @@
 # The Interop Project
 
-Welcome to the Interop Project, an ongoing effort to make the web more interoperable in key areas, prioritized by user and web developer needs. This is part of [the web-platform-tests project](https://github.com/web-platform-tests/wpt), the main test suite for the web platform, and worked on by the [Interop Team](./supporters.md).
+Welcome to the Interop Project, an ongoing effort to make the web more interoperable in key areas, prioritized by user and web developer needs. This is part of [the web-platform-tests project](https://github.com/web-platform-tests/wpt), the main test suite for the web platform, and worked on by the [Interop Team](./charter.md#team-members).
 
 Please see the [Interop 2023](./2023/README.md) for the current iteration of the project!
 
