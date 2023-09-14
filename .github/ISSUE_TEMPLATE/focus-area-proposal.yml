@@ -5,7 +5,7 @@ body:
 - type: markdown
   attributes:
     value: |
-      Thanks for making an Interop 2024 proposal!
+      Thanks for taking the time to make a proposal for Interop 2024!
 
       Be sure to read the [requirements and guidance](https://github.com/web-platform-tests/interop/blob/main/README.md#requirements-for-focus-area-proposals) to give your proposal the best chance of success!
 
