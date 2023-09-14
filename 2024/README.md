@@ -13,4 +13,4 @@ Interop 2024 is an effort to increase interoperability across browsers in key te
 
 ## Focus Area Proposals
 
-If you would like to make a proposal for Interop 2024, please review the [requirements](https://github.com/web-platform-tests/interop/blob/main/README.md#requirements-for-focus-area-proposals) and [guidance](https://github.com/web-platform-tests/interop/blob/main/README.md#guidance-for-prioritizing-focus-area-proposals) provided in the Interop readme. An updated template for focus area proposal submissions will be shared on September 14, 2023.
+If you would like to make a proposal for Interop 2024, please review the [requirements](https://github.com/web-platform-tests/interop/blob/main/README.md#requirements-for-focus-area-proposals) and [guidance](https://github.com/web-platform-tests/interop/blob/main/README.md#guidance-for-prioritizing-focus-area-proposals) provided in the Interop readme.
