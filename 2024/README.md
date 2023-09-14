@@ -6,10 +6,10 @@ Interop 2024 is an effort to increase interoperability across browsers in key te
 
 ## Timeline
 
-- Public call for proposals - September 14, 2023 to October 5, 2023
-- Proposal review by the Interop team, with an opportunity for refinement
+- Interop 2024 proposal submission period - September 14, 2023 to October 5, 2023
+- Proposals can be refined up until October 12, 2023
 - Selection of proposals by the Interop team, based on consensus
-- Public launch in January 2024
+- Communication of decisions and public launch in January 2024
 
 ## Focus Area Proposals
 
