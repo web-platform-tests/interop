@@ -7,9 +7,16 @@ body:
     value: |
       Thanks for making an Interop 2024 Proposal
 
-      Please see the [Interop 2024 README](https://github.com/web-platform-tests/interop/blob/main/2024/README.md) for the timeline and what to expect from the process.
+      Be sure to read the [requirements and guidance](https://github.com/web-platform-tests/interop/blob/main/README.md#requirements-for-focus-area-proposals) to give your proposal the best chance of success!
 
       If this feature is widely implemented, but lacks a high quality specification or tests, an [Investigation Effort](https://github.com/web-platform-tests/interop/issues/new?template=investigation-effort-proposal.yml) may be more appropriate.
+
+      Timeline for Interop 2024 planning:
+
+      - Public call for proposals - September 14, 2023 to October 5, 2023
+      - Proposal review by the Interop team, with an opportunity for refinement
+      - Selection of proposals by the Interop team, based on consensus
+      - Public launch in January 2024
 - type: markdown
   attributes:
     value: "## Proposal Details"
