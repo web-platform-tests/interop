@@ -21,7 +21,7 @@ The following features were selected for Interop 2023. Descriptions are taken fr
 All tests: [view all tests on wpt.fyi](https://wpt.fyi/results/?label=master&label=experimental&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2021-aspect-ratio%20or%20label%3Ainterop-2021-flexbox%20or%20label%3Ainterop-2021-grid%20or%20label%3Ainterop-2021-position-sticky%20or%20label%3Ainterop-2021-transforms%20or%20label%3Ainterop-2022-cascade%20or%20label%3Ainterop-2022-color%20or%20label%3Ainterop-2022-contain%20or%20label%3Ainterop-2022-dialog%20or%20label%3Ainterop-2022-forms%20or%20label%3Ainterop-2022-scrolling%20or%20label%3Ainterop-2022-subgrid%20or%20label%3Ainterop-2022-text%20or%20label%3Ainterop-2022-viewport%20or%20label%3Ainterop-2022-webcompat%20or%20label%3Ainterop-2023-color%20or%20label%3Ainterop-2023-contain%20or%20label%3Ainterop-2023-container%20or%20label%3Ainterop-2023-cssborderimage%20or%20label%3Ainterop-2023-cssmasking%20or%20label%3Ainterop-2023-events%20or%20label%3Ainterop-2023-flexbox%20or%20label%3Ainterop-2023-fonts%20or%20label%3Ainterop-2023-forms%20or%20label%3Ainterop-2023-grid%20or%20label%3Ainterop-2023-has%20or%20label%3Ainterop-2023-inert%20or%20label%3Ainterop-2023-mathfunctions%20or%20label%3Ainterop-2023-mediaqueries%20or%20label%3Ainterop-2023-modules%20or%20label%3Ainterop-2023-motion%20or%20label%3Ainterop-2023-offscreencanvas%20or%20label%3Ainterop-2023-property%20or%20label%3Ainterop-2023-pseudos%20or%20label%3Ainterop-2023-url%20or%20label%3Ainterop-2023-webcodecs%20or%20label%3Ainterop-2023-webcompat%20or%20label%3Ainterop-2023-webcomponents)
 
 
-### Border Image in CSS
+### Border Image
 
 Authors can specify an image to be used in place of the border-style. In this case, the border’s design is taken from the sides and corners of an image specified ([CSS `border-image`](https://github.com/web-platform-tests/interop/issues/146)).
 
@@ -32,7 +32,7 @@ Authors can specify an image to be used in place of the border-style. In this ca
 [Tests](https://wpt.fyi/results/css/css-backgrounds?label=experimental&label=master&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2023-cssborderimage)
 
 
-### Color Spaces and Functions in CSS
+### Color Spaces and Functions
 
 [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)
 
@@ -41,7 +41,7 @@ Authors can specify an image to be used in place of the border-style. In this ca
 [Tests](https://wpt.fyi/results/css?label=experimental&label=master&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2022-color%20or%20label%3Ainterop-2023-color)
 
 
-### Container Queries in CSS
+### Container Queries
 
 Container queries allow us to look at a container size and apply styles to the contents based on the size of their container rather than the viewport or other device characteristics. If the container has less space in the surrounding context, you can hide certain elements or use smaller fonts, for example. ([Container Queries](https://github.com/web-platform-tests/interop/issues/133)).
 
@@ -52,7 +52,7 @@ Container queries allow us to look at a container size and apply styles to the c
 [Tests](https://wpt.fyi/results/css/css-contain/container-queries?label=experimental&label=master&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2023-container)
 
 
-### Containment in CSS
+### Containment
 
 The contain CSS property indicates that an element and its contents are, as much as possible, independent from the rest of the document tree. Containment enables isolating a subsection of the DOM, providing performance benefits by limiting calculations of layout, style, paint, size, or any combination to a DOM subtree rather than the entire page. Containment can also be used to scope CSS counters and quotes.
 
@@ -61,6 +61,17 @@ The contain CSS property indicates that an element and its contents are, as much
 [Spec](https://drafts.csswg.org/css-contain-3/)
 
 [Tests](https://wpt.fyi/results/css?label=experimental&label=master&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2022-contain%20or%20label%3Ainterop-2023-contain)
+
+
+### CSS Math Functions
+
+The math functions allow CSS numeric values to be written as mathematical expressions.
+
+[MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions#math_functions)
+
+[Spec](https://drafts.csswg.org/css-values-4/#math)
+
+[Tests](https://wpt.fyi/results/css/css-values?label=experimental&label=master&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2023-mathfunctions)
 
 
 ### CSS Pseudo-classes
@@ -74,7 +85,7 @@ A CSS pseudo-class is a keyword added to a selector that specifies a special sta
 [Tests](https://wpt.fyi/results/css/selectors?label=experimental&label=master&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2023-pseudos)
 
 
-### Custom Properties in CSS
+### Custom Properties
 
 The `@property` CSS at-rule is part of the CSS Houdini umbrella of APIs, it allows developers to explicitly define their css custom properties, allowing for property type checking, setting default values, and define whether a property can inherit values or not.
 
@@ -150,7 +161,7 @@ The `inert` attribute on HTML elements makes the browser "ignore" user input eve
 [Tests](https://wpt.fyi/results/inert?label=experimental&label=master&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2023-inert)
 
 
-### Masking in CSS
+### Masking
 
 CSS Masking allows for partially or fully hiding portions of visual elements, using masking and clipping.
 
@@ -159,17 +170,6 @@ CSS Masking allows for partially or fully hiding portions of visual elements, us
 [Spec](https://drafts.fxtf.org/css-masking/#the-mask)
 
 [Tests](https://wpt.fyi/results/css/css-masking?label=experimental&label=master&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2023-cssmasking)
-
-
-### Math Functions in CSS
-
-The math functions allow CSS numeric values to be written as mathematical expressions.
-
-[MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions#math_functions)
-
-[Spec](https://drafts.csswg.org/css-values-4/#math)
-
-[Tests](https://wpt.fyi/results/css/css-values?label=experimental&label=master&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2023-mathfunctions)
 
 
 ### Media Queries 4
@@ -183,7 +183,7 @@ Media queries allow you to apply CSS styles depending on a device's general type
 [Tests](https://wpt.fyi/results/css/mediaqueries?label=experimental&label=master&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2023-mediaqueries)
 
 
-### Modules in Web Workers
+### Modules
 
 Add support for ES Modules in Web Worker contexts.
 
@@ -194,7 +194,7 @@ Add support for ES Modules in Web Worker contexts.
 [Tests](https://wpt.fyi/results/?label=experimental&label=master&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2023-modules)
 
 
-### Motion Path in CSS Animations
+### Motion Path
 
 Motion Path is a CSS module that allows authors to animate any graphical object along a custom path. CSS Motion Path is now supported in all three engines. But there are remaining test failures. This focus area is to make sure we reach a higher bar of interoperability, and make it more possible for developers to use Motion Path without problems.
 
@@ -270,13 +270,6 @@ The URL interface is used to parse, construct, normalize, and encode URLs. It wo
 [Tests](https://wpt.fyi/results/url?label=experimental&label=master&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2023-url)
 
 
-### Web Compat 2023
-
-A focus area for bugs that cause known site compatibility issues, or documented problems for authors creating libraries or sites, but which are not part of a larger feature that's appropriate for its own focus area.
-
-[Tests](https://wpt.fyi/results/?label=experimental&label=master&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2023-webcompat)
-
-
 ### Web Codecs (video)
 
 The Web Codecs API gives web developers low-level access to the individual frames of a video stream and chunks of audio. It is useful for web applications that require full control over the way media is processed. For example, video or audio editors, and video conferencing.
@@ -286,6 +279,13 @@ The Web Codecs API gives web developers low-level access to the individual frame
 [Spec](https://w3c.github.io/webcodecs/)
 
 [Tests](https://wpt.fyi/results/webcodecs?label=experimental&label=master&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2023-webcodecs)
+
+
+### Web Compat 2023
+
+A focus area for bugs that cause known site compatibility issues, or documented problems for authors creating libraries or sites, but which are not part of a larger feature that's appropriate for its own focus area.
+
+[Tests](https://wpt.fyi/results/?label=experimental&label=master&product=chrome&product=firefox&product=safari&aligned&view=interop&q=label%3Ainterop-2023-webcompat)
 
 
 ### Web Components
