@@ -4,7 +4,7 @@ The Interop Team aims to make the web more interoperable in key areas, prioritiz
 
 ## Governance
 
-The team makes decisions based on consensus, which is defined as support from at least two participating organizations and no opposition. Decisions can be made both in the repository and in meetings, as long as consensus can be established. By default, the group will operate in public. However, specific decision-making processes can be made member-confidential by defining them as such in a process document published by the team. Furthermore, process documents are only published with the consensus of the team.
+The team makes decisions based on consensus, which is defined as support from at least two participating organizations and no opposition. Decisions can be made both in the repository and in meetings, as long as consensus can be established. By default, the group will operate in public. However, specific decision-making processes can be made member-confidential by defining them as such in a process document published with the consensus of the team.
 
 The chair of the team is responsible for organizing meetings, driving discussions to a conclusion, and recording decisions. The team appoints an individual as the chair based on consensus at a minimum once per calendar year. The term limit for the chair will be 1 year and the same individual can be reappointed as chair, if there is consensus. If the team is unable to meet due to absence of a chair, the Core Team may appoint one directly.
 
