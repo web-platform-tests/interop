@@ -70,11 +70,9 @@ Decisions will be made at a specific meeting for discussion of preliminary elimi
 
 At this point, there is a clear list of Focus Area proposals under consideration. Each organization has two weeks to review the list of proposals and make Round 2 decisions.
 
-Each member organization chooses `N` number of proposals they would like to see move on to Round 3. There is no ranking or scoring at this point, a simple “yes, we want this proposal to stay in consideration”. Once all the “yeses” are gathered, any proposal that does not have the support of at least one organization is eliminated.
+Each member organization chooses 40 number of proposals they would like to see move on to Round 3. There is no ranking or scoring at this point, a simple “yes, we want this proposal to stay in consideration”. Once all the “yeses” are gathered, any proposal that does not have the support of at least one organization is eliminated.
 
-For example, let’s imagine there are 112 focus area proposals submitted. Let’s set `N` to 10 — so each of the six organizations gets to choose 10 proposals. There will likely be significant overlap, but not complete. So imagine 32 proposals get chosen by at least one organization. (It will be no less than 10, and no more than 60.) This means the remaining 80 proposals are eliminated.
-
-If `N` is increased, then more proposals will make it into the next round. The goal is to find a balance so all of the proposals that are most likely to be considered high priority will make it into the next round. While eliminating as many as possible, to reduce the workload of the Interop 2024 organizations. There’s no need to extensively evaluate proposals of lower priority.
+The goal is to find a balance so all of the proposals that are most likely to be considered high priority will make it into the next round. While eliminating as many as possible, to reduce the workload of the Interop 2024 organizations. There’s no need to extensively evaluate proposals of lower priority.
 
 ### Elimination Round 3: Prioritization
 
