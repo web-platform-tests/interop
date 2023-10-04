@@ -70,7 +70,7 @@ Decisions will be made at a specific meeting for discussion of preliminary elimi
 
 At this point, there is a clear list of Focus Area proposals under consideration. Each organization has two weeks to review the list of proposals and make Round 2 decisions.
 
-Each member organization chooses 40 number of proposals they would like to see move on to Round 3. There is no ranking or scoring at this point, a simple “yes, we want this proposal to stay in consideration”. Once all the “yeses” are gathered, any proposal that does not have the support of at least one organization is eliminated.
+Each member organization chooses 40 proposals they would like to see move on to Round 3. There is no ranking or scoring at this point, a simple “yes, we want this proposal to stay in consideration”. Once all the “yeses” are gathered, any proposal that does not have the support of at least one organization is eliminated.
 
 The goal is to find a balance so all of the proposals that are most likely to be considered high priority will make it into the next round. While eliminating as many as possible, to reduce the workload of the Interop 2024 organizations. There’s no need to extensively evaluate proposals of lower priority.
 
