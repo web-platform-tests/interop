@@ -57,7 +57,7 @@ Any Focus Area proposal that does not meet the minimum publicly-stated selection
 2. The proposed technology is already interoperable according to WPT results.
 3. The proposed technology is not on a standards track, or its standard is not sufficiently mature.
 
-Decisions will be made at a specific meeting for discussion of preliminary eliminations. Any member organization can bring up a proposal they believe should be eliminated. Brief debate can be had. If **there is quick consensus**, that proposal will be eliminated. If there is not consensus and a longer debate is needed, the proposal will be not be eliminated and will instead move on to the next round.
+Decisions will be made at a specific meeting for discussion of preliminary eliminations. The minutes of this meeting are confidential to the team. Any member organization can bring up a proposal they believe should be eliminated. Brief debate can be had. If **there is quick consensus**, that proposal will be eliminated. If there is not consensus and a longer debate is needed, the proposal will be not be eliminated and will instead move on to the next round.
 
 1. Setup *Disqualification meeting*
 2. Each organization can propose items for disqualification.
@@ -70,7 +70,7 @@ Decisions will be made at a specific meeting for discussion of preliminary elimi
 
 At this point, there is a clear list of Focus Area proposals under consideration. Each organization has two weeks to review the list of proposals and make Round 2 decisions.
 
-Each member organization chooses 40 proposals they would like to see move on to Round 3. There is no ranking or scoring at this point, a simple “yes, we want this proposal to stay in consideration”. Once all the “yeses” are gathered, any proposal that does not have the support of at least one organization is eliminated.
+Each member organization chooses 40 proposals they would like to see move on to Round 3; these selections are confidential to the team. There is no ranking or scoring at this point, a simple “yes, we want this proposal to stay in consideration”. Once all the “yeses” are gathered, any proposal that does not have the support of at least one organization is eliminated.
 
 The goal is to find a balance so all of the proposals that are most likely to be considered high priority will make it into the next round. While eliminating as many as possible, to reduce the workload of the Interop 2024 organizations. There’s no need to extensively evaluate proposals of lower priority.
 
@@ -78,7 +78,7 @@ The goal is to find a balance so all of the proposals that are most likely to be
 
 The official list of Focus Area proposals is updated to reflect the elimination of proposals not chosen by any organization. Each organization now has 20 days to review the list of remaining proposals and make their Round 3 decisions.
 
-In this round, each organization ranks the proposals in order of importance from most to least. And submits any vetos they may wish to exercise.
+In this round, each organization ranks the proposals in order of importance from most to least. And submits any vetos they may wish to exercise. The entire contents of this round is confidential to the team.
 
 Any proposal that gets a veto is immediately eliminated.
 
