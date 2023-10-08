@@ -4,7 +4,7 @@ Interop 2024 is an effort to increase interoperability across browsers in key te
 
 ## Proposals
 
-Thank you to everyone who submitted a [proposal for Interop 2024](https://github.com/orgs/web-platform-tests/projects/3)! We got a total of TODO proposals, and are currently working on evaluating them.
+Thank you to everyone who submitted a [proposal for Interop 2024](https://github.com/orgs/web-platform-tests/projects/3)! We got a total of 103 proposals, and are currently working on evaluating them.
 
 ## Timeline
 
