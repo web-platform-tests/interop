@@ -88,7 +88,7 @@ For example, if there are 20 remaining proposals, each organization will choose 
 
 (If there appear to be quite a few proposals remaining in this round, the group can decide to only ask for each organization to submit their Top `X` number, while rating the rest zero. For example, if 50 proposals remain at this point, it likely makes sense to only submit a Top 25, and to not worry about ranking 26-50 in a specific order.)
 
-After Round 3, every remaining proposal can be listed in order, with the group’s highest priority at the top, and the lowest at the bottom.
+After Round 3, every remaining proposal can be listed in order, with the group’s highest priority at the top, and the lowest at the bottom. The team will decide by consensus which of the proposals will be included in Interop 2024 and how they will be grouped into focus areas and investigation efforts.
 
 NOTE: in the past, “Exclude” was a way to express many different kinds of sentiments — including: does not meet the minimum qualifications, or this is low priority to us. We expect “veto” to be used much less than “exclude”, because there are other ways to express those sentiments. Vetoing is specifically for objecting to a particular proposal being included *at all,* no matter how highly ranked other organizations might find it. It’s for expressing objection to a particular web technology, perhaps to something an organization has already expressed an objection to in the web standards process or otherwise has an objection to implementing.
 
