@@ -82,7 +82,7 @@ In this round, each organization ranks the proposals in order of importance from
 
 Any proposal that gets a veto is immediately eliminated.
 
-Each proposal gets assigned points from each organization, according to their rank, and an ordered list of all remaining proposals is created. Where `X` is number of proposals that are ranked, and `Y` is the ranking a particular proposal gets from a certain organization, then that proposal gets `X-Y`  points from that organization. Once all 6 rankings are in for that proposal, the total points from all six organizations is known. If that proposal is not eliminated by a veto, then it has a certain number of points, and can be listed in order among the other proposals.
+Each proposal gets assigned points from each organization, according to their rank, and an ordered list of all remaining proposals is created. Where `X` is number of proposals that are ranked, and `Y` is the ranking a particular proposal gets from a certain organization, then that proposal gets `X-Y+1`  points from that organization. Once all 6 rankings are in for that proposal, the total points from all six organizations is known. If that proposal is not eliminated by a veto, then it has a certain number of points, and can be listed in order among the other proposals.
 
 For example, if there are 20 remaining proposals, each organization will choose a number 1, number 2, down to number 20. Let’s say a proposal for flying cars gets the following ranks: 1, 5, 7, 10, 14, 20. That will give it the following points: 20, 15, 13, 10, 6, 1 = 65 points total.
 
