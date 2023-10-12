@@ -12,6 +12,8 @@
 
 Interop 2024 and the set of accepted proposals will be announced in January 2024.
 
+(This timeline can be adjusted as needed, at any time, by consensus of the Interop Team.) 
+
 ### Call for Proposal Period
 
 An open call for proposals will begin on a specific date, and run for three weeks.
