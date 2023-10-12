@@ -6,7 +6,7 @@
 
 1. Call for Proposal Period — three weeks (Sep 14 – Oct 7)
 2. Continued discussion and refinement of proposals — one week (Oct 8 – Oct 14)
-3. Elimination Round 1: Disqualification — one week (Oct 12 – Oct 19)
+3. Elimination Round 1: Disqualification — one week (Oct 16 – Oct 20)
 4. Elimination Round 2: Reduction — two weeks (Oct 19 – Nov 2)
 5. Elimination Round 3: Prioritization — three weeks (Nov 2 – Nov 30, exc. North America Thanksgiving)
 
