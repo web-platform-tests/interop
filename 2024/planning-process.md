@@ -5,7 +5,7 @@
 ### Timeline
 
 1. Call for Proposal Period — three weeks (Sep 14 – Oct 5)
-2. Continued discussion and refinement of proposals — one week (Oct 5 – Oct 12)
+2. Continued discussion and refinement of proposals — one week (Oct 8 – Oct 14)
 3. Elimination Round 1: Disqualification — one week (Oct 12 – Oct 19)
 4. Elimination Round 2: Reduction — two weeks (Oct 19 – Nov 2)
 5. Elimination Round 3: Prioritization — three weeks (Nov 2 – Nov 30, exc. North America Thanksgiving)
