@@ -24,7 +24,7 @@ An open call for proposals will begin on a specific date, and run for three week
 2. Proposals should be for either:
     1. Focus Area, or
     2. Investigation Project
-3. Related proposals should be filed separately. For example, all the ideas for “Web Compat” should be filed as a set of separate issues, not one issue. This makes it easier to discuss and prioritize each separately. Bundles of proposals risk being rejected or deprioritized.
+3. Related proposals should be filed separately. For example, a group of specific features to address under “Typography” should be filed as separate issues, not one issue. This makes it easier to discuss and prioritize each separately. Bundles of proposals risk being rejected or deprioritized.
 4. Focus Area proposals must:
     1. Name a specific web technology.
         1. This can be a web technology that has not yet been implemented in any or all browser engines.
