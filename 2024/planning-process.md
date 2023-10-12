@@ -80,7 +80,7 @@ The official list of Focus Area proposals is updated to reflect the elimination 
 
 In this round, each organization ranks the proposals in order of importance from most to least. And submits any vetos they may wish to exercise. The entire contents of this round is confidential to the team.
 
-Any proposal that gets a veto is immediately eliminated.
+Any proposal that has an objection is immediately eliminated.
 
 Each proposal gets assigned points from each organization, according to their rank, and an ordered list of all remaining proposals is created. Where `X` is number of proposals that are ranked, and `Y` is the ranking a particular proposal gets from a certain organization, then that proposal gets `X-Y+1`  points from that organization. Once all 6 rankings are in for that proposal, the total points from all six organizations is known. If that proposal is not eliminated by a veto, then it has a certain number of points, and can be listed in order among the other proposals.
 
