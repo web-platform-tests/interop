@@ -35,11 +35,15 @@ An open call for proposals will begin on a specific date, and run for three week
         i. This can be a web technology that has not yet been implemented in any or all browser engines.
         ii. Or this can be a web technology that has already been implemented in all browser engines, but those implementations have test failures that reveal a lack of compliance to the web standard, causing a lack of interoperability.
     B. The feature must be defined in a sufficiently mature standards-track web specification from one the following organizations. Please provide a link to the web standard. 
-        i. [IETF](https://www.ietf.org/) (Standard Track)
-        ii. [Khronos Group](https://www.khronos.org/)
-        iii. [TC39](https://tc39.es/) (Stage 2+)
-        iv. [W3C](https://www.w3.org/) 
-        v. [WHATWG](https://whatwg.org/)
+        i. [Alliance for Open Media](https://aomedia.org/)
+        ii. [IETF](https://www.ietf.org/) (Standard Track)
+        iii. [ISO](https://www.iso.org/)
+        iv. [Khronos Group](https://www.khronos.org/)
+        v. [TC39](https://tc39.es/) (Stage 2+)
+        vi. [W3C](https://www.w3.org/) 
+        vii. [WebAssembly](https://webassembly.org/specs/) (Phase 3+)
+        viii. [WHATWG](https://whatwg.org/)
+        ix. or other similar industry web standards organizations
     C. Describe the benefit to web developers and the web itself
     D. Link to existing tests (if any) and/or describe plan to create needed tests
 5. Investigation Project proposals must: 
