@@ -54,6 +54,6 @@ The following organizations make up the Interop Team, in alphabetical order:
 
 The Interop Team is made up of organizations with a track record of contributions to the web-platform-tests project.
 
-Organizations may apply to join the team by contacting the chair. New members will be added with a consensus decision of existing members.
+Organizations may apply to join the team by contacting the chair. New members will be added with a consensus decision of existing members. The deliberations are confidential to the existing members.
 
 Existing members may leave the team at any time without further obligation.
