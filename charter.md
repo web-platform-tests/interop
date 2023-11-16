@@ -18,7 +18,7 @@ The Interop Team's work is subject to the [WPT code of conduct](https://github.c
 
 All contributions are licensed under the terms in [CONTRIBUTING.md](https://github.com/web-platform-tests/wpt/blob/master/CONTRIBUTING.md).
 
-Substantive changes to this charter are done via the [web-platform-tests RFC process](https://github.com/web-platform-tests/rfcs).
+Substantive changes to this charter are done via the [web-platform-tests RFC process](https://github.com/web-platform-tests/rfcs). Substantive changes to this charter can be made using the wpt RFC process, with an additional requirement of explicit consensus from the Interop Team participants.
 
 ## Scope
 
