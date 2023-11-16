@@ -8,7 +8,7 @@ The team makes decisions based on consensus. A decision has consensus if it has 
 
 The team operates in public, except when otherwise allowed by this charter.
 
-The team may publish a process document to define how it will develop a given metric. These process documents are adopted by a decision of the team. These process documents may define parts of their operation to be confidential to the team.
+The team must publish a process document to define how it will develop a given metric. These process documents are adopted by a decision of the team. These process documents may define parts of their operation to be confidential to the team.
 
 The chair of the team is responsible for organizing meetings, driving discussions to a conclusion, and recording decisions. The team appoints an individual as the chair based on consensus at a minimum once per calendar year. The term limit for the chair will be 1 year and the same individual can be reappointed as chair, if there is consensus. If the team is unable to meet due to absence of a chair, the Core Team may appoint one directly.
 
