@@ -6,7 +6,7 @@ The Interop Team aims to make the web more interoperable in key areas, prioritiz
 
 The team makes decisions based on consensus. A decision has consensus if it has support from at least two participating organizations and no opposition.
 
-The team operates in public, except when otherwise allowed by this charter.
+The team operates in public, except when otherwise allowed by this charter, or by process documents specific to given metrics or other deliverables of the team.
 
 The team must publish a process document to define how it will develop a given metric. These process documents are adopted by a decision of the team. These process documents may define parts of their operation to be confidential to the team.
 
