@@ -1,4 +1,4 @@
-# Proposal for Interop 2024 Process
+# Interop 2024 Process
 
 The Interop Project is an ongoing effort to make the web more interoperable in key areas, prioritized by user and web developer needs. It’s part of the [_Web Platform Tests_](https://github.com/web-platform-tests/wpt) project, the main test suite for the web platform. And it’s facilitated by the [_Interop Team_](https://github.com/web-platform-tests/interop/blob/main/supporters.md).
 
