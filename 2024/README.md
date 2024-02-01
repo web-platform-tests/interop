@@ -23,7 +23,7 @@ The following features were selected for Interop 2024.
 - [Tests](https://wpt.fyi/results/?product=chrome&product=edge&product=firefox&product=safari&aligned=&view=interop&q=label%3Ainterop-2024-accessibility&label=master&label=experimental) 
 
 This focus area comes from work on one of the Interop 2023 investigation areas.
-The work resulted in tests that mean we can include improving the interoperability of two specific areas relating to the browser’s accessibility tree.
+The work resulted in tests that mean we can include improving the interoperability of some specific areas relating to the browser’s accessibility tree.
 
 The first area is Accessible Name and Description Computation (_accname_).
 Accessible names convey the purpose or intent of the element.
@@ -36,6 +36,8 @@ The computed role of an element is a string that represents the role of the elem
 This is used primarily in developer tools and,
 for example, in the WebDriver function getComputedRole, enabling interoperability testing.
 
+Lastly, there's a new set of tests covering `display: contents`.
+
 #### Work covered as part of Interop 2024
 
 During Interop 2024 the aim is to ensure all browsers create accessible names and computed roles in the same way.
@@ -44,6 +46,7 @@ During Interop 2024 the aim is to ensure all browsers create accessible names an
 
 - [Accessible Name and Description Computation 1.2 Specification](https://w3c.github.io/accname/)
 - [MDN: Accessible name](https://developer.mozilla.org/en-US/docs/Glossary/Accessible_name) 
+- [More accessible markup with display: contents](https://hidde.blog/more-accessible-markup-with-display-contents/)
 
 
 ### CSS Nesting 
