@@ -394,7 +394,7 @@ The following investigation areas were selected for Interop 2023.
 
 ### Accessibility Testing
 
-Carried over from 2023, this investigation area involves working towards generating consistent accessibility tries from the same DOM and CSS.
+Carried over from 2023, this investigation area involves working towards generating consistent accessibility trees from the same DOM and CSS.
 
 
 ### Mobile Testing
