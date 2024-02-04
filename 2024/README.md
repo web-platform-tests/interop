@@ -173,7 +173,7 @@ The work this year does not include storage buckets.
 - [MDN: Using IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB) 
 - [web.dev: IndexedDB](https://web.dev/articles/indexeddb)
 
-#### Layout
+### Layout
 
 - [Issue for flexbox](https://github.com/web-platform-tests/interop/issues/478)
 - [Issue for grid](https://github.com/web-platform-tests/interop/issues/481)
@@ -347,7 +347,7 @@ The work this year will ensure interoperability of `:dir()` and `dir=auto`, base
 
 - [MDN: :dir](https://developer.mozilla.org/en-US/docs/Web/CSS/:dir)
 
-#### text-wrap: balance
+### text-wrap: balance
 
 - [Issue](https://github.com/web-platform-tests/interop/issues/561) 
 - [Tests](https://wpt.fyi/results/css/css-text?product=chrome&product=edge&product=firefox&product=safari&aligned=&view=interop&q=label%3Ainterop-2024-text-wrap&label=master&label=experimental)
