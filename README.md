@@ -58,6 +58,6 @@ There are also guiding values that should be taken into consideration:
 * The feature has a positive impact on privacy.
 * The feature has a positive impact on security.
 
-### Feedback
+## Feedback
 
 If you see a bug or unclarity in the site or process of Interop, please file an [issue](https://github.com/web-platform-tests/interop/issues). For other questions or advice, you can also [email us](mailto:interop-questions@googlegroups.com).
