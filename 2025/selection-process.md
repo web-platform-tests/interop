@@ -1,4 +1,4 @@
-### Interop 2025 proposal selection process
+# Interop 2025 proposal selection process
 
 Interop 2025 is an effort to increase interoperability across browsers in key technical areas that are of high priority to web developers and end users. This effort is part of the [web-platform-tests](https://github.com/web-platform-tests/wpt) (WPT) project — an automated test suite for web standards — and run by a team of representatives from companies that make substantial contributions to browser rendering engines (including Apple, Bocoup, Google, Igalia, Microsoft, and Mozilla).
 
@@ -7,7 +7,7 @@ Please see the [Interop 2024 Dashboard](https://wpt.fyi/interop-2024) and [Inter
 Each iteration of the project starts with an open call for proposals, followed by a selection and prioritization process by each participating organization. Final decision on the inclusion of a proposal is made by [consensus](https://github.com/web-platform-tests/interop/blob/main/charter.md#:~:text=The%20team%20makes%20decisions%20based%20on%20consensus.%20A%20decision%20has%20consensus%20if%20it%20has%20support%20from%20at%20least%20two%20participating%20organizations%20and%20no%20opposition). For Interop 2025, the timeline and the selection process is as described below.
 
 
-### Timeline
+## Timeline
 
 This is the general timeline for the Interop 2025 proposal selection process. The dates are centered on the Interop team meeting (Thursdays). Please note that the timelines are subject to change.
 
@@ -18,10 +18,10 @@ This is the general timeline for the Interop 2025 proposal selection process. Th
 *   Scope of the Interop 2025 project will be published, the first half of February, 2025.
 
 
-### Proposal selection phases
+## Proposal selection phases
 
 
-#### Phase 1: Filtering (Oct 3rd to Oct 17th)
+### Phase 1: Filtering (Oct 3rd to Oct 17th)
 
 Interop meeting dates: Oct 3rd, Oct 10th, Oct 17th
 [Visibility] All decisions and results from this phase will be published on the Interop repo.
@@ -33,7 +33,7 @@ There are two steps to this phase:
 2. First round of feedback on proposals that do not meet the Interop project criteria would be provided to proposal authors on the Interop repo.
 
 
-#### Phase 2: Ranking (Oct 18th to Oct 31st)
+### Phase 2: Ranking (Oct 18th to Oct 31st)
 
 Interop meeting dates: Oct 24th, Oct 31st
 [Visibility] All decisions, made in Interop team meetings during this phase, will be confidential. However, organizations can choose to publish their own rankings, outside of the Interop program.
@@ -44,7 +44,7 @@ In this stage, the focus would be on organizations picking areas where there is 
 4. Any proposal that has at least 2 organizations expressing high priority and no objections, would be moved forward to the next phase of consensus building. Any organization that posts an objection would also outline the reasoning for it, to the Interop team. The ranking of proposals would be done asynchronously, ahead of the Interop meetings.
 
 
-#### Phase 3: Prioritization (Nov 1st to Dec 5th)
+### Phase 3: Prioritization (Nov 1st to Dec 5th)
 
 Interop meeting dates: Nov 7th, Nov 14th, Nov 21st, Dec 5th
 [Visibility] All decisions made in this phase will be confidential. 
@@ -56,7 +56,7 @@ In this stage, each organization will further prioritize proposals for a specifi
 7. Any proposal that has support from 2 organizations and does not have any objection, will be considered included in Interop 2025. At the end of this phase, the expectation is that the Interop team will have a first draft of proposals that are included in Interop 2025.
 
 
-#### Phase 4: Carryovers and Grouping (Dec 6th to Dec 19th)
+### Phase 4: Carryovers and Grouping (Dec 6th to Dec 19th)
 
 Interop meeting dates: Dec 12th and Dec 19th
 [Visibility] All decisions and results from this phase will be confidential.
@@ -68,7 +68,7 @@ In this stage, the Interop team will evaluate progress made in Interop 2024 focu
 10. This phase will also include decisions on inclusion of investigation effort proposals, by consensus.
 
 
-#### Phase 5: Final decisions (Jan 9th to Jan 30th)
+### Phase 5: Final decisions (Jan 9th to Jan 30th)
 
 Interop meeting dates: Jan 9th, Jan 16th, Jan 23rd, Jan 30th
 [Visibility] The final list of focus areas would be made public at launch
