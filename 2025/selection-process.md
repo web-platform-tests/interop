@@ -56,7 +56,7 @@ In this stage, each organization will further prioritize proposals for a specifi
 
 5. From the list of proposals that get through to Phase 3, each organization will have an opportunity to further prioritize internally and build consensus within the Interop Team based on available signals.
 6. Organizations can also object to any proposal at this point.
-7. Any proposal that has support from 2 organizations and does not have any objection, will be considered included in Interop 2025. At the end of this phase, the expectation is that the Interop team will have a first draft of proposals that are included in Interop 2025.
+7. Any proposal that has support from 2 organizations and does not have an objection, will be considered included in Interop 2025. At the end of this phase, the expectation is that the Interop team will have a first draft of proposals that are included in Interop 2025.
 
 
 ### Phase 4: Carryovers and Grouping (Dec 6th to Dec 19th)
