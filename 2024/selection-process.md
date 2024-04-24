@@ -26,30 +26,30 @@ This timeline can be adjusted as needed, at any time, by consensus of the Intero
 An open call for proposals will begin on a specific date, and run for three weeks.
 
 1. Anyone can submit a proposal.
-2. Proposals should be for either: 
-    A. Focus Area, or
-    B. Investigation Project
-3. Related proposals should be filed separately. For example, a group of specific features to address under “Typography” should be filed as separate issues, not one issue. This makes it easier to discuss and prioritize each separately. Bundles of proposals risk being rejected or deprioritized.
-4. Focus Area proposals must: 
-    A. Name a specific web technology. 
-        i. This can be a web technology that has not yet been implemented in any or all browser engines.
-        ii. Or this can be a web technology that has already been implemented in all browser engines, but those implementations have test failures that reveal a lack of compliance to the web standard, causing a lack of interoperability.
-    B. The feature must be defined in a sufficiently mature standards-track web specification from one the following organizations. Please provide a link to the web standard. 
-        i. [Alliance for Open Media](https://aomedia.org/)
-        ii. [IETF](https://www.ietf.org/) (Standard Track)
-        iii. [ISO](https://www.iso.org/)
-        iv. [Khronos Group](https://www.khronos.org/)
-        v. [TC39](https://tc39.es/) (Stage 2+)
-        vi. [W3C](https://www.w3.org/) 
-        vii. [WebAssembly](https://webassembly.org/specs/) (Phase 3+)
-        viii. [WHATWG](https://whatwg.org/)
-        ix. or other similar industry web standards organizations
-    C. Describe the benefit to web developers and the web itself
-    D. Link to existing tests (if any) and/or describe plan to create needed tests
-5. Investigation Project proposals must: 
-    A. Outline their scope and their goals,
-    B. Not substantially be work better suited to a group within a standards development organization,
-    C. Clearly provide present or future impact on cross-browser interoperability.
+2. Proposals should be for either:
+     1. Focus Area, or
+     2. Investigation Project
+4. Related proposals should be filed separately. For example, a group of specific features to address under “Typography” should be filed as separate issues, not one issue. This makes it easier to discuss and prioritize each separately. Bundles of proposals risk being rejected or deprioritized.
+5. Focus Area proposals must: 
+    1. Name a specific web technology. 
+        1. This can be a web technology that has not yet been implemented in any or all browser engines.
+        2. Or this can be a web technology that has already been implemented in all browser engines, but those implementations have test failures that reveal a lack of compliance to the web standard, causing a lack of interoperability.
+    2. The feature must be defined in a sufficiently mature standards-track web specification from one the following organizations. Please provide a link to the web standard. 
+        1. [Alliance for Open Media](https://aomedia.org/)
+        2. [IETF](https://www.ietf.org/) (Standard Track)
+        3. [ISO](https://www.iso.org/)
+        4. [Khronos Group](https://www.khronos.org/)
+        5. [TC39](https://tc39.es/) (Stage 2+)
+        6. [W3C](https://www.w3.org/) 
+        7. [WebAssembly](https://webassembly.org/specs/) (Phase 3+)
+        8. [WHATWG](https://whatwg.org/)
+        9. or other similar industry web standards organizations
+    3. Describe the benefit to web developers and the web itself
+    4. Link to existing tests (if any) and/or describe plan to create needed tests
+6. Investigation Project proposals must: 
+    1. Outline their scope and their goals,
+    2. Not substantially be work better suited to a group within a standards development organization,
+    3. Clearly provide present or future impact on cross-browser interoperability.
 
 As soon as each proposal is submitted as a GitHub issue, discussion of that proposal can begin. Questions can be asked. The proposal can be edited and refined.
 
