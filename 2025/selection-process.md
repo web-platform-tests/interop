@@ -25,7 +25,7 @@ This is the general timeline for the Interop 2025 proposal selection process. Th
 
 Interop meeting dates: Oct 3rd, Oct 10th, Oct 17th
 
-[Visibility] All decisions and results from this phase will be published on the Interop repo.
+[Visibility] Outcomes from this phase will be published on the Interop repo.
 
 In this stage, proposals that do not meet the criteria set by the Interop team will be filtered out. Feedback would be provided to the proposal authors to verify any additional data points that should be considered prior to exclusion. The Interop team will decide on the exclusion of proposals, based on consensus and proposal authors will be informed at the end of this phase. 
 
@@ -38,7 +38,7 @@ There are two steps to this phase:
 
 Interop meeting dates: Oct 24th, Oct 31st
 
-[Visibility] All decisions, made in Interop team meetings during this phase, will be confidential. However, organizations can choose to publish their own rankings, outside of the Interop program.
+[Visibility] All decisions, made in Interop team meetings during this phase, will be confidential. However, organizations can choose to publish their own priorities, for the Interop proposals, outside of the Interop program.
 
 In this stage, the focus would be on organizations picking areas where there is internal alignment on the specific feature or area being important enough to work on from a user/web developer perspective. Each organization will have different rubrics for prioritization. However, where applicable, organizations can choose to have any data used for prioritization be shared publicly.
 
