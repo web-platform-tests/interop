@@ -1,81 +1,183 @@
 # Interop 2025 proposal selection process
 
-Interop 2025 is an effort to increase interoperability across browsers in key technical areas that are of high priority to web developers and end users. This effort is part of the [web-platform-tests](https://github.com/web-platform-tests/wpt) (WPT) project — an automated test suite for web standards — and run by a team of representatives from companies that make substantial contributions to browser rendering engines (including Apple, Bocoup, Google, Igalia, Microsoft, and Mozilla).
+Interop 2025 is an effort to increase interoperability across browsers
+in key technical areas that are of high priority to web developers and
+end users. This effort is part of the
+[web-platform-tests](https://github.com/web-platform-tests/wpt) (WPT)
+project — an automated test suite for web standards — and run by a
+team of representatives from companies that make substantial
+contributions to browser rendering engines (including Apple, Bocoup,
+Google, Igalia, Microsoft, and Mozilla).
 
-Please see the [Interop 2024 Dashboard](https://wpt.fyi/interop-2024) and [Interop 2024 README](https://github.com/web-platform-tests/interop/blob/main/2024/README.md) for the current iteration of the project.
+Please see the [Interop 2024 Dashboard](https://wpt.fyi/interop-2024)
+and [Interop 2024
+README](https://github.com/web-platform-tests/interop/blob/main/2024/README.md)
+for the current iteration of the project.
 
-Each iteration of the project starts with an open call for proposals, followed by a selection and prioritization process by each participating organization. Final decision on the inclusion of a proposal is made by [consensus](https://github.com/web-platform-tests/interop/blob/main/charter.md#:~:text=The%20team%20makes%20decisions%20based%20on%20consensus.%20A%20decision%20has%20consensus%20if%20it%20has%20support%20from%20at%20least%20two%20participating%20organizations%20and%20no%20opposition). For Interop 2025, the timeline and the selection process is as described below.
-
+Each iteration of the project starts with an open call for proposals,
+followed by a selection and prioritization process by each
+participating organization. Final decision on the inclusion of a
+proposal is made by
+[consensus](https://github.com/web-platform-tests/interop/blob/main/charter.md#:~:text=The%20team%20makes%20decisions%20based%20on%20consensus.%20A%20decision%20has%20consensus%20if%20it%20has%20support%20from%20at%20least%20two%20participating%20organizations%20and%20no%20opposition). For
+Interop 2025, the timeline and the selection process is as described
+below.
 
 ## Timeline
 
 This is the general timeline for the Interop 2025 proposal selection process. The dates are centered on the Interop team meeting (Thursdays). Please note that the timelines are subject to change.
 
 *   Proposal submission window (3 weeks): Sept 19th, 2024 to Oct 3rd, 2024
-*   First round of feedback on proposals that do not meet the Interop project criteria (2 weeks): Oct 3rd, 2024 to Oct 17th, 2024
-*   Proposal selection and prioritization: Oct - Dec 2024
-*   Interop 2024 carryover evaluation and 2025 grouping: Dec 2024 - Jan 2025
-*   Scope of the Interop 2025 project will be published, the first half of February, 2025.
+*   Proposal selection: Before December 19th 2024
+*   Scope of the Interop 2025 project published: the first half of February, 2025.
+
+## Proposal selection process
+
+The aim of the proposal selection process is to generate a shared
+understanding of the merits of each proposal, and converge on a
+decision about the most impactful areas in which we can improve
+interop on the web over 2025.
 
 
-## Proposal selection phases
+### Prior to Proposal Submission
 
+**Timeline**: Before September 19th 2024
 
-### Phase 1: Filtering (Oct 3rd to Oct 17th)
+The interop team will develop a non-exhaustive set of signals/criteria
+that are considered important when assessing proposals. These will be
+made available to proposal authors, and used later in the process when
+championing and assessing different proposals. However they are not
+binding on any specific participant i.e. participants are free to
+consider additional criteria (such as individual resource constraints)
+and weigh the shared criteria as they choose.
 
-Interop meeting dates: Oct 3rd, Oct 10th, Oct 17th
+### Proposal Submission
 
-[Visibility] Outcomes from this phase will be published on the Interop repo.
+**Timeline**: Before September 19th to October 3rd
 
-In this stage, proposals that do not meet the criteria set by the Interop team will be filtered out. Feedback would be provided to the proposal authors to verify any additional data points that should be considered prior to exclusion. The Interop team will decide on the exclusion of proposals, based on consensus and proposal authors will be informed at the end of this phase. 
+Members of the web community, including participants, will be invited
+to submit proposals for Interop 2025. These will take the form of
+issues on the Interop GitHub repository. Issue templates and
+documentation will be provided to guide proposers towards proposals
+that meet the formal criteria (e.g. around testability) and which can
+be assessed according to the agreed criteria.
 
-There are two steps to this phase:
-1. Proposal refinement: Oct 4th, 2024 to Oct 10th, 2024 - feedback would be provided to proposal authors on the Interop repo. 
-2. First round of feedback on proposals that do not meet the Interop project criteria would be provided to proposal authors on the Interop repo.
+Items from Interop 2024 which have not yet reached full
+interoperability will be automatically resubmitted, and will go
+through the process as for any other proposal. In addition new
+proposals can be submitted that extend the scope of existing focus
+areas (whether or not they have reached full interoperability).
 
+As in previous years proposals can either be for focus areas or
+investigations. For simplicity the remainder of this document will
+only refer to focus area proposals, but this also covers proposals for
+investigation efforts.
 
-### Phase 2: Ranking (Oct 18th to Oct 31st)
+### Champion Selection
 
-Interop meeting dates: Oct 24th, Oct 31st
+**Timeline**: October 3rd, 10th, 17th
 
-[Visibility] All decisions, made in Interop team meetings during this phase, will be confidential. However, organizations can choose to publish their own priorities, for the Interop proposals, outside of the Interop program.
+Interop participants propose focus areas, consisting of one or more
+proposals, that they would like to champion. Proposals will initially
+be shared in time for the meeting on October 10th, and champions
+finalised on October 17th.
 
-In this stage, the focus would be on organizations picking areas where there is internal alignment on the specific feature or area being important enough to work on from a user/web developer perspective. Each organization will have different rubrics for prioritization. However, where applicable, organizations can choose to have any data used for prioritization be shared publicly.
+Where more than one participant wants to champion the same focus area
+proposal a single champion must be nominated for the remainder of the
+process.
 
-3. Each organization will select proposals for the prioritization discussion by putting a High/Low priority signal against each proposal where they have internal alignment to do the work. A low priority signal would indicate a willingness to support the proposal, if other organizations also deem it to be important. Organizations can also express any objections at this point.
-4. Any proposal that has at least 2 organizations expressing high priority and no objections, would be moved forward to the next phase of consensus building. Any organization that posts an objection would also outline the reasoning for it, to the Interop team. The ranking of proposals would be done asynchronously, ahead of the Interop meetings.
+Champions and seconds (i.e. organizations that would champion a focus
+area but were not the final selected champion) are recorded for each
+proposal.
 
+There is no assigned limit to the number of proposals one participant
+may champion.
 
-### Phase 3: Prioritization (Nov 1st to Dec 5th)
+_Alternative_: Each participant is expected to champion a minimum of
+three proposals.
 
-Interop meeting dates: Nov 7th, Nov 14th, Nov 21st, Dec 5th
+In case different focus areas are put forward with overlapping sets of
+proposals, the participants are encouraged to work out a way to divide
+the proposals into focus areas in a way that satisfies everyone. If
+this is impossible then carrying forward multiple competing focus area
+proposals is permitted, but final selections will only allow each
+proposal to appear in a single focus area.
 
-[Visibility] All decisions made in this phase will be confidential. 
+Any proposal without a champion will not be carried forward.
 
-In this stage, each organization will further prioritize proposals for a specific year (Interop 2025). This is more involved and a complex process where each organization weighs engineering priorities and available resources.
+### Focus Area Proposal Refinement
 
-5. From the list of proposals that get through to Phase 3, each organization will have an opportunity to further prioritize internally and build consensus within the Interop Team based on available signals.
-6. Organizations can also object to any proposal at this point.
-7. Any proposal that has support from 2 organizations and does not have an objection, will be considered included in Interop 2025. At the end of this phase, the expectation is that the Interop team will have a first draft of proposals that are included in Interop 2025.
+**Timeline**: October 24th and 31st
 
+Champions gather evidence of the impact of their proposals, using the
+rubric developed earlier. Specific participants may also be asked
+to provide (publicly available) information for all proposals where
+that participant has ownership of the information (e.g. standards
+positions, use counter data).
 
-### Phase 4: Carryovers and Grouping (Dec 6th to Dec 19th)
+### Focus Area Proposal Presentation
 
-Interop meeting dates: Dec 12th and Dec 19th
+**Timeline**: November 7th and 14th
 
-[Visibility] All decisions and results from this phase will be confidential.
+Each participant gets 15 minutes of meeting time to present the
+proposals they are championing, and make the case that they should be
+considered a priority for inclusion in Interop 2025.
 
-In this stage, the Interop team will evaluate progress made in Interop 2024 focus areas and create a first draft of areas that will be carried over to Interop 2025. In addition, the proposals from phase 3 will be weighed against any carryover focus areas from Interop 2024. The outcome from this phase is a second draft of prioritized proposals for Interop 2025 (this will include new proposals and carryover focus areas) with a high-level grouping. This stage will include the steps below:
+_Alternative_: Have a longer meeting on either November 7th or November
+14th so that all the proposals are presented in the same week.
 
-8. Interop 2024 carryover evaluation - this will be done live in the Interop team meeting.
-9. Grouping of proposals, in conjunction with carryover areas - a draft will be created and worked on, asynchronously. Decisions would be made live in the Interop team meeting.
-10. This phase will also include decisions on inclusion of investigation effort proposals, by consensus.
+### Focus Area Proposal Ranking
 
+**Timeline**: Before December 5th
 
-### Phase 5: Final decisions (Jan 9th to Jan 30th)
+Participants rank each proposal as P1 (highest priority) to P3 (lowest
+priority), or veto.
 
-Interop meeting dates: Jan 9th, Jan 16th, Jan 23rd, Jan 30th
+There is no preset limit on how many proposals each participant may
+assign each rank.
 
-[Visibility] The final list of focus areas would be made public at launch
+Initial rankings are submitted in time for the December 5th meeting.
 
-In this stage, final decisions on prioritizations and grouping will be made.
+### Focus Area Ranking and Selection
+
+**Timeline**: December 5th, 12th, 19th
+
+Focus areas with any vetoes are eliminated.
+
+Proposals that have strong positive consensus (majority P1 rankings,
+no P3 rankings) are immediately adopted.  Proposals with a strong
+negative consensus (majority P3 rankings, no P1 ranking, or P1 only
+from the champion) are immediately dropped.
+
+Proposals with mixed rankings are ordered according to the number of
+P1 rankings, followed by the number of P2 rankings, followed by the
+number of P3 rankings. Starting from the top of the ordered list
+participants who ranked the proposal lower are given an opportunity to
+explain their concerns, and suggest any adjustments that would change
+their perspective. Proposal champions get final say on whether to
+adjust their proposals in response to this feedback.
+
+Following each meeting participants may adjust their rankings for the
+remaining proposals up or down in response to discussions, any agreed
+changes to the proposals, or the overall composition of the project,
+and the process repeats in the following meeting.
+
+Before the end of the December 19th meeting there's a formal call for
+consensus on the set of selected focus areas.
+
+_Alternative_: We share a fixed set of rankings and attempt to reach
+consensus based on an ordered list without formal adjustment.
+
+### Communication and Publication
+
+**Timeline**: Jan 9th, Jan 16th, Jan 23rd, Jan 30th
+
+Launch date is finalized. Focus area tests are labeled. Feedback for
+proposal authors written.
+
+### Launch
+
+**Timeline**: February 6th 2025 (provisional)
+
+The Interop 2025 dashboard is published. Proposal authors are provided
+with feedback and the original GitHub issues are closed. Participants
+publish announcements of the launch.
