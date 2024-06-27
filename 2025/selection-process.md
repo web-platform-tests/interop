@@ -24,7 +24,9 @@ below.
 
 ## Timeline
 
-This is the general timeline for the Interop 2025 proposal selection process. The dates are centered on the Interop team meeting (Thursdays). Please note that the timelines are subject to change.
+This is the general timeline for the Interop 2025 proposal selection 
+process. The dates are centered on the Interop team meeting (Thursdays).
+Please note that the timelines are subject to change.
 
 *   Proposal submission window (3 weeks): Sept 19th, 2024 to Oct 3rd, 2024
 *   Proposal selection: Before December 19th 2024
@@ -37,9 +39,9 @@ understanding of the merits of each proposal, and converge on a
 decision about the most impactful areas in which we can improve
 interop on the web over 2025.
 
-As in previous years, details of proposal selection and ranking remain 
-participant confidential throughout the process. Final decisions will
-be published as the Interop team.
+As in Interop 2023 and 2024, details of proposal selection and ranking
+remain participant confidential throughout the process. Final decisions
+will be published as the Interop team.
 
 ### Prior to Proposal Submission
 
@@ -95,9 +97,6 @@ proposal.
 There is no assigned limit to the number of proposals one participant
 may champion.
 
-_Alternative_: Each participant is expected to champion a minimum of
-three proposals.
-
 In case different focus areas are put forward with overlapping sets of
 proposals, the participants are encouraged to work out a way to divide
 the proposals into focus areas in a way that satisfies everyone. If
@@ -119,14 +118,11 @@ positions, use counter data).
 
 ### Focus Area Proposal Presentation
 
-**Timeline**: November 7th and 14th
+**Timeline**: November 7th (double-length meeting)
 
 Each participant gets 15 minutes of meeting time to present the
 proposals they are championing, and make the case that they should be
 considered a priority for inclusion in Interop 2025.
-
-_Alternative_: Have a longer meeting on either November 7th or November
-14th so that all the proposals are presented in the same week.
 
 ### Focus Area Proposal Ranking
 
@@ -146,10 +142,10 @@ Initial rankings are submitted in time for the December 5th meeting.
 
 Focus areas with any vetoes are eliminated.
 
-Proposals that have strong positive consensus (majority P1 rankings,
-no P3 rankings) are immediately adopted.  Proposals with a strong
-negative consensus (majority P3 rankings, no P1 ranking, or P1 only
-from the champion) are immediately dropped.
+Proposals that have strong positive consensus (e.g. majority P1
+rankings, no P3 rankings) are adopted. Proposals with a strong 
+consensus of low priority (e.g. many P3 ranking and no P1
+ranking, or many P3 and P1 only from the champion) are dropped.
 
 Proposals with mixed rankings are ordered according to the number of
 P1 rankings, followed by the number of P2 rankings, followed by the
@@ -164,11 +160,9 @@ remaining proposals up or down in response to discussions, any agreed
 changes to the proposals, or the overall composition of the project,
 and the process repeats in the following meeting.
 
-Before the end of the December 19th meeting there's a formal call for
+Before the end of the December 19th meeting there's a final decision
+on any proposals whithout a clear resolution formal call for
 consensus on the set of selected focus areas.
-
-_Alternative_: We share a fixed set of rankings and attempt to reach
-consensus based on an ordered list without formal adjustment.
 
 ### Communication and Publication
 
