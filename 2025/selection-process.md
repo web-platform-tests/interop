@@ -161,7 +161,7 @@ changes to the proposals, or the overall composition of the project,
 and the process repeats in the following meeting.
 
 Before the end of the December 19th meeting there's a final decision
-on any proposals whithout a clear resolution formal call for
+on any proposals without a clear resolution, and formal call for
 consensus on the set of selected focus areas.
 
 ### Communication and Publication
