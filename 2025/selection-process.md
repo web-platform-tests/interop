@@ -37,6 +37,9 @@ understanding of the merits of each proposal, and converge on a
 decision about the most impactful areas in which we can improve
 interop on the web over 2025.
 
+As in previous years, details of proposal selection and ranking remain 
+participant confidential throughout the process. Final decisions will
+be published as the Interop team.
 
 ### Prior to Proposal Submission
 
