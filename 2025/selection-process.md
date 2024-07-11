@@ -44,7 +44,9 @@ remain participant confidential throughout the process. Final decisions
 will be published as the Interop team.
 
 Participating organizations are free to publish the list of proposals
-that they choose to champion and their reasoning for choosing them.
+that they were selected to champion and their reasoning for wanting
+to champion those proposals.
+
 Confidentiality also does not prevent participating organizations from
 sharing their own priorities or roadmaps outside of the Interop program.
 
