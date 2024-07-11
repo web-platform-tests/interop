@@ -43,7 +43,9 @@ As in Interop 2023 and 2024, details of proposal selection and ranking
 remain participant confidential throughout the process. Final decisions
 will be published as the Interop team.
 
-Confidentiality does not prevent participating organizations from
+Participating organizations are free to publish the list of proposals
+that they choose to champion and their reasoning for choosing them.
+Confidentiality also does not prevent participating organizations from
 sharing their own priorities or roadmaps outside of the Interop program.
 
 ### Prior to Proposal Submission
