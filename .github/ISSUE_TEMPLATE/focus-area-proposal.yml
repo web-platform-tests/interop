@@ -7,7 +7,7 @@ body:
     value: |
       Thanks for taking the time to make a proposal for Interop 2025!
 
-      Be sure to read the [requirements and guidance](https://github.com/web-platform-tests/interop/blob/main/README.md#requirements-for-focus-area-proposals) to give your proposal the best chance of success!
+      Be sure to read the [proposal guide](https://github.com/web-platform-tests/interop/blob/main/proposal_guide.md) to give your proposal the best chance of success!
 
       Note: If this feature is widely implemented, but lacks a high quality specification or tests, an [Investigation Effort](https://github.com/web-platform-tests/interop/issues/new?template=investigation-effort-proposal.yml) may be more appropriate.
 
@@ -39,72 +39,15 @@ body:
     required: true
 - type: textarea
   attributes:
-    label: Open Issues
+    label: Additional Signals
     description: |
-      Links to any open standards issues that affect the proposal.
-- type: textarea
-  attributes:
-    label: Tests
-    description: |
-      Tests for the feature in web-platform-tests on [wpt.fyi](https://wpt.fyi/).
+      Any additional signals from our [proposal guide](https://github.com/web-platform-tests/interop/blob/main/proposal_guide.md):
 
-      These are the tests that will be used to score progress in this Focus Area. If the tests are not yet ready, link to evidence of the tests being worked on (e.g. a PR in the web-platform-tests repository or an issue in a vendor bug tracker).
-- type: markdown
-  attributes:
-    value: "## Supporting Evidence
-
-      The following fields are for collecting data to assess the likely impact on authors and users of improving interoperability of the proposed feature. It is not required to fill in all (or any) fields, but proposals with stronger supporting evidence are more likely to be selected."
-- type: checkboxes
-  attributes:
-    label: Current Implementations
-    description: |
-      Which major browser engines already implement the feature?
-    options:
-      - label: Blink
-      - label: Gecko
-      - label: WebKit
-- type: textarea
-  attributes:
-    label: Standards Positions
-    description: |
-      Links to [Gecko](https://mozilla.github.io/standards-positions/) or [WebKit](https://webkit.org/standards-positions/) Standards Positions, or Intent to Prototype / Ship emails for the feature.
-- type: textarea
-  attributes:
-    label: Browser bug reports
-    description: |
-      Browser bugs or browser bug statistics, for example, [Chromium](https://bugs.chromium.org/), [Gecko](https://bugzilla.mozilla.org/), or [WebKit](https://bugs.webkit.org/).
-- type: textarea
-  attributes:
-    label: Developer discussions
-    description: |
-      Examples of developers running into the lack of this feature, or problems with the feature, on sites like Stack Overflow.
-- type: textarea
-  attributes:
-    label: Polls & Surveys
-    description: |
-      Developer feedback surveys referencing this feature e.g. for example, MDN surveys, [State of CSS](https://stateofcss.com/) or [State of JavaScript](https://stateofjs.com/en-us/).
-- type: textarea
-  attributes:
-    label: Existing Usage
-    description: |
-      Evidence of existing usage of the feature e.g. [Chrome use counters](https://www.chromestatus.com/metrics/feature/popularity) or [HTTP Archive](https://httparchive.org/), or links to libraries or other code trying to use the feature.
-- type: textarea
-  attributes:
-    label: Workarounds
-    description: |
-      Links to code that's trying to work around the absence of this feature e.g. polyfills.
-- type: textarea
-  attributes:
-    label: Accessibility Impact
-    description: |
-      Information about the impact of the feature on the accessilbility properties of the web platform, if any.
-- type: textarea
-  attributes:
-    label: Privacy Impact
-    description: |
-      Information about the impact of the feature on the privacy properties of the web platform, if any.
-- type: textarea
-  attributes:
-    label: Other
-    description: |
-      Any other relevant information that will help assess the impact of making the feature more interoperable.
+      - Standards Positions
+      - Site Breakage and Workaround
+      - Size and Current State of the Feature
+      - Browser Bugs
+      - Developer Surveys
+      - Other Developer Sentiment
+      - Likely Compatibility Impact
+      - Platform Impact
