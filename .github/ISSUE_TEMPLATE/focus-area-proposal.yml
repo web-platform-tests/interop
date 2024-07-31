@@ -27,10 +27,13 @@ body:
     description: |
       Specification for the feature. The feature must defined by a standards-track specification from one of the following organizations:
 
+      - [Alliance for Open Media](https://aomedia.org/)
       - [IETF](https://www.ietf.org/) (Standard Track)
+      - [ISO](https://www.iso.org/)
       - [Khronos Group](https://www.khronos.org/)
       - [TC39](https://tc39.es/) (Stage 2+)
       - [W3C](https://www.w3.org/) (Recommendation Track)
+      - [WebAssembly](https://webassembly.org/specs/) (Phase 3+)
       - [WHATWG](https://whatwg.org/)
   validations:
     required: true
