@@ -48,7 +48,7 @@ sharing their own priorities or roadmaps outside of the Interop program.
 
 ### Prior to Proposal Submission
 
-**Timeline**: Before September 19th 2024
+**Timeline**: Before September 12th 2024
 
 The interop team will develop a non-exhaustive set of signals/criteria
 that are considered important when assessing proposals. These will be
@@ -60,7 +60,7 @@ and weigh the shared criteria as they choose.
 
 ### Proposal Submission
 
-**Timeline**: Before September 19th to October 3rd
+**Timeline**: September 12th to October 3rd
 
 Members of the web community, including participants, will be invited
 to submit proposals for Interop 2025. These will take the form of
