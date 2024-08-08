@@ -97,11 +97,11 @@ confidence we have on full implementation being achievable:
   data can be misleading, so this is unlikely to carry much weight on
   its own.
 
-### Bug Trackers
+### Browser Bugs
 
 Any evidence of developer demand in public bug trackers. For example:
 
-* Star counts in the Chromium bug tracker.
+* +1 counts in the Chromium bug tracker.
 
 ### Developer Surveys
 
