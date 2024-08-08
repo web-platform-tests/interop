@@ -28,7 +28,7 @@ This is the general timeline for the Interop 2025 proposal selection
 process. The dates are centered on the Interop team meeting (Thursdays).
 Please note that the timelines are subject to change.
 
-*   Proposal submission window (3 weeks): Sept 19th, 2024 to Oct 3rd, 2024
+*   Proposal submission window (3 weeks): Sept 12th, 2024 to Oct 3rd, 2024
 *   Proposal selection: Before December 19th 2024
 *   Scope of the Interop 2025 project published: the first half of February, 2025.
 
