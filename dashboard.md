@@ -31,7 +31,10 @@ The pipeline for updating scores is as follows:
   - Safari Technology Preview: [every 3 hours](https://github.com/web-platform-tests/wpt/blob/6f491c45bc5182275419be89a0820c2deaddc6b0/.azure-pipelines.yml#L491)
   - Safari Stable: [daily](https://github.com/web-platform-tests/wpt/blob/6f491c45bc5182275419be89a0820c2deaddc6b0/.azure-pipelines.yml#L451)
 
-  Runs take 1-3 hours to complete. Results are uploaded to wpt.fyi and are made available within minutes of completion.
+  The 3 hourly and daily cadences are implemented using "epoch" branches which
+  are updated by a [GitHub Actions workflow](https://github.com/web-platform-tests/wpt/blob/master/.github/workflows/epochs.yml).
+
+  Runs take 1-3 hours to complete. Webhooks notify wpt.fyi of the results, which downloads them and makes them available within minutes of completion. (Some CI setups instead use a results upload API, but not those discussed here.)
 
   Delay: 1-6 hours for experimental, 1-27 hours for stable
 
