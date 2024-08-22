@@ -7,7 +7,7 @@ Interop 2025 is an effort to increase interoperability across browsers in key te
 ## Timeline
 
 Interop 2025 will open for proposals on September 12, 2024 and the overall timeline is as below. Please note that the timelines are subject to change.
-- Proposal submission window (3 weeks): Sept 12th, 2024 to Oct 3rd, 2024
+- Proposal submission window (3 weeks): Sept 12th, 2024 through Oct 3rd, 2024
 - Proposal selection: Before December 19th 2024
 - Scope of the Interop 2025 project published: the first half of February, 2025.
 
