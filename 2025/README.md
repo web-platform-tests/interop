@@ -1,6 +1,6 @@
-**Interop 2025 has not yet launched and this documentation is still being finalized. Please do not submit proposals yet.**
-
 # Interop 2025
+
+**Interop 2025 is now open for proposals!** Please submit your focus area and/or investigation area proposals [here](https://github.com/web-platform-tests/interop/issues/new/choose).
 
 Interop 2025 is an effort to increase interoperability across browsers in key technical areas that are of high priority to web developers and end users. More details on the project are available in the [Interop Project README](https://github.com/web-platform-tests/interop/blob/main/README.md).
 
@@ -13,4 +13,4 @@ Interop 2025 will open for proposals on September 12, 2024 and the overall timel
 
 ## Guidance for proposal authors
 
-If you would like to make a proposal for Interop 2025, we invite you to review the updated [Interop proposer's guide](https://github.com/web-platform-tests/interop/blob/main/proposal_guide.md) which offers valuable insights into the signals and criteria that Interop participants will consider when evaluating proposals. An updated template for focus area proposal submissions will be shared on September 12, 2024.
+If you would like to make a proposal for Interop 2025, we invite you to review the updated [Interop proposer's guide](https://github.com/web-platform-tests/interop/blob/main/proposal_guide.md) which offers valuable insights into the signals and criteria that Interop participants will consider when evaluating proposals. You can submit your focus area and/or investigation area proposals [here](https://github.com/web-platform-tests/interop/issues/new/choose).
