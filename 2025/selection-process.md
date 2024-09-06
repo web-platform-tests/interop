@@ -28,7 +28,7 @@ This is the general timeline for the Interop 2025 proposal selection
 process. The dates are centered on the Interop team meeting (Thursdays).
 Please note that the timelines are subject to change.
 
-*   Proposal submission window (3 weeks): Sept 12th, 2024 to Oct 3rd, 2024
+*   Proposal submission window (3 weeks): Sept 17th, 2024 to Oct 7th, 2024
 *   Proposal selection: Before December 19th 2024
 *   Scope of the Interop 2025 project published: the first half of February, 2025.
 
@@ -48,7 +48,7 @@ sharing their own priorities or roadmaps outside of the Interop program.
 
 ### Prior to Proposal Submission
 
-**Timeline**: Before September 12th 2024
+**Timeline**: Before September 17th 2024
 
 The interop team will develop a non-exhaustive set of signals/criteria
 that are considered important when assessing proposals. These will be
@@ -60,7 +60,7 @@ and weigh the shared criteria as they choose.
 
 ### Proposal Submission
 
-**Timeline**: September 12th to October 3rd
+**Timeline**: September 17th to October 7th
 
 Members of the web community, including participants, will be invited
 to submit proposals for Interop 2025. These will take the form of
@@ -82,12 +82,12 @@ investigation efforts.
 
 ### Champion Selection
 
-**Timeline**: October 3rd, 10th, 17th
+**Timeline**: October 17th and 24th
 
 Interop participants propose focus areas, consisting of one or more
 proposals, that they would like to champion. Proposals will initially
-be shared in time for the meeting on October 10th, and champions
-finalised on October 17th.
+be shared in time for the meeting on October 17th, and champions
+finalised on October 24th.
 
 Where more than one participant wants to champion the same focus area
 proposal a single champion must be nominated for the remainder of the
@@ -111,7 +111,7 @@ Any proposal without a champion will not be carried forward.
 
 ### Focus Area Proposal Refinement
 
-**Timeline**: October 24th and 31st
+**Timeline**: October 31st and November 7th
 
 Champions gather evidence of the impact of their proposals, using the
 rubric developed earlier. Specific participants may also be asked
@@ -121,7 +121,7 @@ positions, use counter data).
 
 ### Focus Area Proposal Presentation
 
-**Timeline**: November 7th (double-length meeting)
+**Timeline**: November 14th (double-length meeting)
 
 Each participant gets 15 minutes of meeting time to present the
 proposals they are championing, and make the case that they should be
