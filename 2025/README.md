@@ -1,8 +1,10 @@
 # Interop 2025
 
-**Interop 2025 is now open for proposals!** Please submit your focus area and/or investigation area proposals [here](https://github.com/web-platform-tests/interop/issues/new/choose).
-
 Interop 2025 is an effort to increase interoperability across browsers in key technical areas that are of high priority to web developers and end users. More details on the project are available in the [Interop Project README](https://github.com/web-platform-tests/interop/blob/main/README.md).
+
+## Proposals
+
+Thank you to everyone who submitted a [proposal for Interop 2025](https://github.com/orgs/web-platform-tests/projects/5)! Please see the timeline below for the ongoing planning of Interop 2025.
 
 ## Timeline
 
