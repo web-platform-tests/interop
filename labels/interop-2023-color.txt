@@ -1,0 +1,10 @@
+/css/css-images/gradient/gradient-eval-002.html
+/css/css-images/gradient/gradient-eval-003.html
+/css/css-images/gradient/gradient-eval-005.html
+/css/css-images/gradient/gradient-eval-006.html
+/css/css-images/gradient/gradient-eval-007.html
+/css/css-images/gradient/gradient-eval-008.html
+/css/css-images/gradient/gradient-eval-009.html
+/css/css-images/parsing/gradient-interpolation-method-computed.html
+/css/css-images/parsing/gradient-interpolation-method-invalid.html
+/css/css-images/parsing/gradient-interpolation-method-valid.html
