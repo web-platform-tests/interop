@@ -82,7 +82,7 @@ investigation efforts.
 
 ### Champion Selection
 
-**Timeline**: October 10th, 17th and 24th
+**Timeline**: October 10th, 17th, 24th, 31st
 
 Interop participants propose focus areas, consisting of one or more
 proposals, that they would like to champion. Proposals will initially
@@ -111,7 +111,7 @@ Any proposal without a champion will not be carried forward.
 
 ### Focus Area Proposal Refinement
 
-**Timeline**: October 31st and November 7th
+**Timeline**: November 7th, November 14th
 
 Champions gather evidence of the impact of their proposals, using the
 rubric developed earlier. Specific participants may also be asked
@@ -121,7 +121,7 @@ positions, use counter data).
 
 ### Focus Area Proposal Presentation
 
-**Timeline**: November 14th (double-length meeting)
+**Timeline**: November 21st (double-length meeting)
 
 Each participant gets 15 minutes of meeting time to present the
 proposals they are championing, and make the case that they should be
