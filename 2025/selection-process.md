@@ -169,14 +169,14 @@ consensus on the set of selected focus areas.
 
 ### Communication and Publication
 
-**Timeline**: Jan 9th, Jan 16th, Jan 23rd, Jan 30th
+**Timeline**: Jan 9th, Jan 16th, Jan 23rd, Jan 30th, Feb 6th
 
 Launch date is finalized. Focus area tests are labeled. Feedback for
 proposal authors written.
 
 ### Launch
 
-**Timeline**: February 6th 2025 (provisional)
+**Timeline**: February 13th 2025 (provisional)
 
 The Interop 2025 dashboard is published. Proposal authors are provided
 with feedback and the original GitHub issues are closed. Participants
