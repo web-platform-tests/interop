@@ -34,7 +34,7 @@ Interop 2025 is focused on technology that is already specified in web standards
   * [Accessibility testing](#accessibility-testing)
   * [Gaming](#gaming)
   * [Mobile testing](#mobile-testing)
-  * [Privacy testing](#privacy)
+  * [Privacy testing](#privacy-testing)
   * [WebVTT](#webvtt)
 
 <a name="focus-areas"></a>
