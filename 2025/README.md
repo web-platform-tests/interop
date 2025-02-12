@@ -17,7 +17,7 @@ Interop 2025 is focused on technology that is already specified in web standards
   * [`<details>` element](#details-element)
   * [Layout](#layout)
   * [Modules](#modules)
-  * [Navigation](#navigation)
+  * [Navigation API](#navigation-api)
   * [Pointer and Mouse events](#pointer-and-mouse-events)
   * [Remove mutation events](#remove-mutation-events)
   * [`@scope`](#scope)
@@ -34,7 +34,7 @@ Interop 2025 is focused on technology that is already specified in web standards
   * [Accessibility testing](#accessibility-testing)
   * [Gaming](#gaming)
   * [Mobile testing](#mobile-testing)
-  * [Privacy](#privacy)
+  * [Privacy testing](#privacy)
   * [WebVTT](#webvtt)
 
 <a name="focus-areas"></a>
@@ -135,9 +135,9 @@ This year, the work will focus on importing JSON module scripts.
 * [import](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import), on MDN
 * [import attributes](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import/with), on MDN
 
-<a name="navigation"></a>
+<a name="navigation-api"></a>
 
-### Navigation
+### Navigation API
 
 The Navigation API makes it easier for applications to manage meaningful user state changes within the application. The API initiates, intercepts, or modifies browser navigation actions.
 
@@ -375,9 +375,9 @@ This is a continuation of [last year's mobile testing investigation](https://git
 * [Focus area proposal for Layout Viewport and Viewport-Relative Lengths](https://github.com/web-platform-tests/interop/issues/870)
 * [Focus area proposal for Mobile Testing Results for Interop/WPT](https://github.com/web-platform-tests/interop/issues/891)
 
-<a name="privacy"></a>
+<a name="privacy-testing"></a>
 
-### Privacy
+### Privacy testing
 
 Privacy is an essential feature of the web platform. The goal is to investigate the tests that should be written to better cover the privacy-related features of the platform, and write those tests.
 
