@@ -18,7 +18,7 @@ Interop 2025 is focused on technology that is already specified in web standards
   * [Layout](#layout)
   * [Modules](#modules)
   * [Navigation API](#navigation-api)
-  * [Pointer and Mouse events](#pointer-and-mouse-events)
+  * [Pointer and mouse events](#pointer-and-mouse-events)
   * [Remove mutation events](#remove-mutation-events)
   * [`@scope`](#scope)
   * [`scrollend` event](#scrollend)
@@ -32,7 +32,7 @@ Interop 2025 is focused on technology that is already specified in web standards
   * [Writing modes](#writing-modes)
 * [Investigation efforts](#investigation-efforts)
   * [Accessibility testing](#accessibility-testing)
-  * [Gaming](#gaming)
+  * [Gamepad API testing](#gamepad-api-testing)
   * [Mobile testing](#mobile-testing)
   * [Privacy testing](#privacy-testing)
   * [WebVTT](#webvtt)
@@ -150,7 +150,7 @@ The Navigation API makes it easier for applications to manage meaningful user st
 
 <a name="pointer-and-mouse-events"></a>
 
-### Pointer and Mouse events
+### Pointer and mouse events
 
 Pointer and mouse events are DOM events that are fired due to the user interacting with a pointing device. Pointer events are designed to create a single DOM event model to handle pointing input devices such as a mouse, pen/stylus or touch (such as one or more fingers).
 This focus area is a carry over from Interop 2024. See [last year's focus area description](https://github.com/web-platform-tests/interop/blob/main/2024/README.md#pointer-and-mouse-events).
@@ -353,11 +353,11 @@ This is a continuation of [last year's accessibility testing investigation](http
 
 * [Focus area proposal](https://github.com/web-platform-tests/interop/issues/866)
 
-<a name="gaming"></a>
+<a name="gamepad-api-testing"></a>
 
-### Gaming
+### Gamepad API testing
 
-The goal is to investigate improving game development on the web, by focusing on the Gamepad, Pointer Lock, and Screen Orientation APIs. These are critically important for gaming on the web, especially for cloud and mobile gaming.
+The goal is to investigate improving testability of the Gamepad API.
 
 **Resources**:
 
