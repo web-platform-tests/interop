@@ -11,7 +11,7 @@ Interop 2025 is focused on technology that is already specified in web standards
 ## Contents
 
 * [Focus areas](#focus-areas)
-  * [Anchor positioning](#anchor-positioning)
+  * [CSS anchor positioning](#css-anchor-positioning)
   * [`backdrop-filter`](#backdrop-filter)
   * [Core Web Vitals](#core-web-vitals)
   * [`<details>` element](#details-element)
@@ -25,9 +25,9 @@ Interop 2025 is focused on technology that is already specified in web standards
   * [Storage Access API](#storage-access-api)
   * [`text-decoration`](#text-decoration)
   * [URLPattern](#urlpattern)
-  * [View Transitions](#view-transitions)
+  * [View Transition API](#view-transition-api)
   * [WebAssembly](#webassembly)
-  * [Web Compat](#web-compat)
+  * [Web compat](#web-compat)
   * [WebRTC](#webrtc)
   * [Writing modes](#writing-modes)
 * [Investigation efforts](#investigation-efforts)
@@ -41,9 +41,9 @@ Interop 2025 is focused on technology that is already specified in web standards
 
 ## Focus areas
 
-<a name="anchor-positioning"></a>
+<a name="css-anchor-positioning"></a>
 
-### Anchor positioning
+### CSS anchor positioning
 
 CSS anchor positioning sets an element's position and size based on the position and size of another element. For example, you can use anchor positioning to place a tooltip next to the content it references, in a way that avoids overflows or offscreen rendering.
 
@@ -246,7 +246,7 @@ The URLPattern API creates patterns that can be matched against URLs or URL comp
 
 <a name="view-transitions"></a>
 
-### View Transitions
+### View Transition API
 
 View transitions allow you to create animated visual transitions between different states of a document.
 This year, the work will focus on making same-document view transitions interoperable and on implementing the `view-transition-class` CSS property.
@@ -279,7 +279,7 @@ This year, the work will focus on the following features:
 
 <a name="web-compat"></a>
 
-### Web Compat
+### Web compat
 
 Web compatibility refers to whether a website works as intended in a particular browser version.
 The tests in this focus area were selected based on evidence that differences between browsers have caused real-world problems for web developers or end users. This year, the work will focus on web compatibility issues with CSS properties like `appearance`, `zoom`, `list-style-position`, and `overscroll-behavior`, as well as CSP, PerformanceObserver, and `document.caretPositionFromPoint`.
