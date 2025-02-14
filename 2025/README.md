@@ -11,9 +11,9 @@ Interop 2025 is focused on technology that is already specified in web standards
 ## Contents
 
 * [Focus areas](#focus-areas)
-  * [CSS anchor positioning](#css-anchor-positioning)
   * [`backdrop-filter`](#backdrop-filter)
   * [Core Web Vitals](#core-web-vitals)
+  * [CSS anchor positioning](#css-anchor-positioning)
   * [`<details>` element](#details-element)
   * [Layout](#layout)
   * [Modules](#modules)
@@ -41,19 +41,6 @@ Interop 2025 is focused on technology that is already specified in web standards
 
 ## Focus areas
 
-<a name="css-anchor-positioning"></a>
-
-### CSS anchor positioning
-
-CSS anchor positioning sets an element's position and size based on the position and size of another element. For example, you can use anchor positioning to place a tooltip next to the content it references, in a way that avoids overflows or offscreen rendering.
-
-**Resources**:
-
-* [Focus area proposal](https://github.com/web-platform-tests/interop/issues/752)
-* [Tests](https://wpt.fyi/results/css/css-anchor-position?label=master&label=experimental&aligned&q=label%3Ainterop-2025-anchor-positioning)
-* [Spec](https://drafts.csswg.org/css-anchor-position-1/)
-* [CSS anchor positioning](https://developer.mozilla.org/docs/Web/CSS/CSS_anchor_positioning), on MDN
-
 <a name="backdrop-filter"></a>
 
 ### `backdrop-filter`
@@ -80,6 +67,19 @@ This year, the work will focus on implementing the Largest Contentful Paint (LCP
 * [Focus area proposal for INP](https://github.com/web-platform-tests/interop/issues/894)
 * [Tests](https://wpt.fyi/results/?label=master&label=experimental&aligned&q=label%3Ainterop-2025-core-web-vitals)
 * [Web Vitals](https://web.dev/articles/vitals), on web.dev
+
+<a name="css-anchor-positioning"></a>
+
+### CSS anchor positioning
+
+CSS anchor positioning sets an element's position and size based on the position and size of another element. For example, you can use anchor positioning to place a tooltip next to the content it references, in a way that avoids overflows or offscreen rendering.
+
+**Resources**:
+
+* [Focus area proposal](https://github.com/web-platform-tests/interop/issues/752)
+* [Tests](https://wpt.fyi/results/css/css-anchor-position?label=master&label=experimental&aligned&q=label%3Ainterop-2025-anchor-positioning)
+* [Spec](https://drafts.csswg.org/css-anchor-position-1/)
+* [CSS anchor positioning](https://developer.mozilla.org/docs/Web/CSS/CSS_anchor_positioning), on MDN
 
 <a name="details-element"></a>
 
