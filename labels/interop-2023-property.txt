@@ -1,0 +1,16 @@
+/css/css-properties-values-api/at-property-animation.html
+/css/css-properties-values-api/at-property-cssom.html
+/css/css-properties-values-api/at-property-shadow.html
+/css/css-properties-values-api/at-property-stylesheets.html
+/css/css-properties-values-api/at-property-viewport-units-dynamic.html
+/css/css-properties-values-api/at-property-viewport-units.html
+/css/css-properties-values-api/at-property.html
+/css/css-properties-values-api/property-cascade.html
+/css/css-properties-values-api/register-property-syntax-parsing.html
+/css/css-properties-values-api/register-property.html
+/css/css-properties-values-api/registered-property-change-style-001.html
+/css/css-properties-values-api/registered-property-computation.html
+/css/css-properties-values-api/registered-property-crosstalk.html
+/css/css-properties-values-api/registered-property-cssom.html
+/css/css-properties-values-api/registered-property-initial.html
+/css/css-properties-values-api/registered-property-revert.html
