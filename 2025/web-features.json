@@ -6,7 +6,7 @@
   "interop-2024-layout": ["grid", "subgrid", "flexbox"],
   "interop-2025-modules": ["json-modules"],
   "interop-2025-navigation": ["navigation"],
-  "interop-2023-events": ["pointer-events-api"],
+  "interop-2023-events": ["pointer-events-api", "mouse-events"],
   "interop-2025-remove-mutation-events": ["mutation-events"],
   "interop-2025-scope": ["scope"],
   "interop-2025-scrollend": ["scrollend"],
@@ -14,8 +14,8 @@
   "interop-2025-textdecoration": ["text-decoration"],
   "interop-2025-urlpattern": ["urlpattern"],
   "interop-2025-view-transitions": ["view-transitions", "view-transition-class"],
-  "interop-2025-webassembly": [],
+  "interop-2025-webassembly": ["wasm-string-builtins"],
   "interop-2025-webcompat": ["appearance", "zoom", "list-style"],
-  "interop-2025-webrtc": ["webrtc"],
+  "interop-2025-webrtc": ["webrtc", "webrtc-encoded-transform"],
   "interop-2025-writingmodes": ["writing-mode"]
 }
