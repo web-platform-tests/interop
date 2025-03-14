@@ -9,18 +9,18 @@
   "2022": {
     "interop-2021-aspect-ratio": ["aspect-ratio"],
     "interop-2022-cascade": ["cascade-layers"],
-    "interop-2022-color": [],
-    "interop-2022-contain": [],
+    "interop-2022-color": ["color-mix", "hsl", "hwb", "lab", "oklab", "rgb", "color-function"],
+    "interop-2022-contain": ["contain", "container-layout", "contain-paint", "contain-size"],
     "interop-2022-dialog": ["dialog"],
     "interop-2021-flexbox": ["flexbox"],
     "interop-2022-forms": [],
     "interop-2021-grid": ["grid"],
-    "interop-2022-scrolling": [],
+    "interop-2022-scrolling": ["overscroll-behavior", "scroll-snap", "scroll-behavior"],
     "interop-2021-position-sticky": ["sticky-positioning"],
     "interop-2022-subgrid": ["subgrid"],
     "interop-2021-transforms": ["transforms2d", "transforms3d"],
-    "interop-2022-text": [],
-    "interop-2022-viewport": [],
+    "interop-2022-text": ["font-variant", "font-variant-alternates", "font-variant-caps", "font-variant-east-asian", "font-variant-ligatures", "font-variant-numeric", "font-variant-position", "ic"],
+    "interop-2022-viewport": ["viewport-units"],
     "interop-2022-webcompat": []
   },
   "2023": {
