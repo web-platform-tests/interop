@@ -35,7 +35,7 @@
     ],
     "interop-2022-contain": [
       "contain",
-      "container-layout",
+      "contain-layout",
       "contain-paint",
       "contain-size"
     ],
@@ -98,7 +98,7 @@
     ],
     "interop-2023-contain": [
       "contain",
-      "container-layout",
+      "contain-layout",
       "contain-paint",
       "contain-size",
       "content-visibility",
@@ -290,7 +290,6 @@
       "list-style"
     ],
     "interop-2025-webrtc": [
-      "webrtc",
       "webrtc-encoded-transform"
     ],
     "interop-2025-writingmodes": [
