@@ -1,0 +1,299 @@
+{
+  "2021": {
+    "interop-2021-aspect-ratio": [
+      "aspect-ratio"
+    ],
+    "interop-2021-flexbox": [
+      "flexbox"
+    ],
+    "interop-2021-grid": [
+      "grid"
+    ],
+    "interop-2021-position-sticky": [
+      "sticky-positioning"
+    ],
+    "interop-2021-transforms": [
+      "transforms2d",
+      "transforms3d"
+    ]
+  },
+  "2022": {
+    "interop-2021-aspect-ratio": [
+      "aspect-ratio"
+    ],
+    "interop-2022-cascade": [
+      "cascade-layers"
+    ],
+    "interop-2022-color": [
+      "color-mix",
+      "hsl",
+      "hwb",
+      "lab",
+      "oklab",
+      "rgb",
+      "color-function"
+    ],
+    "interop-2022-contain": [
+      "contain",
+      "contain-layout",
+      "contain-paint",
+      "contain-size"
+    ],
+    "interop-2022-dialog": [
+      "dialog"
+    ],
+    "interop-2021-flexbox": [
+      "flexbox"
+    ],
+    "interop-2022-forms": [],
+    "interop-2021-grid": [
+      "grid"
+    ],
+    "interop-2022-scrolling": [
+      "overscroll-behavior",
+      "scroll-snap",
+      "scroll-behavior"
+    ],
+    "interop-2021-position-sticky": [
+      "sticky-positioning"
+    ],
+    "interop-2022-subgrid": [
+      "subgrid"
+    ],
+    "interop-2021-transforms": [
+      "transforms2d",
+      "transforms3d"
+    ],
+    "interop-2022-text": [
+      "font-variant",
+      "font-variant-alternates",
+      "font-variant-caps",
+      "font-variant-east-asian",
+      "font-variant-ligatures",
+      "font-variant-numeric",
+      "font-variant-position",
+      "ic"
+    ],
+    "interop-2022-viewport": [
+      "viewport-units"
+    ],
+    "interop-2022-webcompat": []
+  },
+  "2023": {
+    "interop-2023-cssborderimage": [
+      "border-image"
+    ],
+    "interop-2023-color": [
+      "color-mix",
+      "hsl",
+      "hwb",
+      "lab",
+      "oklab",
+      "rgb",
+      "color-function",
+      "gradient-interpolation"
+    ],
+    "interop-2023-container": [
+      "container-queries"
+    ],
+    "interop-2023-contain": [
+      "contain",
+      "contain-layout",
+      "contain-paint",
+      "contain-size",
+      "content-visibility",
+      "contain-intrinsic-size"
+    ],
+    "interop-2023-mathfunctions": [
+      "trig-functions",
+      "exp-functions"
+    ],
+    "interop-2023-pseudos": [
+      "dir-pseudo",
+      "nth-child-of",
+      "user-pseudos"
+    ],
+    "interop-2023-property": [
+      "registered-custom-properties"
+    ],
+    "interop-2023-flexbox": [
+      "flexbox"
+    ],
+    "interop-2023-fonts": [
+      "supports",
+      "font-palette"
+    ],
+    "interop-2023-forms": [],
+    "interop-2023-grid": [
+      "grid"
+    ],
+    "interop-2023-has": [
+      "has"
+    ],
+    "interop-2023-inert": [
+      "inert"
+    ],
+    "interop-2023-cssmasking": [
+      "clip-path"
+    ],
+    "interop-2023-mediaqueries": [
+      "media-queries",
+      "media-query-range-syntax"
+    ],
+    "interop-2023-modules": [
+      "import-maps",
+      "js-modules-workers"
+    ],
+    "interop-2023-motion": [
+      "motion-path"
+    ],
+    "interop-2023-offscreencanvas": [
+      "offscreen-canvas"
+    ],
+    "interop-2023-events": [
+      "mouse-events",
+      "pointer-events-api"
+    ],
+    "interop-2022-scrolling": [
+      "overscroll-behavior",
+      "scroll-snap",
+      "scroll-behavior"
+    ],
+    "interop-2022-subgrid": [
+      "subgrid"
+    ],
+    "interop-2021-transforms": [
+      "transforms2d",
+      "transforms3d"
+    ],
+    "interop-2023-url": [
+      "url"
+    ],
+    "interop-2023-webcodecs": [
+      "webcodecs"
+    ],
+    "interop-2023-webcompat": [],
+    "interop-2023-webcomponents": [
+      "constructed-stylesheets",
+      "form-associated-custom-elements"
+    ]
+  },
+  "2024": {
+    "interop-2024-accessibility": [],
+    "interop-2024-nesting": [
+      "nesting"
+    ],
+    "interop-2023-property": [
+      "registered-custom-properties"
+    ],
+    "interop-2024-dsd": [
+      "declarative-shadow-dom"
+    ],
+    "interop-2024-font-size-adjust": [
+      "font-size-adjust"
+    ],
+    "interop-2024-websockets": [],
+    "interop-2024-indexeddb": [
+      "indexeddb"
+    ],
+    "interop-2024-layout": [
+      "flexbox",
+      "grid",
+      "subgrid"
+    ],
+    "interop-2023-events": [
+      "mouse-events",
+      "pointer-events-api"
+    ],
+    "interop-2024-popover": [
+      "popover"
+    ],
+    "interop-2024-relative-color": [
+      "relative-color"
+    ],
+    "interop-2024-video-rvfc": [
+      "request-video-frame-callback"
+    ],
+    "interop-2024-scrollbar": [
+      "scrollbar-gutter",
+      "scrollbar-width"
+    ],
+    "interop-2024-starting-style-transition-behavior": [
+      "starting-style",
+      "transition-behavior"
+    ],
+    "interop-2024-dir": [],
+    "interop-2024-text-wrap": [
+      "text-wrap",
+      "text-wrap-balance"
+    ],
+    "interop-2023-url": [
+      "url"
+    ]
+  },
+  "2025": {
+    "interop-2025-backdrop-filter": [
+      "backdrop-filter"
+    ],
+    "interop-2025-core-web-vitals": [
+      "largest-contentful-paint"
+    ],
+    "interop-2025-anchor-positioning": [
+      "anchor-positioning"
+    ],
+    "interop-2025-details": [
+      "details"
+    ],
+    "interop-2024-layout": [
+      "flexbox",
+      "grid",
+      "subgrid"
+    ],
+    "interop-2025-modules": [
+      "json-modules"
+    ],
+    "interop-2025-navigation": [
+      "navigation"
+    ],
+    "interop-2023-events": [
+      "pointer-events-api",
+      "mouse-events"
+    ],
+    "interop-2025-remove-mutation-events": [
+      "mutation-events"
+    ],
+    "interop-2025-scope": [
+      "scope"
+    ],
+    "interop-2025-scrollend": [
+      "scrollend"
+    ],
+    "interop-2025-storageaccess": [
+      "storage-access"
+    ],
+    "interop-2025-textdecoration": [
+      "text-decoration"
+    ],
+    "interop-2025-urlpattern": [
+      "urlpattern"
+    ],
+    "interop-2025-view-transitions": [
+      "view-transitions",
+      "view-transition-class"
+    ],
+    "interop-2025-webassembly": [
+      "wasm-string-builtins"
+    ],
+    "interop-2025-webcompat": [
+      "appearance",
+      "zoom",
+      "list-style"
+    ],
+    "interop-2025-webrtc": [
+      "webrtc-encoded-transform"
+    ],
+    "interop-2025-writingmodes": [
+      "writing-mode"
+    ]
+  }
+}
