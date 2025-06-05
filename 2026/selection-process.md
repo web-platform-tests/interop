@@ -28,9 +28,9 @@ This is the general timeline for the Interop 2026 proposal selection
 process. The dates are centered on the Interop team meeting (Thursdays).
 Please note that the timelines are subject to change.
 
-*   Proposal submission window (~3 weeks): Sept 18th, 2025 to Oct 8th, 2025
-*   Proposal selection: Before December 18th 2025
-*   Scope of the Interop 2026 project published: the first half of February, 2026.
+*   Proposal submission window (~3 weeks): September 4th, 2025 to September 24th, 2025
+*   Proposal selection: Before December 4th 2025
+*   Scope of the Interop 2026 project published: February 5th, 2026.
 
 ## Proposal selection process
 
@@ -48,7 +48,7 @@ sharing their own priorities or roadmaps outside of the Interop program.
 
 ### Prior to Proposal Submission
 
-**Timeline**: Before September 18th 2025
+**Timeline**: Before September 4th 2025
 
 The interop team will develop a non-exhaustive set of signals/criteria
 that are considered important when assessing proposals. These will be
@@ -60,7 +60,7 @@ and weigh the shared criteria as they choose.
 
 ### Proposal Submission
 
-**Timeline**: September 18th to October 8th
+**Timeline**: September 4th to September 24th
 
 Members of the web community, including participants, will be invited
 to submit proposals for Interop 2026. These will take the form of
@@ -80,9 +80,13 @@ investigations. For simplicity the remainder of this document will
 only refer to focus area proposals, but this also covers proposals for
 investigation efforts.
 
+### Proposal Refinement
+
+**Timeline**: September 24th to October 2nd
+
 ### Champion Selection
 
-**Timeline**: October 9th, 16th, 23rd, 30th
+**Timeline**: October 2nd, 9th, 16th, 23rd
 
 Interop participants propose focus areas, consisting of one or more
 proposals, that they would like to champion. Proposals will initially
@@ -92,10 +96,6 @@ finalised on October 23rd.
 Where more than one participant wants to champion the same focus area
 proposal a single champion must be nominated for the remainder of the
 process.
-
-Champions and seconds (i.e. organizations that would champion a focus
-area but were not the final selected champion) are recorded for each
-proposal.
 
 There is no assigned limit to the number of proposals one participant
 may champion.
@@ -111,7 +111,7 @@ Any proposal without a champion will not be carried forward.
 
 ### Focus Area Proposal Refinement
 
-**Timeline**: November 6th, November 13th
+**Timeline**: October 30th, November 6th
 
 Champions gather evidence of the impact of their proposals, using the
 rubric developed earlier. Specific participants may also be asked
@@ -121,15 +121,15 @@ positions, use counter data).
 
 ### Focus Area Proposal Presentation
 
-**Timeline**: November 20th (double-length meeting)
+**Timeline**: November 13th (double-length meeting)
 
 Each participant gets 15 minutes of meeting time to present the
 proposals they are championing, and make the case that they should be
 considered a priority for inclusion in Interop 2026.
 
-### Focus Area Proposal Ranking
+### Proposal Ranking
 
-**Timeline**: Before December 4th
+**Timeline**: Before November 20th
 
 Participants rank each proposal as P1 (highest priority) to P3 (lowest
 priority), or veto.
@@ -137,11 +137,11 @@ priority), or veto.
 There is no preset limit on how many proposals each participant may
 assign each rank.
 
-Initial rankings are submitted in time for the December 4th meeting.
+Initial rankings are submitted in time for the November 20th meeting.
 
-### Focus Area Ranking and Selection
+### Focus Area Selection
 
-**Timeline**: December 4th, 11th, 18th
+**Timeline**: November 20th, December 4th and 11th
 
 Focus areas with any vetoes are eliminated.
 
@@ -163,20 +163,20 @@ remaining proposals up or down in response to discussions, any agreed
 changes to the proposals, or the overall composition of the project,
 and the process repeats in the following meeting.
 
-Before the end of the December 18th meeting there's a final decision
+Before the end of the December 11th meeting there's a final decision
 on any proposals without a clear resolution, and formal call for
 consensus on the set of selected focus areas.
 
 ### Communication and Publication
 
-**Timeline**: Jan 8th, Jan 15th, Jan 22nd, Jan 29th, Feb 5th
+**Timeline**: December 18th - January 29th
 
 Launch date is finalized. Focus area tests are labeled. Feedback for
 proposal authors written.
 
 ### Launch
 
-**Timeline**: February 12th 2026 (provisional)
+**Timeline**: February 5th 2026 (provisional)
 
 The Interop 2026 dashboard is published. Proposal authors are provided
 with feedback and the original GitHub issues are closed. Participants
