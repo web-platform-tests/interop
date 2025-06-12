@@ -112,7 +112,7 @@ proposal to appear in a single focus area.
 
 Any proposal without a champion will not be carried forward.
 
-### Focus Area Proposal Refinement
+### Champion Evidence Gathering
 
 **Timeline**: October 30th, November 6th
 
