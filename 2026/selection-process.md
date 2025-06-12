@@ -84,6 +84,8 @@ investigation efforts.
 
 **Timeline**: September 24th to October 2nd
 
+This phase would be used by the Interop team to ask proposal authors for any clarifications to help with evaluating the proposal.
+
 ### Champion Selection
 
 **Timeline**: October 2nd, 9th, 16th, 23rd
