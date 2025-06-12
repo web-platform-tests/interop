@@ -44,7 +44,8 @@ remain participant confidential throughout the process. Final decisions
 will be published as the Interop team.
 
 Confidentiality does not prevent participating organizations from
-sharing their own priorities or roadmaps outside of the Interop program.
+sharing their own priorities or roadmaps, as distinct from positions in the
+proposal selection process.
 
 ### Prior to Proposal Submission
 
