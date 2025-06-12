@@ -89,12 +89,12 @@ This phase would be used by the Interop team to ask proposal authors for any cla
 
 ### Champion Selection
 
-**Timeline**: October 2nd, 9th, 16th, 23rd
+**Timeline**: October 2nd, 9th, 16th
 
 Interop participants propose focus areas, consisting of one or more
 proposals, that they would like to champion. Proposals will initially
-be shared in time for the meeting on October 16th, and champions
-finalised on October 23rd.
+be shared in time for the meeting on October 9th, and champions
+finalised on October 16th.
 
 Where more than one participant wants to champion the same focus area
 proposal a single champion must be nominated for the remainder of the
@@ -114,7 +114,7 @@ Any proposal without a champion will not be carried forward.
 
 ### Champion Evidence Gathering
 
-**Timeline**: October 30th, November 6th
+**Timeline**: October 23rd, 30th
 
 Champions gather evidence of the impact of their proposals, using the
 rubric developed earlier. Specific participants may also be asked
@@ -124,7 +124,7 @@ positions, use counter data).
 
 ### Focus Area Proposal Presentation
 
-**Timeline**: November 13th (double-length meeting)
+**Timeline**: November 6th (double-length meeting)
 
 Each participant gets 15 minutes of meeting time to present the
 proposals they are championing, and make the case that they should be
