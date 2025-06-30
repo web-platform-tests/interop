@@ -22,7 +22,7 @@ Interop focus areas are scored by the pass rate of tests from the
 [Web Platform Tests project (WPT)](https://github.com/web-platform-tests/wpt).
 This means that, to be accepted:
 
-* The proposed feature must be covered by WPT tests.
+* The proposed feature must be covered by web-platform-tests.
 
 * The test coverage must be sufficient to represent a meaningful
   assessment of implementation quality and interoperability.
