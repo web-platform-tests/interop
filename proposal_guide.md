@@ -55,6 +55,14 @@ be required:
 
 ## Additional Signals
 
+### Web Features
+
+In some cases proposals may correspond to a specific
+[web-feature](https://web-platform-dx.github.io/web-features-explorer/).
+In these cases providing the web-feature id in the proposal will
+allow information about the feature, such as relevant standards positions,
+to be gathered and filled in automatically.
+
 ### Standards Positions
 
 Interop is not intended as a venue to reach agreement on whether a
