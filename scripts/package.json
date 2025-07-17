@@ -1,0 +1,9 @@
+{
+  "name": "interop-scripts",
+  "type": "module",
+  "devDependencies": {
+    "octokit": "^5.0.3",
+    "web-features": "^2.40.2",
+    "yargs": "^18.0.0"
+  }
+}
