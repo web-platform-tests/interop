@@ -106,7 +106,7 @@ function gatherFeaturesFromExplicitMentions(issueBody) {
   for (const mention of explicitMentions) {
     const match = mention.match(/web-features?:\s*([a-z0-9-]+)/i);
     if (match && match[1] && features[match[1]]) {
-      gatherFeatures.add(match[1]);
+      gatheredFeatures.add(match[1]);
     }
   }
 
