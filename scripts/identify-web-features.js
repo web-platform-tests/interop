@@ -32,96 +32,107 @@ async function getReferencedIssue() {
   return response.data;
 }
 
-// Identify web-features based on spec URLs in the issue body.
-function gatherFeaturesFromSpecUrls(issueBody, gatheredFeatures) {
-  // Find URLs in the issue body.
+function gatherUrlsFromIssue(issueBody) {
   const urls = issueBody.match(/https?:\/\/[^)\s]+/g) || [];
+  return urls.map(url => new URL(url));
+}
 
-  // Filter out known non-spec URLs.
-  const specUrls = urls
-    .filter(url => {
-      // Filter out known non-spec URLs.
-      return !url.includes("bugzilla") &&
-        !url.includes("github.com") &&
-        !url.includes("webkit.org") &&
-        !url.includes("developer.mozilla.org") &&
-        !url.includes("developer.chrome.com") &&
-        !url.includes("wpt.fyi") &&
-        !url.includes("css-tricks") &&
-        !url.includes("webstatus.dev") &&
-        !url.includes("learn.microsoft.com") &&
-        !url.includes("chromium.org");
-    }).map(url => {
-      // Separate the # from the URL if it exists.
-      return [url, url.split("#")[0]];
-    });
+// Identify web-features based on spec URLs in the issue body.
+function gatherFeaturesFromSpecUrls(urls) {
+  const gatheredFeatures = new Set();
 
-  // Iterate over web features to find spec URL matches.
-  for (const [candidateUrl, candidateUrlNoAnchor] of specUrls) {
+  for (const url of urls) {
     for (const id in features) {
       const feature = features[id];
-      const featureSpecs = Array.isArray(feature.spec) ? feature.spec : [feature.spec];
-      if (featureSpecs.some(spec => spec === candidateUrl || spec === candidateUrlNoAnchor)) {
+      const specUrls = (Array.isArray(feature.spec) ? feature.spec : [feature.spec]).map(url => new URL(url));
+
+      if (specUrls.some(specUrl => {
+        return specUrl.hostname === url.hostname &&
+          specUrl.pathname === url.pathname &&
+          (specUrl.hash ? specUrl.hash === url.hash : true);
+      })) {
         gatheredFeatures.add(id)
       }
     }
   }
+
+  return gatheredFeatures;
 }
 
 // Identify web-features based on explorer URLs in the issue body.
-function gatherFeaturesFromExplorerUrls(issueBody, gatheredFeatures) {
-  // https://web-platform-dx.github.io/web-features-explorer/features/<feature-id>
-  let urls = issueBody.match(/https?:\/\/web-platform-dx.github.io\/web-features-explorer\/features\/[a-z0-9-]+/g) || [];
-  urls = urls.map(url => url.split("#")[0]);
+function gatherFeaturesFromExplorerUrls(urls) {
+  const gatheredFeatures = new Set();
 
   for (const url of urls) {
-    // Extract the feature ID from the URL.
-    const match = url.match(/features\/([a-z0-9-]+)/);
-    if (match && match[1]) {
-      const id = match[1];
-      const feature = features[id];
-      if (feature) {
-        gatheredFeatures.add(id);
-      }
+    if (url.hostname !== "web-platform-dx.github.io" || !url.pathname.startsWith("/web-features-explorer/features/")) {
+      continue;
+    }
+
+    const candidateId = url.pathname.substring(url.pathname.indexOf("features/") + 9).replace("/", "").replace(".json", "");
+    if (features[candidateId]) {
+      gatheredFeatures.add(candidateId);
     }
   }
+
+  return gatheredFeatures;
 }
 
 // Identify web-features based on WPT URLs in the issue body.
-function gatherFeaturesFromWPTUrls(issueBody, gatheredFeatures) {
-  // https://wpt.fyi/results/?q=feature:<feature-id>
-  let urls = issueBody.match(/https?:\/\/wpt\.fyi\/results\/\?q=feature:[a-z0-9-]+/g) || [];
-  urls = urls.map(url => url.split("#")[0]);
+function gatherFeaturesFromWPTUrls(urls) {
+  const gatheredFeatures = new Set();
 
   for (const url of urls) {
-    // Extract the feature ID from the URL.
-    const match = url.match(/feature:([a-z0-9-]+)/);
-    if (match && match[1]) {
-      const id = match[1];
-      const feature = features[id];
-      if (feature) {
-        gatheredFeatures.add(id);
-      }
+    if (url.hostname !== "wpt.fyi" || !url.pathname.startsWith("/results/") || !url.searchParams.has("q")) {
+      continue;
+    }
+
+    const query = url.searchParams.get("q");
+    const match = query.match(/feature:([a-z0-9-]+)/);
+    if (match && match[1] && features[match[1]]) {
+      gatheredFeatures.add(match[1]);
     }
   }
+
+  return gatheredFeatures;
+}
+
+// Identify web-features by checking for explicit mentions in the issue body.
+function gatherFeaturesFromExplicitMentions(issueBody) {
+  const gatheredFeatures = new Set();
+
+  // Look for `web-features: <feature-id>` or `web-feature: <feature-id>` in the issue body.
+  // There might be spaces between the colon and the feature ID. And there might be spaces after the ID, or a period, or end of line.
+  const explicitMentions = issueBody.match(/web-features?:\s*([a-z0-9-]+)/gi) || [];
+  for (const mention of explicitMentions) {
+    const match = mention.match(/web-features?:\s*([a-z0-9-]+)/i);
+    if (match && match[1] && features[match[1]]) {
+      gatherFeatures.add(match[1]);
+    }
+  }
+
+  return gatheredFeatures;
 }
 
 // Given a GitHub issue, find the web-features that are referenced in the issue body.
-// For now, we only look for URLs that match the web-features specifications.
 function findFeaturesInIssue(issue) {
-  const features = new Set();
-  
-  gatherFeaturesFromSpecUrls(issue.body, features);
-  gatherFeaturesFromExplorerUrls(issue.body, features);
-  gatherFeaturesFromWPTUrls(issue.body, features);
-  // TODO: Match on other things too:
-  // - web-features ID in the body of the issue, which might be there since the issue template asks for it.
-  // - MDN URLs
-  // - vendor positions
-  // - etc.
-  // Maybe investigate a weighting system to prioritize features based on the number of matches.
+  const urls = gatherUrlsFromIssue(issue.body);
 
-  return [...features];
+  const specFeatures = gatherFeaturesFromSpecUrls(urls);
+  const wptFeatures = gatherFeaturesFromWPTUrls(urls);
+  const explorerFeatures = gatherFeaturesFromExplorerUrls(urls);
+  const explicitWebFeatureMentions = gatherFeaturesFromExplicitMentions(issue.body);
+
+  // Explorer URLs take precedence over spec and WPT URLs.
+  // And explicit mentions take precedence over everything else.
+  if (explicitWebFeatureMentions.size > 0) {
+    return [...explicitWebFeatureMentions];
+  }
+  if (explorerFeatures.size > 0) {
+    // If we have explorer features, we don't need to combine them with spec and WPT features.
+    return [...explorerFeatures];
+  }
+
+  return [...new Set([...specFeatures, ...wptFeatures])];
 }
 
 // Given a feature id, retrieve the feature's data.
@@ -139,7 +150,7 @@ async function getFeatureData(id) {
   }
 }
 
-function printBaselineStatus(feature) {
+function getBaselineStatusAsMarkdown(feature) {
   if (feature.status && feature.status.baseline === "high") {
     return "Widely Available";
   } else if (feature.status && feature.status.baseline === "low") {
@@ -148,7 +159,7 @@ function printBaselineStatus(feature) {
   return "Limited Availability";
 }
 
-function printDocs(feature) {
+function getDocsAsMarkdown(feature) {
   if (!feature.mdnUrls.length) {
     return "";
   }
@@ -157,7 +168,7 @@ function printDocs(feature) {
   return `* **Docs:** ${docs}\n`;
 }
 
-function printStandardPositions(feature) {
+function getStandardPositionsAsMarkdown(feature) {
   if (!feature.standardPositions.mozilla.url && !feature.standardPositions.webkit.url) {
     return "";
   }
@@ -174,14 +185,14 @@ function printStandardPositions(feature) {
   return pos + "\n";
 }
 
-function printUseCounter(feature) {
+function getUseCounterAsMarkdown(feature) {
   if (!feature.useCounters.chromeStatusUrl) {
     return "";
   }
   return `* **Chrome use counter:** [chromestatus.com](${feature.useCounters.chromeStatusUrl})\n`;
 }
 
-function printSurveys(feature) {
+function getSurveysAsMarkdown(feature) {
   if (!feature.stateOfSurveys || !feature.stateOfSurveys.length) {
     return "";
   }
@@ -193,7 +204,7 @@ function printSurveys(feature) {
   return `* **State of CSS/JS/HTML surveys:** ${surveys}\n`;
 }
 
-function printPreviousInterops(feature) {
+function getPreviousInteropsAsMarkdown(feature) {
   if (!feature.interop.length) {
     return "";
   }
@@ -205,7 +216,7 @@ function printPreviousInterops(feature) {
   return `* **Included in previous Interop iterations:** ${interops}\n`
 }
 
-function printWPTLink(feature) {
+function getWPTLinkAsMarkdown(feature) {
   if (!feature.wptLink) {
     return "";
   }
@@ -218,13 +229,13 @@ function getMarkdownContentForFeature(feature) {
   str += `* **ID:** ${feature.id}\n`;
   str += `* **Name:** ${escapeFeatureName(feature)}\n`;
   str += `* **Description:** ${feature.description_html}\n`;
-  str += `* **Baseline status:** ${printBaselineStatus(feature)}\n`;
-  str += printDocs(feature);
-  str += printStandardPositions(feature);
-  str += printUseCounter(feature);
-  str += printSurveys(feature);
-  str += printPreviousInterops(feature);
-  str += printWPTLink(feature);
+  str += `* **Baseline status:** ${getBaselineStatusAsMarkdown(feature)}\n`;
+  str += getDocsAsMarkdown(feature);
+  str += getStandardPositionsAsMarkdown(feature);
+  str += getUseCounterAsMarkdown(feature);
+  str += getSurveysAsMarkdown(feature);
+  str += getPreviousInteropsAsMarkdown(feature);
+  str += getWPTLinkAsMarkdown(feature);
   str += `* **More information:** See the [web-features explorer](https://web-platform-dx.github.io/web-features-explorer/features/${feature.id}/).\n\n`;
 
   return str;
@@ -269,28 +280,34 @@ async function main() {
   const featureIds = findFeaturesInIssue(issue);
   const features = await Promise.all(featureIds.map(id => getFeatureData(id)));
 
+  let content = "_This comment was automatically generated based on the information you provided. Please don't edit it._\n\n";
+
   if (features.length === 0) {
     console.log("Could not find any matching features the issue body.");
-    return;
-  }
 
-  console.log(`Found ${features.length} matching feature(s):`);
-  console.log(features.map(f => `- ${f.id}`).join("\n"));
+    content += "No web features (from the [web-features project](https://github.com/web-platform-dx/web-features/)) were found in your proposal. If your proposal doesn't correspond to a web feature, that is fine.\\\n";
+    content += "Otherwise, please update your initial comment to include `web-features: <feature-id>`.";
+    content += "To find feature IDs, use the [web-features explorer](https://web-platform-dx.github.io/web-features-explorer/).\n\n";
 
-  let content = "_This comment was automatically generated based on the information you provided. Please don't edit it._\n\n";
-  content += `Below is additional information about the web feature${features.length > 1 ? "s" : ""} (from the [web-features project](https://github.com/web-platform-dx/web-features/)) which ${features.length > 1 ? "are" : "is"} referenced in your proposal.`;
-  content += `This information might help motivate your focus area proposal.\n\n`;
+  } else {
+    console.log(`Found ${features.length} matching feature(s):`);
+    console.log(features.map(f => `- ${f.id}`).join("\n"));
+    
+    content += `Below is additional information about the web feature${features.length > 1 ? "s" : ""} (from the [web-features project](https://github.com/web-platform-dx/web-features/)) which ${features.length > 1 ? "are" : "is"} referenced in your proposal.\\\n`;
+    content += "If this doesn't accurately correspond to your proposal, please update your initial comment to include `web-features: <feature-id>`.";
+    content += "To find feature IDs, use the [web-features explorer](https://web-platform-dx.github.io/web-features-explorer/).\n\n";
 
-  for (const feature of features) {
-    const featureContent = getMarkdownContentForFeature(feature);
+    for (const feature of features) {
+      const featureContent = getMarkdownContentForFeature(feature);
 
-    if (features.length > 1) {
-      content += `<details>\n`;
-      content += `<summary>${escapeFeatureName(feature)}</summary>\n\n`;
-      content += featureContent;
-      content += `</details>\n\n`;
-    } else {
-      content += featureContent;
+      if (features.length > 1) {
+        content += `<details>\n`;
+        content += `<summary>${escapeFeatureName(feature)}</summary>\n\n`;
+        content += featureContent;
+        content += `</details>\n\n`;
+      } else {
+        content += featureContent;
+      }
     }
   }
 
