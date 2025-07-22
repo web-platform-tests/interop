@@ -286,7 +286,7 @@ async function main() {
     console.log("Could not find any matching features the issue body.");
 
     content += "No web features (from the [web-features project](https://github.com/web-platform-dx/web-features/)) were found in your proposal. If your proposal doesn't correspond to a web feature, that is fine.\\\n";
-    content += "Otherwise, please update your initial comment to include `web-features: <feature-id>`.";
+    content += "Otherwise, please update your initial comment to include `web-features: <feature-id>`.\n";
     content += "To find feature IDs, use the [web-features explorer](https://web-platform-dx.github.io/web-features-explorer/).\n\n";
 
   } else {
@@ -294,7 +294,7 @@ async function main() {
     console.log(features.map(f => `- ${f.id}`).join("\n"));
     
     content += `Below is additional information about the web feature${features.length > 1 ? "s" : ""} (from the [web-features project](https://github.com/web-platform-dx/web-features/)) which ${features.length > 1 ? "are" : "is"} referenced in your proposal.\\\n`;
-    content += "If this doesn't accurately correspond to your proposal, please update your initial comment to include `web-features: <feature-id>`.";
+    content += "If this doesn't accurately correspond to your proposal, please update your initial comment to include `web-features: <feature-id>`.\n";
     content += "To find feature IDs, use the [web-features explorer](https://web-platform-dx.github.io/web-features-explorer/).\n\n";
 
     for (const feature of features) {
