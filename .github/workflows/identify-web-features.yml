@@ -1,0 +1,25 @@
+# This GitHub Actions workflow identifies web features in new and edited issues.
+# Identified features are posted as a comment on the issue.
+name: Identify Web Features in Issues
+
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '22'
+      - name: Run identification script
+        run: |
+          cd scripts
+          npm install
+          node identify-web-features.js -n ${{ github.event.issue.number }} -r ${{ github.repository }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
