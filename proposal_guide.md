@@ -14,6 +14,16 @@ listed are considered binding, and the different organizations that
 are part of the Interop team may use the criteria in different ways,
 or supplement these with their own specific considerations.
 
+For reference, here are some proposals from past years that are well structured. 
+Please note that the proposal template will have changes year over year. 
+We encourage you to read the guide in its entirety for the latest guidance. 
+
+<details>
+  <summary>Example proposals</summary>
+  
+  - [View transition classes (Interop 2025)](https://github.com/web-platform-tests/interop/issues/767) 
+</details>
+
 ## Essential Criteria
 
 ### Testing
