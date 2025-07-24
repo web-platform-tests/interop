@@ -22,8 +22,8 @@ We encourage you to read the guide in its entirety for the latest guidance.
   <summary>Example proposals</summary>
   
   - [View transition classes (Interop 2025)](https://github.com/web-platform-tests/interop/issues/767)
-  - [list-style-position on bare li elements](https://github.com/web-platform-tests/interop/issues/857)
-  - [backdrop-filter](https://github.com/web-platform-tests/interop/issues/822)
+  - [list-style-position on bare li elements (Interop 2025)](https://github.com/web-platform-tests/interop/issues/857)
+  - [backdrop-filter (Interop 2025)](https://github.com/web-platform-tests/interop/issues/822)
 </details>
 
 ## Essential Criteria
