@@ -46,7 +46,7 @@ body:
   attributes:
     label: Test Links
     description: |
-      Links to web-platform-tests, if you already know which tests cover the proposal
+      Links to web-platform-tests, if you already know which tests cover the proposal.
 - type: textarea
   attributes:
     label: Additional Signals
