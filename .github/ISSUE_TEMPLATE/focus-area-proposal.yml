@@ -44,6 +44,11 @@ body:
       [web-feature](https://web-platform-dx.github.io/web-features-explorer/) for the proposal. If your proposal corresponds closely to a specific web-feature please provide it here.
 - type: textarea
   attributes:
+    label: Test Links
+    description: |
+      Links to web-platform-tests, if you already know which tests cover the proposal
+- type: textarea
+  attributes:
     label: Additional Signals
     description: |
       Any additional signals from our [proposal guide](https://github.com/web-platform-tests/interop/blob/main/proposal_guide.md):
