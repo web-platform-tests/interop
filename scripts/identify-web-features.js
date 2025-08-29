@@ -217,7 +217,7 @@ function getPreviousInteropsAsMarkdown(feature) {
 }
 
 function getWPTLinkAsMarkdown(feature) {
-  if (!feature.wptLink) {
+  if (!feature.wpt) {
     return "";
   }
   return `* **WPT tests:** [wpt.fyi](https://wpt.fyi/results/?q=feature:${feature.id})\n`;
