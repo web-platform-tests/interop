@@ -220,7 +220,7 @@ function getWPTLinkAsMarkdown(feature) {
   if (!feature.wpt) {
     return "";
   }
-  return `* **WPT tests:** [wpt.fyi](https://wpt.fyi/results/?q=feature:${feature.id})\n`;
+  return `* **WPT tests:** [wpt.fyi/results/?q=feature:${feature.id}](https://wpt.fyi/results/?q=feature:${feature.id})\n`;
 }
 
 // Generate the markdown content for the given feature.
@@ -236,7 +236,7 @@ function getMarkdownContentForFeature(feature) {
   str += getSurveysAsMarkdown(feature);
   str += getPreviousInteropsAsMarkdown(feature);
   str += getWPTLinkAsMarkdown(feature);
-  str += `* **More information:** See the [web-features explorer](https://web-platform-dx.github.io/web-features-explorer/features/${feature.id}/).\n\n`;
+  str += `* **More information:** See the [web-features explorer](https://web-platform-dx.github.io/web-features-explorer/features/${feature.id}/)\n\n`;
 
   return str;
 }
