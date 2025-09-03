@@ -1,6 +1,6 @@
 # Interop 2026
 
-**Interop 2026 is now open for proposals!** Please submit your focus area and/or investigation area proposals [here](https://github.com/web-platform-tests/interop/issues/new/choose).
+**Interop 2026 is now open for proposals!** See the [proposal guide](../making-a-proposal.md) for details, and how to give your proposal the best chance of success.
 
 Interop 2026 is an effort to increase interoperability across browsers in key technical areas that are of high priority to web developers and end users. More details on the project are available in the [Interop Project README](https://github.com/web-platform-tests/interop/blob/main/README.md).
 
@@ -13,4 +13,4 @@ Interop 2026 is an effort to increase interoperability across browsers in key te
 
 ## Guidance for proposal authors
 
-If you would like to make a proposal for Interop 2026, we invite you to review the updated [Interop proposer's guide](https://github.com/web-platform-tests/interop/blob/main/proposal_guide.md) which offers valuable insights into the signals and criteria that Interop participants will consider when evaluating proposals. 
+If you would like to make a proposal for Interop 2026, we invite you to review the updated [Interop proposer's guide](https://github.com/web-platform-tests/interop/blob/main/proposal_guide.md) which offers valuable insights into the signals and criteria that Interop participants will consider when evaluating proposals.

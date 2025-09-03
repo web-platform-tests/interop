@@ -16,7 +16,27 @@ or supplement these with their own specific considerations.
 
 For reference, here are some proposals from past years that are well structured. 
 Please note that the proposal template will have changes year over year. 
-We encourage you to read the guide in its entirety for the latest guidance. 
+We encourage you to read the guide in its entirety for the latest guidance.
+
+## Submitting a proposal
+
+Submit a proposal using one of the following links:
+
+- [Propose an Interop 2026 Focus
+  Area](https://github.com/web-platform-tests/interop/issues/new?template=focus-area-proposal.yml)
+  – for features that already have high quality specifications and
+  tests, but aren't implemented by all browsers.
+- [Proposal an Interop 2026 Investigation
+  Effort](https://github.com/web-platform-tests/interop/issues/new?investigation-effort-proposal.yml)
+  – for features that are widely implemented, but lack a high quality
+  specification or tests.
+
+To give your proposal the best chance of success, see the [essential
+criteria](#essential-criteria) below.
+
+If you want to propose a new feature for the web platform, please file
+an issue with the relevant group, such as [the
+CSSWG](https://github.com/w3c/csswg-drafts) for CSS features.
 
 <details>
   <summary>Example proposals</summary>
