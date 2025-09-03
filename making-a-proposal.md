@@ -18,6 +18,14 @@ For reference, here are some proposals from past years that are well structured.
 Please note that the proposal template will have changes year over year. 
 We encourage you to read the guide in its entirety for the latest guidance.
 
+<details>
+  <summary>Example proposals</summary>
+
+  - [View transition classes (Interop 2025)](https://github.com/web-platform-tests/interop/issues/767)
+  - [list-style-position on bare li elements (Interop 2025)](https://github.com/web-platform-tests/interop/issues/857)
+  - [backdrop-filter (Interop 2025)](https://github.com/web-platform-tests/interop/issues/822)
+</details>
+
 ## Submitting a proposal
 
 Submit a proposal using one of the following links:
@@ -28,8 +36,7 @@ Submit a proposal using one of the following links:
   tests, but aren't implemented by all browsers.
 - [Proposal an Interop 2026 Investigation
   Effort](https://github.com/web-platform-tests/interop/issues/new?investigation-effort-proposal.yml)
-  – for features that are widely implemented, but lack a high quality
-  specification or tests.
+  – for features that lack a high quality specification or tests.
 
 To give your proposal the best chance of success, see the [essential
 criteria](#essential-criteria) below.
@@ -37,14 +44,6 @@ criteria](#essential-criteria) below.
 If you want to propose a new feature for the web platform, please file
 an issue with the relevant group, such as [the
 CSSWG](https://github.com/w3c/csswg-drafts) for CSS features.
-
-<details>
-  <summary>Example proposals</summary>
-  
-  - [View transition classes (Interop 2025)](https://github.com/web-platform-tests/interop/issues/767)
-  - [list-style-position on bare li elements (Interop 2025)](https://github.com/web-platform-tests/interop/issues/857)
-  - [backdrop-filter (Interop 2025)](https://github.com/web-platform-tests/interop/issues/822)
-</details>
 
 ## Essential Criteria
 

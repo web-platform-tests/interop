@@ -9,7 +9,7 @@ body:
 
       Be sure to read the [proposal guide](https://github.com/web-platform-tests/interop/blob/main/making-a-proposal.md) to give your proposal the best chance of success!
 
-      Note: If this feature is widely implemented, but lacks a high quality specification or tests, an [Investigation Effort](https://github.com/web-platform-tests/interop/issues/new?template=investigation-effort-proposal.yml) may be more appropriate.
+      Note: If this feature lacks a high quality specification or tests, an [Investigation Effort](https://github.com/web-platform-tests/interop/issues/new?template=investigation-effort-proposal.yml) may be more appropriate.
 
       When you submit your proposal, a GitHub issue will be created to track it. Please check back on GitHub from time to time to answer any questions we have. You'll also be able to make changes to your proposal from now until October 2nd by commenting on your issue. See our [README](https://github.com/web-platform-tests/interop/blob/main/2026/README.md) for the full timeline of Interop 2026.
 - type: markdown

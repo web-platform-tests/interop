@@ -13,4 +13,4 @@ Interop 2026 is an effort to increase interoperability across browsers in key te
 
 ## Guidance for proposal authors
 
-If you would like to make a proposal for Interop 2026, we invite you to review the updated [Interop proposer's guide](https://github.com/web-platform-tests/interop/blob/main/proposal_guide.md) which offers valuable insights into the signals and criteria that Interop participants will consider when evaluating proposals.
+If you would like to make a proposal for Interop 2026, we invite you to review the updated [Interop proposer's guide](../making-a-proposal.md) which offers valuable insights into the signals and criteria that Interop participants will consider when evaluating proposals.
