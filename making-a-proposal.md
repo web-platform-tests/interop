@@ -14,8 +14,8 @@ listed are considered binding, and the different organizations that
 are part of the Interop team may use the criteria in different ways,
 or supplement these with their own specific considerations.
 
-For reference, here are some proposals from past years that are well structured. 
-Please note that the proposal template will have changes year over year. 
+For reference, here are some proposals from past years that are well structured.
+Please note that the proposal template will have changes year over year.
 We encourage you to read the guide in its entirety for the latest guidance.
 
 <details>
@@ -34,7 +34,7 @@ Submit a proposal using one of the following links:
   Area](https://github.com/web-platform-tests/interop/issues/new?template=focus-area-proposal.yml)
   – for features that already have high quality specifications and
   tests, but aren't implemented by all browsers.
-- [Proposal an Interop 2026 Investigation
+- [Propose an Interop 2026 Investigation
   Effort](https://github.com/web-platform-tests/interop/issues/new?investigation-effort-proposal.yml)
   – for features that lack a high quality specification or tests.
 
