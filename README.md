@@ -6,6 +6,10 @@ Please see the [Interop 2024 Dashboard](https://wpt.fyi/interop-2024) and [Inter
 
 Please see the [Interop 2025 README](./2025/README.md) for the ongoing planning of Interop 2025, which will be announced in early 2025.
 
+## Proposing a focus area for 2026
+
+**Interop 2026 is now open for proposals!** See the [proposal guide](./making-a-proposal.md) for details, and how to give your proposal the best chance of success.
+
 ## The Purpose of the Interop Project
 
 *Improve interoperability significantly for the benefit of users and web developers.*
