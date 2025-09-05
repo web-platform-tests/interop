@@ -189,16 +189,16 @@ function getStandardPositionsAsMarkdown(feature) {
     return "";
   }
 
-  let pos = "* **Standard positions:** ";
+  const positions = [];
 
   if (feature.standardPositions.mozilla.url) {
-    pos += `[Mozilla](${feature.standardPositions.mozilla.url})`;
+    positions.push(`[Mozilla](${feature.standardPositions.mozilla.url})`);
   }
   if (feature.standardPositions.webkit.url) {
-    pos += (pos ? ", " : "") + `[WebKit](${feature.standardPositions.webkit.url})`;
+    positions.push(`[WebKit](${feature.standardPositions.webkit.url})`);
   }
 
-  return pos + "\n";
+  return "* **Standard positions:** " + positions.join(", ") + "\n";
 }
 
 function getUseCounterAsMarkdown(feature) {
