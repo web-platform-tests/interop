@@ -2,10 +2,12 @@ import { Octokit } from "octokit";
 import { features } from "web-features";
 import yargs from "yargs";
 
+const GITHUB_API_VERSION = "2022-11-28";
 // This is used as a hidden HTML comment when posting comments to GitHub issues.
 // This way, we can retrieve the comment later, and update it if needed.
 const HIDDEN_COMMENT_IN_ISSUE = "<!-- interop-proposals-bot web-features update -->";
-const GITHUB_API_VERSION = "2022-11-28";
+// The label which the issue must have for the bot to process it.
+const REQUIRED_LABEL = "focus-area-proposal";
 
 const argv = yargs(process.argv)
   .option("number", {
@@ -275,6 +277,11 @@ async function postOrUpdateComment(issueNumber, markdown) {
 // The main entry point to the script.
 async function main() {
   const issue = await getReferencedIssue();
+
+  if (!issue.labels.some(label => label.name === REQUIRED_LABEL)) {
+    console.log(`The issue does not have the required label "${REQUIRED_LABEL}". Exiting.`);
+    return;
+  }
 
   console.log(`Processing issue #${issue.number}: "${issue.title}"`);
   const featureIds = findFeaturesInIssue(issue);
