@@ -110,6 +110,20 @@ function gatherFeaturesFromExplicitMentions(issueBody) {
     }
   }
 
+  // Also look for an h3 markdown section like:
+  // ### web-feature
+  // <feature-id>
+  // The bug template includes this section. Note that there may be empty lines and spaces before or after the id.
+  const sectionMentions = issueBody.match(/###\s*web-features?\s*([\r\n]+[ \t]*[a-z0-9-]+)+/gi) || [];
+  for (const section of sectionMentions) {
+    const lines = section.split(/[\r\n]+/).map(line => line.trim()).filter(line => line && !line.startsWith("###"));
+    for (const line of lines) {
+      if (features[line]) {
+        gatheredFeatures.add(line);
+      }
+    }
+  }
+
   return gatheredFeatures;
 }
 
@@ -288,7 +302,6 @@ async function main() {
     content += "No web features (from the [web-features project](https://github.com/web-platform-dx/web-features/)) were found in your proposal. If your proposal doesn't correspond to a web feature, that is fine.\\\n";
     content += "Otherwise, please update your initial comment to include `web-features: <feature-id>`.\n";
     content += "To find feature IDs, use the [web-features explorer](https://web-platform-dx.github.io/web-features-explorer/).\n\n";
-
   } else {
     console.log(`Found ${features.length} matching feature(s):`);
     console.log(features.map(f => `- ${f.id}`).join("\n"));
