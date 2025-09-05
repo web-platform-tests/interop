@@ -98,7 +98,6 @@ function gatherFeaturesFromWPTUrls(urls) {
 
 // Identify web-features by checking for explicit mentions in the issue body.
 function gatherFeaturesFromExplicitMentions(issueBody) {
-  console.log(issueBody);
   const gatheredFeatures = new Set();
 
   // Look for `web-features: <feature-id>` or `web-feature: <feature-id>` in the issue body.
@@ -328,7 +327,7 @@ async function main() {
   // Add the hidden comment to find this comment again later.
   content += `\n${HIDDEN_COMMENT_IN_ISSUE}`;
 
-  // await postOrUpdateComment(issue.number, content);
+  await postOrUpdateComment(issue.number, content);
 }
 
 main();
