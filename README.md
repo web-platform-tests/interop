@@ -8,7 +8,7 @@ Please see the [Interop 2025 README](./2025/README.md) for the ongoing planning 
 
 ## Proposing a focus area for 2026
 
-**Interop 2026 is now open for proposals!** See the [proposal guide](./making-a-proposal.md) for details, and how to give your proposal the best chance of success.
+**Interop 2026 is now open for proposals!** See the [proposal guide](./proposal_guide.md) for details, and how to give your proposal the best chance of success.
 
 ## The Purpose of the Interop Project
 
