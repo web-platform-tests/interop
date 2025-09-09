@@ -70,7 +70,7 @@ function gatherFeaturesFromExplorerUrls(urls) {
       continue;
     }
 
-    const candidateId = url.pathname.substring(url.pathname.indexOf("features/") + 9).replace("/", "").replace(".json", "");
+    const candidateId = url.pathname.substring(url.pathname.indexOf("features/") + 9).replace("/", "").replace(".json", "").toLowerCase();
     if (features[candidateId]) {
       gatheredFeatures.add(candidateId);
     }
@@ -90,8 +90,13 @@ function gatherFeaturesFromWPTUrls(urls) {
 
     const query = url.searchParams.get("q");
     const match = query.match(/feature:([a-z0-9-]+)/);
-    if (match && match[1] && features[match[1]]) {
-      gatheredFeatures.add(match[1]);
+    if (!match || !match[1]) {
+      continue;
+    }
+
+    const id = match[1].toLowerCase();
+    if (features[id]) {
+      gatheredFeatures.add(id);
     }
   }
 
@@ -107,8 +112,13 @@ function gatherFeaturesFromExplicitMentions(issueBody) {
   const explicitMentions = issueBody.match(/web-features?:\s*([a-z0-9-]+)/gi) || [];
   for (const mention of explicitMentions) {
     const match = mention.match(/web-features?:\s*([a-z0-9-]+)/i);
-    if (match && match[1] && features[match[1]]) {
-      gatheredFeatures.add(match[1]);
+    if (!match || !match[1]) {
+      continue;
+    }
+
+    const id = match[1].toLowerCase();
+    if (features[id]) {
+      gatheredFeatures.add(id);
     }
   }
 
@@ -120,8 +130,9 @@ function gatherFeaturesFromExplicitMentions(issueBody) {
   for (const section of sectionMentions) {
     const lines = section.split(/[\r\n]+/).map(line => line.trim()).filter(line => line && !line.startsWith("###"));
     for (const line of lines) {
-      if (features[line]) {
-        gatheredFeatures.add(line);
+      const id = line.toLowerCase();
+      if (features[id]) {
+        gatheredFeatures.add(id);
       }
     }
   }
