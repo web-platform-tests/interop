@@ -3,7 +3,7 @@
   "type": "module",
   "devDependencies": {
     "octokit": "^5.0.3",
-    "web-features": "^2.45.0",
+    "web-features": "^2.48.0",
     "yargs": "^18.0.0"
   }
 }
