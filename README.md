@@ -2,13 +2,8 @@
 
 Welcome to the Interop Project, an ongoing effort to make the web more interoperable in key areas, prioritized by user and web developer needs. This is part of [the web-platform-tests project](https://github.com/web-platform-tests/wpt), the main test suite for the web platform, and worked on by the [Interop Team](./charter.md).
 
-Please see the [Interop 2024 Dashboard](https://wpt.fyi/interop-2024) and [Interop 2024 README](./2024/README.md) for the current iteration of the project!
-
-Please see the [Interop 2025 README](./2025/README.md) for the ongoing planning of Interop 2025, which will be announced in early 2025.
-
-## Proposing a focus area for 2026
-
-**Interop 2026 is now open for proposals!** See the [proposal guide](./proposal_guide.md) for details, and how to give your proposal the best chance of success.
+Please see the [Interop 2025 Dashboard](https://wpt.fyi/interop-2025) and [Interop 2025 README](./2025/README.md) for the current iteration of the project!
+Please see the [Interop 2026 README](./2026/README.md) for the ongoing planning of Interop 2026, which will be announced in early 2026.
 
 ## The Purpose of the Interop Project
 
