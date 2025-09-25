@@ -36,7 +36,7 @@ Submit a proposal using one of the following links:
   – for features that already have high quality specifications and
   tests, but aren't implemented by all browsers.
 - [Propose an Interop 2026 Investigation
-  Effort](https://github.com/web-platform-tests/interop/issues/new?investigation-effort-proposal.yml)
+  Effort](https://github.com/web-platform-tests/interop/issues/new?template=investigation-effort-proposal.yml)
   – for features that lack a high quality specification or tests.
 
 To give your proposal the best chance of success, see the [essential
