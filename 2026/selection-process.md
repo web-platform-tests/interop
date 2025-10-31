@@ -132,7 +132,7 @@ considered a priority for inclusion in Interop 2026.
 
 ### Proposal Ranking
 
-**Timeline**: Before November 20th
+**Timeline**: Before December 4th
 
 Participants rank each proposal as P1 (highest priority) to P3 (lowest
 priority), or veto.
@@ -140,11 +140,11 @@ priority), or veto.
 There is no preset limit on how many proposals each participant may
 assign each rank.
 
-Initial rankings are submitted in time for the November 20th meeting.
+Initial rankings are submitted in time for the December 4th meeting.
 
 ### Focus Area Selection
 
-**Timeline**: November 20th, December 4th and 11th
+**Timeline**: December 4th, 11th and 18th
 
 Focus areas with any vetoes are eliminated.
 
@@ -166,7 +166,7 @@ remaining proposals up or down in response to discussions, any agreed
 changes to the proposals, or the overall composition of the project,
 and the process repeats in the following meeting.
 
-Before the end of the December 11th meeting there's a final decision
+Before the end of the December 18th meeting there's a final decision
 on any proposals without a clear resolution, and formal call for
 consensus on the set of selected focus areas.
 
