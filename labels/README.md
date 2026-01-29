@@ -1,0 +1,1 @@
+This directory tracks all tests that have a label starting with "interop-". It's updated via automated pull requests and is used to ensure that labels aren't added or removed without the interop team being aware of the change.
