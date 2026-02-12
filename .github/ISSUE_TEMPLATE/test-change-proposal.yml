@@ -1,11 +1,11 @@
 name: Test Change Proposal
-description: Proposal to change, add, or remove tests for an Interop 2025 focus area
+description: Proposal to change, add, or remove tests for an Interop 2026 focus area
 labels: test-change-proposal
 body:
 - type: markdown
   attributes:
     value: |
-      Thanks for taking the time to make a suggest an improvement to the Interop 2025 test suite!
+      Thanks for taking the time to make a suggest an improvement to the Interop 2026 test suite!
 
       Please see the [RFC](https://github.com/web-platform-tests/rfcs/blob/master/rfcs/interop_2023.md#updating-the-tests) for details on how test change proposals are handled.
 - type: textarea
