@@ -54,7 +54,7 @@ Container style queries, which use the `@container` at-rule together with one or
 
 Anchor positioning places an element based on the position of another element. For example, you can place a tooltip next to the content it references.
 
-This focus area is a carry over from Interop 2025\. See [last year's layout focus area description](https://github.com/web-platform-tests/interop/tree/main/2025#css-anchor-positioning).
+This focus area is a carry over from Interop 2025. See [last year's layout focus area description](https://github.com/web-platform-tests/interop/tree/main/2025#css-anchor-positioning).
 
 #### Resources
 
@@ -65,7 +65,7 @@ This focus area is a carry over from Interop 2025\. See [last year's layout focu
 
 ### CSS attr()
 
-The attr() CSS function returns the value of an attribute of an HTML element, with the option to return that value as a specific type or with a specific unit. For example: `background-color: attr(data-background type(\<color\>), red);`.
+The attr() CSS function returns the value of an attribute of an HTML element, with the option to return that value as a specific type or with a specific unit. For example: `background-color: attr(data-background type(<color>), red);`.
 
 #### Resources
 
@@ -87,7 +87,7 @@ The `contrast-color()` CSS function picks a color that has guaranteed contrast a
 
 ### CSS zoom
 
-This focus area is a carry over from Interop 2025\. See [last year's layout focus area description](https://github.com/web-platform-tests/interop/blob/main/2025/README.md#web-compat).
+This focus area is a carry over from Interop 2025. See [last year's layout focus area description](https://github.com/web-platform-tests/interop/blob/main/2025/README.md#web-compat).
 
 This year, the work will focus on continuing to improve the interoperability of the `zoom` CSS property, which scales the size of an element. Unlike the transform property, a zoomed element affects page layout.
 
@@ -311,7 +311,7 @@ This year, the work will focus on web compatibility issues with:
 
 * ESM module loading  
 * The timing of scroll events relative to animation events  
-* Unprefixing the \-webkit-user-select property
+* Unprefixing the `-webkit-user-select` property
 
 #### Resources
 
@@ -364,7 +364,7 @@ In addition to the above focus areas, Interop 2026 also commits to making progre
 
 ### Accessibility testing
 
-This is a continuation of last year’s accessibility testing investigation effort, aimed at working towards generating consistent accessibility trees from the same DOM and CSS across browsers, and improving the WPT testing infrastructure for accessibility testing.
+This is a continuation of last year's accessibility testing investigation effort, aimed at working towards generating consistent accessibility trees from the same DOM and CSS across browsers, and improving the WPT testing infrastructure for accessibility testing.
 
 #### Resources
 
@@ -384,7 +384,7 @@ This investigation effort will focus on making the feature testable. [Current te
 
 ### Mobile testing
 
-This is a continuation of last year’s mobile testing investigation effort, which was focused on getting mobile browser data onto [the wpt.fyi dashboard site](https://wpt.fyi).
+This is a continuation of last year's mobile testing investigation effort, which was focused on getting mobile browser data onto [the wpt.fyi dashboard site](https://wpt.fyi).
 
 This year, the work will focus on improving the WPT infrastructure to test mobile-specific features such as dynamic viewport changes.
 
@@ -395,7 +395,7 @@ This year, the work will focus on improving the WPT infrastructure to test mobil
 
 ### WebVTT
 
-This is a continuation of last year’s WebVTT testing investigation effort, which aims at fixing as many tests as possible, making any needed changes to WebVTT specification along the way, so browser developers have a more transparent understanding of how their implementation conforms to the standard, hopefully opening up the future possibility for greatly improved interoperability.
+This is a continuation of last year's WebVTT testing investigation effort, which aims at fixing as many tests as possible, making any needed changes to WebVTT specification along the way, so browser developers have a more transparent understanding of how their implementation conforms to the standard, hopefully opening up the future possibility for greatly improved interoperability.
 
 #### Resources
 
