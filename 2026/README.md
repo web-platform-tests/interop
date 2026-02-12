@@ -137,7 +137,7 @@ This year, the work will focus on:
 
 ### Fetch uploads and ranges
 
-The fetch() method makes asynchronous HTTP requests.
+The `fetch()` method makes asynchronous HTTP requests.
 
 This year, the work will focus on:
 
