@@ -24,6 +24,15 @@ const argv = yargs(process.argv)
 
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 
+function getFeature(id) {
+  const feature = features[id];
+  if (!feature || feature.kind !== "feature") {
+    return null;
+  }
+
+  return feature;
+}
+
 function escapeFeatureName(feature) {
   // Escape the feature name for use in HTML.
   return feature.name.replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -45,8 +54,12 @@ function gatherFeaturesFromSpecUrls(urls) {
 
   for (const url of urls) {
     for (const id in features) {
-      const feature = features[id];
-      const specUrls = (Array.isArray(feature.spec) ? feature.spec : [feature.spec]).map(url => new URL(url));
+      const feature = getFeature(id);
+      if (!feature) {
+        continue;
+      }
+
+      const specUrls = feature.spec.map(url => new URL(url));
 
       if (specUrls.some(specUrl => {
         return specUrl.hostname === url.hostname &&
@@ -71,7 +84,7 @@ function gatherFeaturesFromExplorerUrls(urls) {
     }
 
     const candidateId = url.pathname.substring(url.pathname.indexOf("features/") + 9).replace("/", "").replace(".json", "");
-    if (features[candidateId]) {
+    if (getFeature(candidateId)) {
       gatheredFeatures.add(candidateId);
     }
   }
@@ -90,7 +103,7 @@ function gatherFeaturesFromWPTUrls(urls) {
 
     const query = url.searchParams.get("q");
     const match = query.match(/feature:([a-z0-9-]+)/);
-    if (match && match[1] && features[match[1]]) {
+    if (match && match[1] && getFeature(match[1])) {
       gatheredFeatures.add(match[1]);
     }
   }
@@ -107,7 +120,7 @@ function gatherFeaturesFromExplicitMentions(issueBody) {
   const explicitMentions = issueBody.match(/web-features?:\s*([a-z0-9-]+)/gi) || [];
   for (const mention of explicitMentions) {
     const match = mention.match(/web-features?:\s*([a-z0-9-]+)/i);
-    if (match && match[1] && features[match[1]]) {
+    if (match && match[1] && getFeature(match[1])) {
       gatheredFeatures.add(match[1]);
     }
   }
@@ -120,7 +133,7 @@ function gatherFeaturesFromExplicitMentions(issueBody) {
   for (const section of sectionMentions) {
     const lines = section.split(/[\r\n]+/).map(line => line.trim()).filter(line => line && !line.startsWith("###"));
     for (const line of lines) {
-      if (features[line]) {
+      if (getFeature(line)) {
         gatheredFeatures.add(line);
       }
     }
@@ -185,27 +198,24 @@ function getDocsAsMarkdown(feature) {
 }
 
 function getStandardPositionsAsMarkdown(feature) {
-  if (!feature.standardPositions.mozilla.url && !feature.standardPositions.webkit.url) {
+  if (!feature.standardPositions.length) {
     return "";
   }
 
   const positions = [];
 
-  if (feature.standardPositions.mozilla.url) {
-    positions.push(`[Mozilla](${feature.standardPositions.mozilla.url})`);
-  }
-  if (feature.standardPositions.webkit.url) {
-    positions.push(`[WebKit](${feature.standardPositions.webkit.url})`);
+  for (const position of feature.standardPositions) {
+    positions.push(`[${position.vendor}](${position.url})`);
   }
 
   return "* **Standard positions:** " + positions.join(", ") + "\n";
 }
 
 function getUseCounterAsMarkdown(feature) {
-  if (!feature.useCounters.chromeStatusUrl) {
+  if (!feature.chromeUseCounters || !feature.chromeUseCounters.url) {
     return "";
   }
-  return `* **Chrome use counter:** [chromestatus.com](${feature.useCounters.chromeStatusUrl})\n`;
+  return `* **Chrome use counter:** [chromestatus.com](${feature.chromeUseCounters.url})\n`;
 }
 
 function getSurveysAsMarkdown(feature) {
@@ -214,7 +224,7 @@ function getSurveysAsMarkdown(feature) {
   }
 
   const surveys = feature.stateOfSurveys.map(survey => {
-    return `[${survey.name} (${survey.question} question)](${survey.link})`;
+    return `[${survey.name} (${survey.question} question)](${survey.url})`;
   }).join(", ");
 
   return `* **State of CSS/JS/HTML surveys:** ${surveys}\n`;
