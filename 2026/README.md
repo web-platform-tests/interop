@@ -151,7 +151,7 @@ This year, the work will focus on:
   * [ReadableStream in body](https://github.com/web-platform-tests/interop/issues/1072)  
   * [FormData](https://github.com/web-platform-tests/interop/issues/1156)  
   * [Range header](https://github.com/web-platform-tests/interop/issues/1157)  
-* [Tests](https://github.com/web-platform-tests/wpt-metadata/pull/8497) (interop-2026-fetch)  
+* [Tests](https://wpt.fyi/results/?label=master&label=experimental&aligned&q=label%3Ainterop-2026-fetch)
 * [Spec](https://fetch.spec.whatwg.org/)  
 * MDN docs:  
   * [ReadableStream in body](https://developer.mozilla.org/docs/Web/API/Request/body)  
