@@ -318,21 +318,21 @@
       "popover-hint"
     ],
     "interop-2026-fetch": [
-      "fetch-request-streams"
-      // Missing other parts
+      "fetch-request-streams",
+      "fetch-formdata"
     ],
     "interop-2026-indexeddb": [
       "getallrecords"
     ],
     "interop-2026-jspi-for-wasm": [
-      "wasm-jspi" // Wait for this PR: https://github.com/web-platform-dx/web-features/pull/3791
+      "wasm-jspi"
     ],
     "interop-2026-media-pseudo-classes": [
       "media-pseudos"
     ],
     "interop-2026-navigation": [
       "navigation",
-      "navigation-precommit-handlers" // Wait for this PR: https://github.com/web-platform-dx/web-features/pull/3792
+      "navigation-precommit-handlers"
     ],
     "interop-2026-scoped-custom-element-registries": [
       "scoped-custom-element-registries"
@@ -355,7 +355,6 @@
     ],
     "interop-2026-webcompat": [
       "top-level-await",
-      // missing timing of scroll event relative to animation event
       "user-select"
     ],
     "interop-2026-webrtc": [
