@@ -260,7 +260,7 @@ CSS scroll snap controls the panning and scrolling behavior within a scroll cont
 
 ### CSS shape()
 
-The `circle()`, `ellipse()`, `inset()`, `path()`, `polygon()`, `rect()`, `shape()`, and `xywh()` CSS functions create shapes for use with `clip-path` and `shape-outside`. 
+The `circle()`, `ellipse()`, `inset()`, `path()`, `polygon()`, `rect()`, `shape()`, and `xywh()` CSS functions create shapes for use with `clip-path` and `shape-outside`.
 
 #### Resources
 
