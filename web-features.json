@@ -344,7 +344,10 @@
       "scroll-snap"
    ],
     "interop-2026-shape": [
-      "shape-function"
+      "shape-function",
+      "shapes",
+      "path-shape",
+      "rect-xywx"
     ],
     "interop-2026-view-transitions": [
       "view-transitions",
