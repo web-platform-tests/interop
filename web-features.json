@@ -295,5 +295,80 @@
     "interop-2025-writingmodes": [
       "writing-mode"
     ]
+  },
+  "2026": {
+    "interop-2025-anchor-positioning": [
+      "anchor-positioning"
+    ],
+    "interop-2026-attr": [
+      "attr"
+    ],
+    "interop-2026-container-style-queries": [
+      "container-style-queries"
+    ],
+    "interop-2026-contrast-color": [
+      "contrast-color"
+    ],
+    "interop-2026-custom-highlights": [
+      "highlight"
+    ],
+    "interop-2026-dialogs-and-popovers": [
+      "dialog-closedby",
+      "open-pseudo",
+      "popover-hint"
+    ],
+    "interop-2026-fetch": [
+      "fetch-request-streams",
+      "fetch-formdata"
+    ],
+    "interop-2026-indexeddb": [
+      "getallrecords"
+    ],
+    "interop-2026-jspi-for-wasm": [
+      "wasm-jspi"
+    ],
+    "interop-2026-media-pseudo-classes": [
+      "media-pseudos"
+    ],
+    "interop-2026-navigation": [
+      "navigation",
+      "navigation-precommit-handlers"
+    ],
+    "interop-2026-scoped-custom-element-registries": [
+      "scoped-custom-element-registries"
+    ],
+    "interop-2026-scroll-driven-animations": [
+      "scroll-driven-animations"
+    ],
+    "interop-2026-scroll-snap": [
+      "scroll-snap"
+   ],
+    "interop-2026-shape": [
+      "shape-function",
+      "shapes",
+      "path-shape",
+      "rect-xywx"
+    ],
+    "interop-2026-view-transitions": [
+      "view-transitions",
+      "blocking-render",
+      "link-rel-expect",
+      "active-view-transition",
+      "cross-document-view-transitions"
+    ],
+    "interop-2026-webcompat": [
+      "top-level-await",
+      "user-select"
+    ],
+    "interop-2026-webrtc": [
+      "webrtc",
+      "webrtc-encoded-transform"
+    ],
+    "interop-2026-webtransport": [
+      "webtransport"
+    ],
+    "interop-2026-zoom": [
+      "zoom"
+    ]
   }
 }
