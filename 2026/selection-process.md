@@ -9,9 +9,9 @@ team of representatives from companies that make substantial
 contributions to browser rendering engines (including Apple, Bocoup,
 Google, Igalia, Microsoft, and Mozilla).
 
-Please see the [Interop 2025 Dashboard](https://wpt.fyi/interop-2025)
-and [Interop 2025
-README](https://github.com/web-platform-tests/interop/blob/main/2025/README.md)
+Please see the [Interop 2026 Dashboard](https://wpt.fyi/interop-2026)
+and [Interop 2026
+README](https://github.com/web-platform-tests/interop/blob/main/2026/README.md)
 for the current iteration of the project.
 
 Each iteration of the project starts with an open call for proposals,
