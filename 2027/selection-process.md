@@ -135,7 +135,7 @@ priority), or veto.
 There is no preset limit on how many proposals each participant may
 assign each rank.
 
-Initial rankings are submitted in time for the November 26th meeting.
+Initial rankings are submitted in time for the November 19th meeting.
 
 ### Focus Area Selection
 
