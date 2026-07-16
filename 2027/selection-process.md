@@ -81,21 +81,15 @@ investigations. For simplicity the remainder of this document will
 only refer to focus area proposals, but this also covers proposals for
 investigation efforts.
 
-### Proposal Refinement
-
-**Timeline**: September 23rd to October 1st
-
-This phase will be used by the Interop team to ask proposal authors
-for any clarifications to help with evaluating the proposal.
 
 ### Champion Selection
 
-**Timeline**: October 1st, 8th, 15th
+**Timeline**: September 23rd, October 1st, October 8th
 
 Interop participants propose focus areas, consisting of one or more
 proposals, that they would like to champion. Proposals will initially
-be shared in time for the meeting on October 8th, and champions
-finalised on October 15th.
+be shared in time for the meeting on October 1st, and champions
+finalised on October 8th.
 
 Where more than one participant wants to champion the same focus area
 proposal a single champion must be nominated for the remainder of the
@@ -115,7 +109,7 @@ Any proposal without a champion will not be carried forward.
 
 ### Champion Evidence Gathering
 
-**Timeline**: October 22nd, 29th
+**Timeline**: October 8th, 15th
 
 Champions gather evidence of the impact of their proposals, using the
 rubric developed earlier. Specific participants may also be asked
@@ -125,7 +119,7 @@ positions, use counter data).
 
 ### Focus Area Proposal Presentation
 
-**Timeline**: November 5th (double-length meeting)
+**Timeline**: October 22nd (double-length meeting)
 
 Each participant gets 15 minutes of meeting time to present the
 proposals they are championing, and make the case that they should be
@@ -133,7 +127,7 @@ considered a priority for inclusion in Interop 2027.
 
 ### Proposal Ranking
 
-**Timeline**: Before December 3rd
+**Timeline**: Before November 26th
 
 Participants rank each proposal as P1 (highest priority) to P3 (lowest
 priority), or veto.
@@ -141,11 +135,11 @@ priority), or veto.
 There is no preset limit on how many proposals each participant may
 assign each rank.
 
-Initial rankings are submitted in time for the December 4th meeting.
+Initial rankings are submitted in time for the November 26th meeting.
 
 ### Focus Area Selection
 
-**Timeline**: December 3rd, 10th and 17th
+**Timeline**: November 26th, December 3rd, 10th and 17th
 
 Focus areas with any vetoes are eliminated.
 
