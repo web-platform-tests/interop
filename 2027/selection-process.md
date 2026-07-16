@@ -127,7 +127,7 @@ considered a priority for inclusion in Interop 2027.
 
 ### Proposal Ranking
 
-**Timeline**: Before November 26th
+**Timeline**: Before November 19th
 
 Participants rank each proposal as P1 (highest priority) to P3 (lowest
 priority), or veto.
@@ -139,7 +139,7 @@ Initial rankings are submitted in time for the November 26th meeting.
 
 ### Focus Area Selection
 
-**Timeline**: November 26th, December 3rd, 10th and 17th
+**Timeline**: December 3rd, 10th and 17th
 
 Focus areas with any vetoes are eliminated.
 
