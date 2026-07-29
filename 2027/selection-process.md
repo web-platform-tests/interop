@@ -28,7 +28,7 @@ This is the general timeline for the Interop 2027 proposal selection
 process. The dates are centered on the Interop team meeting (Thursdays).
 Please note that the timelines are subject to change.
 
-*   Proposal submission window (~3 weeks): September 3rd, 2025 to September 23rd, 2026
+*   Proposal submission window (~3 weeks): September 3rd, 2026 to September 23rd, 2026
 *   Proposal selection: Before December 10th 2026
 *   Scope of the Interop 2027 project published: February 4th, 2027.
 
