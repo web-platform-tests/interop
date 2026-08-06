@@ -6,7 +6,7 @@ end users. This effort is part of the
 [web-platform-tests](https://github.com/web-platform-tests/wpt) (WPT)
 project — an automated test suite for web standards — and run by a
 team of representatives from companies that make substantial
-contributions to browser rendering engines (including Apple, Bocoup,
+contributions to browser rendering engines (including Apple, 
 Google, Igalia, Microsoft, and Mozilla).
 
 Please see the [Interop 2027 Dashboard](https://wpt.fyi/interop-2027)
