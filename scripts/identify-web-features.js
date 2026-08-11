@@ -1,59 +1,66 @@
+import { pathToFileURL } from "node:url";
 import { Octokit } from "octokit";
-import { features } from "web-features";
+import { features as webFeatures } from "web-features";
 import yargs from "yargs";
+import { hideBin } from "yargs/helpers";
 
 const GITHUB_API_VERSION = "2022-11-28";
-// This is used as a hidden HTML comment when posting comments to GitHub issues.
-// This way, we can retrieve the comment later, and update it if needed.
-const HIDDEN_COMMENT_IN_ISSUE = "<!-- interop-proposals-bot web-features update -->";
-// The label which the issue must have for the bot to process it.
-const REQUIRED_LABEL = "focus-area-proposal";
+export const HIDDEN_COMMENT_IN_ISSUE = "<!-- interop-proposals-bot web-features update -->";
+export const REQUIRED_LABEL = "focus-area-proposal";
 
-const argv = yargs(process.argv)
-  .option("number", {
-    alias: "n",
-    type: "number",
-    default: false,
-    describe: "The issue number to process",
-  })
-  .option("repo", {
-    alias: "r",
-    type: "string",
-    describe: "The owner and repository name. For example: web-platform-tests/interop",
-  }).argv;
+function getGitHubHeaders() {
+  return {
+    "X-GitHub-Api-Version": GITHUB_API_VERSION,
+  };
+}
 
-const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+export function parseRepository(repository) {
+  const [owner, repo, ...extra] = repository.split("/");
+  if (!owner || !repo || extra.length > 0) {
+    throw new Error(`Invalid repository "${repository}". Expected "owner/repository".`);
+  }
+  return { owner, repo };
+}
+
+function issueHasLabel(issue, labelName) {
+  return issue.labels.some(label => (typeof label === "string" ? label : label.name) === labelName);
+}
+
+export function shouldProcessIssue(issue) {
+  return issue.state === "open" && issueHasLabel(issue, REQUIRED_LABEL);
+}
 
 function escapeFeatureName(feature) {
-  // Escape the feature name for use in HTML.
   return feature.name.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
-async function getReferencedIssue() {
-  const response = await octokit.request(`GET /repos/${argv.repo}/issues/${argv.number}`,);
-  return response.data;
-}
-
-function gatherUrlsFromIssue(issueBody) {
+export function gatherUrlsFromIssue(issueBody) {
   const urls = issueBody.match(/https?:\/\/[^)\s]+/g) || [];
-  return urls.map(url => new URL(url));
+  return urls.flatMap(url => {
+    try {
+      return [new URL(url)];
+    } catch {
+      return [];
+    }
+  });
 }
 
-// Identify web-features based on spec URLs in the issue body.
-function gatherFeaturesFromSpecUrls(urls) {
+export function gatherFeaturesFromSpecUrls(urls, featureCatalog = webFeatures) {
   const gatheredFeatures = new Set();
 
   for (const url of urls) {
-    for (const id in features) {
-      const feature = features[id];
-      const specUrls = (Array.isArray(feature.spec) ? feature.spec : [feature.spec]).map(url => new URL(url));
+    for (const id in featureCatalog) {
+      const feature = featureCatalog[id];
+      const specUrls = (Array.isArray(feature.spec) ? feature.spec : [feature.spec])
+        .filter(Boolean)
+        .map(specUrl => new URL(specUrl));
 
       if (specUrls.some(specUrl => {
         return specUrl.hostname === url.hostname &&
           specUrl.pathname === url.pathname &&
           (specUrl.hash ? specUrl.hash === url.hash : true);
       })) {
-        gatheredFeatures.add(id)
+        gatheredFeatures.add(id);
       }
     }
   }
@@ -61,8 +68,7 @@ function gatherFeaturesFromSpecUrls(urls) {
   return gatheredFeatures;
 }
 
-// Identify web-features based on explorer URLs in the issue body.
-function gatherFeaturesFromExplorerUrls(urls) {
+export function gatherFeaturesFromExplorerUrls(urls, featureCatalog = webFeatures) {
   const gatheredFeatures = new Set();
 
   for (const url of urls) {
@@ -70,8 +76,10 @@ function gatherFeaturesFromExplorerUrls(urls) {
       continue;
     }
 
-    const candidateId = url.pathname.substring(url.pathname.indexOf("features/") + 9).replace("/", "").replace(".json", "");
-    if (features[candidateId]) {
+    const candidateId = url.pathname.substring(url.pathname.indexOf("features/") + 9)
+      .replace("/", "")
+      .replace(".json", "");
+    if (featureCatalog[candidateId]) {
       gatheredFeatures.add(candidateId);
     }
   }
@@ -79,8 +87,7 @@ function gatherFeaturesFromExplorerUrls(urls) {
   return gatheredFeatures;
 }
 
-// Identify web-features based on WPT URLs in the issue body.
-function gatherFeaturesFromWPTUrls(urls) {
+export function gatherFeaturesFromWPTUrls(urls, featureCatalog = webFeatures) {
   const gatheredFeatures = new Set();
 
   for (const url of urls) {
@@ -90,7 +97,7 @@ function gatherFeaturesFromWPTUrls(urls) {
 
     const query = url.searchParams.get("q");
     const match = query.match(/feature:([a-z0-9-]+)/);
-    if (match && match[1] && features[match[1]]) {
+    if (match?.[1] && featureCatalog[match[1]]) {
       gatheredFeatures.add(match[1]);
     }
   }
@@ -98,29 +105,24 @@ function gatherFeaturesFromWPTUrls(urls) {
   return gatheredFeatures;
 }
 
-// Identify web-features by checking for explicit mentions in the issue body.
-function gatherFeaturesFromExplicitMentions(issueBody) {
+export function gatherFeaturesFromExplicitMentions(issueBody, featureCatalog = webFeatures) {
   const gatheredFeatures = new Set();
 
-  // Look for `web-features: <feature-id>` or `web-feature: <feature-id>` in the issue body.
-  // There might be spaces between the colon and the feature ID. And there might be spaces after the ID, or a period, or end of line.
   const explicitMentions = issueBody.match(/web-features?:\s*([a-z0-9-]+)/gi) || [];
   for (const mention of explicitMentions) {
     const match = mention.match(/web-features?:\s*([a-z0-9-]+)/i);
-    if (match && match[1] && features[match[1]]) {
+    if (match?.[1] && featureCatalog[match[1]]) {
       gatheredFeatures.add(match[1]);
     }
   }
 
-  // Also look for an h3 markdown section like:
-  // ### web-feature
-  // <feature-id>
-  // The bug template includes this section. Note that there may be empty lines and spaces before or after the id.
   const sectionMentions = issueBody.match(/###\s*web-features?\s*([\r\n]+[ \t]*[a-z0-9-]+)+/gi) || [];
   for (const section of sectionMentions) {
-    const lines = section.split(/[\r\n]+/).map(line => line.trim()).filter(line => line && !line.startsWith("###"));
+    const lines = section.split(/[\r\n]+/)
+      .map(line => line.trim())
+      .filter(line => line && !line.startsWith("###"));
     for (const line of lines) {
-      if (features[line]) {
+      if (featureCatalog[line]) {
         gatheredFeatures.add(line);
       }
     }
@@ -129,54 +131,51 @@ function gatherFeaturesFromExplicitMentions(issueBody) {
   return gatheredFeatures;
 }
 
-// Given a GitHub issue, find the web-features that are referenced in the issue body.
-function findFeaturesInIssue(issue) {
-  const urls = gatherUrlsFromIssue(issue.body);
+export function findFeaturesInIssue(issue, featureCatalog = webFeatures) {
+  const issueBody = issue.body || "";
+  const urls = gatherUrlsFromIssue(issueBody);
+  const specFeatures = gatherFeaturesFromSpecUrls(urls, featureCatalog);
+  const wptFeatures = gatherFeaturesFromWPTUrls(urls, featureCatalog);
+  const explorerFeatures = gatherFeaturesFromExplorerUrls(urls, featureCatalog);
+  const explicitWebFeatureMentions = gatherFeaturesFromExplicitMentions(issueBody, featureCatalog);
 
-  const specFeatures = gatherFeaturesFromSpecUrls(urls);
-  const wptFeatures = gatherFeaturesFromWPTUrls(urls);
-  const explorerFeatures = gatherFeaturesFromExplorerUrls(urls);
-  const explicitWebFeatureMentions = gatherFeaturesFromExplicitMentions(issue.body);
-
-  // Explorer URLs take precedence over spec and WPT URLs.
-  // And explicit mentions take precedence over everything else.
   if (explicitWebFeatureMentions.size > 0) {
     return [...explicitWebFeatureMentions];
   }
   if (explorerFeatures.size > 0) {
-    // If we have explorer features, we don't need to combine them with spec and WPT features.
     return [...explorerFeatures];
   }
 
   return [...new Set([...specFeatures, ...wptFeatures])];
 }
 
-// Given a feature id, retrieve the feature's data.
-// We use the web-features-explorer's JSON files to get the full data, which includes both
-// the data that comes from the web-features project and the additional data that the explorer augments it with.
-async function getFeatureData(id) {
+export async function getFeatureData(id, fetchImpl = fetch) {
   console.log(`Getting data for feature ${id}`);
 
-  try {
-    const response = await fetch(`https://web-platform-dx.github.io/web-features-explorer/features/${id}.json`);
-    return await response.json();
-  } catch (error) {
-    console.error(`Error fetching the feature data for ${id}:`, error);
-    return null;
+  const response = await fetchImpl(`https://web-platform-dx.github.io/web-features-explorer/features/${id}.json`);
+  if (!response.ok) {
+    throw new Error(`Could not fetch feature "${id}": HTTP ${response.status}`);
   }
+
+  const feature = await response.json();
+  if (!feature || feature.id !== id || !feature.name) {
+    throw new Error(`Feature "${id}" returned malformed explorer data.`);
+  }
+  return feature;
 }
 
 function getBaselineStatusAsMarkdown(feature) {
-  if (feature.status && feature.status.baseline === "high") {
+  if (feature.status?.baseline === "high") {
     return "Widely Available";
-  } else if (feature.status && feature.status.baseline === "low") {
+  }
+  if (feature.status?.baseline === "low") {
     return "Newly Available";
   }
   return "Limited Availability";
 }
 
 function getDocsAsMarkdown(feature) {
-  if (!feature.mdnUrls.length) {
+  if (!feature.mdnUrls?.length) {
     return "";
   }
 
@@ -185,156 +184,392 @@ function getDocsAsMarkdown(feature) {
 }
 
 function getStandardPositionsAsMarkdown(feature) {
-  if (!feature.standardPositions.mozilla.url && !feature.standardPositions.webkit.url) {
+  if (!feature.standardPositions?.length) {
     return "";
   }
 
   const positions = [];
+  const vendorNames = {
+    apple: "WebKit",
+    mozilla: "Mozilla",
+  };
 
-  if (feature.standardPositions.mozilla.url) {
-    positions.push(`[Mozilla](${feature.standardPositions.mozilla.url})`);
-  }
-  if (feature.standardPositions.webkit.url) {
-    positions.push(`[WebKit](${feature.standardPositions.webkit.url})`);
+  for (const { vendor, url, position, concerns = [] } of feature.standardPositions) {
+    const vendorName = vendorNames[vendor] || vendor;
+    const details = [
+      position,
+      concerns.length ? `concerns: ${concerns.join(", ")}` : "",
+    ].filter(Boolean).join(", ");
+    positions.push(`[${vendorName}](${url})${details ? ` (${details})` : ""}`);
   }
 
-  return "* **Standard positions:** " + positions.join(", ") + "\n";
+  return `* **Standard positions:** ${positions.join(", ")}\n`;
+}
+
+function getDeveloperSignalsAsMarkdown(feature) {
+  if (!feature.developerSignals) {
+    return "";
+  }
+
+  const useCaseCount = feature.useCases?.length || 0;
+  const useCases = useCaseCount
+    ? ` / ${useCaseCount} use case${useCaseCount === 1 ? "" : "s"}`
+    : "";
+  return `* **Developer signals:** ${feature.developerSignals.votes} votes${useCases} ([details](${feature.developerSignals.url}))\n`;
 }
 
 function getUseCounterAsMarkdown(feature) {
-  if (!feature.useCounters.chromeStatusUrl) {
+  const { percentageOfPageLoad, url } = feature.chromeUseCounters || {};
+  if (!url) {
     return "";
   }
-  return `* **Chrome use counter:** [chromestatus.com](${feature.useCounters.chromeStatusUrl})\n`;
+
+  const usage = Number.isFinite(percentageOfPageLoad)
+    ? ` (~${(percentageOfPageLoad * 100).toFixed(3)}% of page loads)`
+    : "";
+  return `* **Chrome use counter:** [chromestatus.com](${url})${usage}\n`;
 }
 
 function getSurveysAsMarkdown(feature) {
-  if (!feature.stateOfSurveys || !feature.stateOfSurveys.length) {
+  if (!feature.stateOfSurveys?.length) {
     return "";
   }
 
   const surveys = feature.stateOfSurveys.map(survey => {
-    return `[${survey.name} (${survey.question} question)](${survey.link})`;
+    return `[${survey.name} (${survey.question} question)](${survey.url})`;
   }).join(", ");
 
   return `* **State of CSS/JS/HTML surveys:** ${surveys}\n`;
 }
 
 function getPreviousInteropsAsMarkdown(feature) {
-  if (!feature.interop.length) {
+  if (!feature.interop?.length) {
     return "";
   }
 
   const interops = feature.interop.map(i => {
-    return `[${i.year}](https://wpt.fyi/interop-2024?feature=${i.label})`;
+    return `[${i.year}](${i.url})`;
   }).join(", ");
 
-  return `* **Included in previous Interop iterations:** ${interops}\n`
+  return `* **Included in previous Interop iterations:** ${interops}\n`;
 }
 
 function getWPTLinkAsMarkdown(feature) {
   if (!feature.wpt) {
     return "";
   }
-  return `* **WPT tests:** [wpt.fyi/results/?q=feature:${feature.id}](https://wpt.fyi/results/?q=feature:${feature.id})\n`;
+  return `* **WPT tests:** [wpt.fyi results](${feature.wpt.url})\n`;
 }
 
-// Generate the markdown content for the given feature.
-function getMarkdownContentForFeature(feature) {
-  let str = `### Feature **${escapeFeatureName(feature)}**\n\n`;
-  str += `* **ID:** ${feature.id}\n`;
-  str += `* **Name:** ${escapeFeatureName(feature)}\n`;
-  str += `* **Description:** ${feature.description_html}\n`;
-  str += `* **Baseline status:** ${getBaselineStatusAsMarkdown(feature)}\n`;
-  str += getDocsAsMarkdown(feature);
-  str += getStandardPositionsAsMarkdown(feature);
-  str += getUseCounterAsMarkdown(feature);
-  str += getSurveysAsMarkdown(feature);
-  str += getPreviousInteropsAsMarkdown(feature);
-  str += getWPTLinkAsMarkdown(feature);
-  str += `* **More information:** See the [web-features explorer](https://web-platform-dx.github.io/web-features-explorer/features/${feature.id}/)\n\n`;
+export function getMarkdownContentForFeature(feature) {
+  let content = `### Feature **${escapeFeatureName(feature)}**\n\n`;
+  content += `* **ID:** ${feature.id}\n`;
+  content += `* **Name:** ${escapeFeatureName(feature)}\n`;
+  content += `* **Description:** ${feature.description_html}\n`;
+  content += `* **Baseline status:** ${getBaselineStatusAsMarkdown(feature)}\n`;
+  content += getDocsAsMarkdown(feature);
+  content += getStandardPositionsAsMarkdown(feature);
+  content += getDeveloperSignalsAsMarkdown(feature);
+  content += getUseCounterAsMarkdown(feature);
+  content += getSurveysAsMarkdown(feature);
+  content += getPreviousInteropsAsMarkdown(feature);
+  content += getWPTLinkAsMarkdown(feature);
+  content += `* **More information:** See the [web-features explorer](https://web-platform-dx.github.io/web-features-explorer/features/${feature.id}/)\n\n`;
 
-  return str;
+  return content;
 }
 
-// Post a new comment with the given markdown content or update an existing comment if it already exists.
-async function postOrUpdateComment(issueNumber, markdown) {
-  // Retrieve existing comments to check if we already posted a comment.
-  const commentsResponse = await octokit.request(`GET /repos/${argv.repo}/issues/${issueNumber}/comments`, {
-    headers: {
-      "X-GitHub-Api-Version": GITHUB_API_VERSION
-    }
-  });
-  const existingComment = commentsResponse.data.find(comment => comment.body.includes(HIDDEN_COMMENT_IN_ISSUE));
-
-  if (existingComment) {
-    // The bot already posted a comment. Update it.
-    console.log(`Updating existing comment #${existingComment.id}...`);
-    await octokit.request(`PATCH /repos/${argv.repo}/issues/comments/${existingComment.id}`, {
-      body: markdown,
-      headers: {
-        "X-GitHub-Api-Version": GITHUB_API_VERSION
-      }
-    });
-  } else {
-    // Post a new comment.
-    console.log(`Posting a new comment...`);
-    await octokit.request(`POST /repos/${argv.repo}/issues/${issueNumber}/comments`, {
-      body: markdown,
-      headers: {
-        "X-GitHub-Api-Version": GITHUB_API_VERSION
-      }
-    });
-  }
-}
-
-// The main entry point to the script.
-async function main() {
-  const issue = await getReferencedIssue();
-
-  if (!issue.labels.some(label => label.name === REQUIRED_LABEL)) {
-    console.log(`The issue does not have the required label "${REQUIRED_LABEL}". Exiting.`);
-    return;
-  }
-
-  console.log(`Processing issue #${issue.number}: "${issue.title}"`);
-  const featureIds = findFeaturesInIssue(issue);
-  const features = await Promise.all(featureIds.map(id => getFeatureData(id)));
-
+export function buildIssueComment(featureData) {
   let content = "_This comment was automatically generated based on the information you provided. Please don't edit it._\n\n";
 
-  if (features.length === 0) {
-    console.log("Could not find any matching features the issue body.");
-
+  if (featureData.length === 0) {
     content += "No web features (from the [web-features project](https://github.com/web-platform-dx/web-features/)) were found in your proposal. If your proposal doesn't correspond to a web feature, that is fine.\\\n";
     content += "Otherwise, please update your initial comment to include `web-features: <feature-id>`.\n";
     content += "To find feature IDs, use the [web-features explorer](https://web-platform-dx.github.io/web-features-explorer/).\n\n";
   } else {
-    console.log(`Found ${features.length} matching feature(s):`);
-    console.log(features.map(f => `- ${f.id}`).join("\n"));
-    
-    content += `Below is additional information about the web feature${features.length > 1 ? "s" : ""} (from the [web-features project](https://github.com/web-platform-dx/web-features/)) which ${features.length > 1 ? "are" : "is"} referenced in your proposal.\\\n`;
+    content += `Below is additional information about the web feature${featureData.length > 1 ? "s" : ""} (from the [web-features project](https://github.com/web-platform-dx/web-features/)) which ${featureData.length > 1 ? "are" : "is"} referenced in your proposal.\\\n`;
     content += "If this doesn't accurately correspond to your proposal, please update your initial comment to include `web-features: <feature-id>`.\n";
     content += "To find feature IDs, use the [web-features explorer](https://web-platform-dx.github.io/web-features-explorer/).\n\n";
 
-    for (const feature of features) {
+    for (const feature of featureData) {
       const featureContent = getMarkdownContentForFeature(feature);
 
-      if (features.length > 1) {
-        content += `<details>\n`;
+      if (featureData.length > 1) {
+        content += "<details>\n";
         content += `<summary>${escapeFeatureName(feature)}</summary>\n\n`;
         content += featureContent;
-        content += `</details>\n\n`;
+        content += "</details>\n\n";
       } else {
         content += featureContent;
       }
     }
   }
 
-  // Add the hidden comment to find this comment again later.
-  content += `\n${HIDDEN_COMMENT_IN_ISSUE}`;
-
-  await postOrUpdateComment(issue.number, content);
+  return `${content}\n${HIDDEN_COMMENT_IN_ISSUE}`;
 }
 
-main();
+export async function getReferencedIssue(octokit, repository, issueNumber) {
+  const response = await octokit.request("GET /repos/{owner}/{repo}/issues/{issue_number}", {
+    ...repository,
+    issue_number: issueNumber,
+    headers: getGitHubHeaders(),
+  });
+  return response.data;
+}
+
+export async function listOpenProposalIssues(octokit, repository) {
+  const issues = await octokit.paginate("GET /repos/{owner}/{repo}/issues", {
+    ...repository,
+    state: "open",
+    labels: REQUIRED_LABEL,
+    per_page: 100,
+    headers: getGitHubHeaders(),
+  });
+
+  return issues.filter(issue => !issue.pull_request && shouldProcessIssue(issue));
+}
+
+async function listBotComments(octokit, repository, issueNumber) {
+  const comments = await octokit.paginate("GET /repos/{owner}/{repo}/issues/{issue_number}/comments", {
+    ...repository,
+    issue_number: issueNumber,
+    per_page: 100,
+    headers: getGitHubHeaders(),
+  });
+  return comments
+    .filter(comment => comment.body?.includes(HIDDEN_COMMENT_IN_ISSUE))
+    .sort((a, b) => a.id - b.id);
+}
+
+async function removeDuplicateBotComments(octokit, repository, botComments) {
+  const [commentToKeep, ...duplicates] = botComments;
+
+  for (const duplicate of duplicates) {
+    console.log(`Deleting duplicate bot comment #${duplicate.id}...`);
+    try {
+      await octokit.request("DELETE /repos/{owner}/{repo}/issues/comments/{comment_id}", {
+        ...repository,
+        comment_id: duplicate.id,
+        headers: getGitHubHeaders(),
+      });
+    } catch (error) {
+      if (error.status !== 404) {
+        throw error;
+      }
+    }
+  }
+
+  return commentToKeep;
+}
+
+export async function postOrUpdateComment(octokit, repository, issueNumber, markdown) {
+  const existingComment = await removeDuplicateBotComments(
+    octokit,
+    repository,
+    await listBotComments(octokit, repository, issueNumber),
+  );
+
+  if (!existingComment) {
+    console.log(`Posting a new comment on issue #${issueNumber}...`);
+    const response = await octokit.request("POST /repos/{owner}/{repo}/issues/{issue_number}/comments", {
+      ...repository,
+      issue_number: issueNumber,
+      body: markdown,
+      headers: getGitHubHeaders(),
+    });
+
+    const commentToKeep = await removeDuplicateBotComments(
+      octokit,
+      repository,
+      await listBotComments(octokit, repository, issueNumber),
+    );
+    if (!commentToKeep) {
+      return "created";
+    }
+    if (commentToKeep.id !== response.data.id) {
+      console.log(`Another run created comment #${commentToKeep.id}; kept that comment instead.`);
+      if (commentToKeep.body === markdown) {
+        return "unchanged";
+      }
+
+      await octokit.request("PATCH /repos/{owner}/{repo}/issues/comments/{comment_id}", {
+        ...repository,
+        comment_id: commentToKeep.id,
+        body: markdown,
+        headers: getGitHubHeaders(),
+      });
+      return "updated";
+    }
+    return "created";
+  }
+
+  if (existingComment.body === markdown) {
+    console.log(`Comment on issue #${issueNumber} is already up to date.`);
+    return "unchanged";
+  }
+
+  console.log(`Updating comment #${existingComment.id} on issue #${issueNumber}...`);
+  await octokit.request("PATCH /repos/{owner}/{repo}/issues/comments/{comment_id}", {
+    ...repository,
+    comment_id: existingComment.id,
+    body: markdown,
+    headers: getGitHubHeaders(),
+  });
+  return "updated";
+}
+
+export async function processIssue(issue, {
+  octokit,
+  repository,
+  fetchImpl = fetch,
+  featureCatalog = webFeatures,
+} = {}) {
+  if (!shouldProcessIssue(issue)) {
+    console.log(`Skipping issue #${issue.number}: it is not an open ${REQUIRED_LABEL} issue.`);
+    return "skipped";
+  }
+
+  console.log(`Processing issue #${issue.number}: "${issue.title}"`);
+  const featureIds = findFeaturesInIssue(issue, featureCatalog);
+
+  // Handle moved and split features by redirecting to the target(s) in the catalog.
+  const processedFeatureIds = [];
+  for (const id of featureIds) {
+    if (featureCatalog[id].kind === "moved") {
+      processedFeatureIds.push(featureCatalog[id].redirect_target);
+    } else if (featureCatalog[id].kind === "split") {
+      processedFeatureIds.push(...featureCatalog[id].redirect_targets);
+    } else {
+      processedFeatureIds.push(id);
+    }
+  }
+
+  // Fetch feature data for each identified feature, and build the comment content.
+  const featureData = await Promise.all(processedFeatureIds.map(async id => {
+    try {
+      return await getFeatureData(id, fetchImpl);
+    } catch (error) {
+      throw new Error(`Issue #${issue.number}, feature "${id}": ${error.message}`, { cause: error });
+    }
+  }));
+
+  if (featureData.length === 0) {
+    console.log(`No matching features found for issue #${issue.number}.`);
+  } else {
+    console.log(`Found ${featureData.length} matching feature(s) for issue #${issue.number}:`);
+    console.log(featureData.map(feature => `- ${feature.id}`).join("\n"));
+  }
+
+  return postOrUpdateComment(
+    octokit,
+    repository,
+    issue.number,
+    buildIssueComment(featureData),
+  );
+}
+
+function createSummary(scanned) {
+  return {
+    scanned,
+    created: 0,
+    updated: 0,
+    unchanged: 0,
+    skipped: 0,
+    failed: 0,
+  };
+}
+
+function printSummary(summary) {
+  console.log("Refresh summary:");
+  for (const [name, count] of Object.entries(summary)) {
+    console.log(`- ${name}: ${count}`);
+  }
+}
+
+export async function processAllOpenProposals(options) {
+  const issues = await listOpenProposalIssues(options.octokit, options.repository);
+  const summary = createSummary(issues.length);
+  const failures = [];
+
+  for (const issue of issues) {
+    try {
+      const currentIssue = await getReferencedIssue(
+        options.octokit,
+        options.repository,
+        issue.number,
+      );
+      const result = await processIssue(currentIssue, options);
+      summary[result] += 1;
+    } catch (error) {
+      summary.failed += 1;
+      failures.push(error);
+      console.error(`Failed to process issue #${issue.number}:`, error);
+    }
+  }
+
+  printSummary(summary);
+  if (failures.length > 0) {
+    throw new AggregateError(failures, `Failed to refresh ${failures.length} proposal issue(s).`);
+  }
+
+  return summary;
+}
+
+async function parseArguments(args) {
+  return yargs(args)
+    .option("number", {
+      alias: "n",
+      type: "number",
+      describe: "The issue number to process",
+    })
+    .option("all-open-proposals", {
+      type: "boolean",
+      default: false,
+      describe: `Process every open issue with the "${REQUIRED_LABEL}" label`,
+    })
+    .option("repo", {
+      alias: "r",
+      type: "string",
+      demandOption: true,
+      describe: "The owner and repository name. For example: web-platform-tests/interop",
+    })
+    .check(argv => {
+      const hasIssueNumber = Number.isInteger(argv.number) && argv.number > 0;
+      if (hasIssueNumber === argv.allOpenProposals) {
+        throw new Error("Choose exactly one of --number or --all-open-proposals.");
+      }
+      return true;
+    })
+    .strict()
+    .parse();
+}
+
+export async function main(args = hideBin(process.argv), {
+  octokit = new Octokit({ auth: process.env.GITHUB_TOKEN }),
+  fetchImpl = fetch,
+  featureCatalog = webFeatures,
+} = {}) {
+  const argv = await parseArguments(args);
+  const repository = parseRepository(argv.repo);
+  const options = { octokit, repository, fetchImpl, featureCatalog };
+
+  if (argv.allOpenProposals) {
+    await processAllOpenProposals(options);
+    return;
+  }
+
+  const issue = await getReferencedIssue(octokit, repository, argv.number);
+  const result = await processIssue(issue, options);
+  printSummary({
+    ...createSummary(1),
+    [result]: 1,
+  });
+}
+
+const isMainModule = process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;
+if (isMainModule) {
+  main().catch(error => {
+    console.error(error);
+    process.exitCode = 1;
+  });
+}
