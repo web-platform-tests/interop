@@ -1,25 +1,78 @@
-# This GitHub Actions workflow identifies web features in new and edited issues.
+# This GitHub Actions workflow identifies web-features in new and edited issues.
 # Identified features are posted as a comment on the issue.
-name: Identify Web Features in Issues
+name: Identify web-features in focus area proposals
 
 on:
+  # Trigger either when a single issue is opened or modified.
   issues:
-    types: [opened, edited]
+    types: [opened, edited, labeled, reopened]
+  # Or when we update the package.json file (web-features dependency).
+  push:
+    branches: [main]
+    paths:
+      - scripts/package.json
+      - scripts/package-lock.json
+  # Or manually.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
 
 jobs:
-  run-script:
+
+  # This job runs when a single issue is opened, edited, etc.
+  process-issue:
+    if: github.event_name == 'issues'
     runs-on: ubuntu-latest
+    concurrency:
+      group: identify-web-features-issue-${{ github.event.issue.number }}
+      cancel-in-progress: false
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Run identification script
-        run: |
-          cd scripts
-          npm install
-          node identify-web-features.js -n ${{ github.event.issue.number }} -r ${{ github.repository }}
+          cache: npm
+          cache-dependency-path: scripts/package-lock.json
+      - name: Install dependencies
+        run: npm ci
+        working-directory: scripts
+      - name: Run tests
+        run: npm test
+        working-directory: scripts
+      - name: Refresh issue
+        run: node identify-web-features.js --number ${{ github.event.issue.number }} --repo ${{ github.repository }}
+        working-directory: scripts
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # This job runs when the package.json file is changed (or manually), and updates all issues.
+  process-all-open-proposals:
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: identify-web-features-all-open-proposals
+      cancel-in-progress: false
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: scripts/package-lock.json
+      - name: Install dependencies
+        run: npm ci
+        working-directory: scripts
+      - name: Run tests
+        run: npm test
+        working-directory: scripts
+      - name: Refresh all open proposals
+        run: node identify-web-features.js --all-open-proposals --repo ${{ github.repository }}
+        working-directory: scripts
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
