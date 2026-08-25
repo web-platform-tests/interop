@@ -14,7 +14,7 @@ function getGitHubHeaders() {
   };
 }
 
-export function parseRepository(repository) {
+function parseRepository(repository) {
   const [owner, repo, ...extra] = repository.split("/");
   if (!owner || !repo || extra.length > 0) {
     throw new Error(`Invalid repository "${repository}". Expected "owner/repository".`);
@@ -45,7 +45,7 @@ export function gatherUrlsFromIssue(issueBody) {
   });
 }
 
-export function gatherFeaturesFromSpecUrls(urls, featureCatalog = webFeatures) {
+function gatherFeaturesFromSpecUrls(urls, featureCatalog) {
   const gatheredFeatures = new Set();
 
   for (const url of urls) {
@@ -68,7 +68,7 @@ export function gatherFeaturesFromSpecUrls(urls, featureCatalog = webFeatures) {
   return gatheredFeatures;
 }
 
-export function gatherFeaturesFromExplorerUrls(urls, featureCatalog = webFeatures) {
+function gatherFeaturesFromExplorerUrls(urls, featureCatalog) {
   const gatheredFeatures = new Set();
 
   for (const url of urls) {
@@ -87,7 +87,7 @@ export function gatherFeaturesFromExplorerUrls(urls, featureCatalog = webFeature
   return gatheredFeatures;
 }
 
-export function gatherFeaturesFromWPTUrls(urls, featureCatalog = webFeatures) {
+function gatherFeaturesFromWPTUrls(urls, featureCatalog) {
   const gatheredFeatures = new Set();
 
   for (const url of urls) {
@@ -105,7 +105,7 @@ export function gatherFeaturesFromWPTUrls(urls, featureCatalog = webFeatures) {
   return gatheredFeatures;
 }
 
-export function gatherFeaturesFromExplicitMentions(issueBody, featureCatalog = webFeatures) {
+function gatherFeaturesFromExplicitMentions(issueBody, featureCatalog) {
   const gatheredFeatures = new Set();
 
   const explicitMentions = issueBody.match(/web-features?:\s*([a-z0-9-]+)/gi) || [];
@@ -131,7 +131,7 @@ export function gatherFeaturesFromExplicitMentions(issueBody, featureCatalog = w
   return gatheredFeatures;
 }
 
-export function findFeaturesInIssue(issue, featureCatalog = webFeatures) {
+export function findFeaturesInIssue(issue, featureCatalog) {
   const issueBody = issue.body || "";
   const urls = gatherUrlsFromIssue(issueBody);
   const specFeatures = gatherFeaturesFromSpecUrls(urls, featureCatalog);
@@ -149,7 +149,7 @@ export function findFeaturesInIssue(issue, featureCatalog = webFeatures) {
   return [...new Set([...specFeatures, ...wptFeatures])];
 }
 
-export async function getFeatureData(id, fetchImpl = fetch) {
+export async function getFeatureData(id, fetchImpl) {
   console.log(`Getting data for feature ${id}`);
 
   const response = await fetchImpl(`https://web-platform-dx.github.io/web-features-explorer/features/${id}.json`);
@@ -279,7 +279,7 @@ export function getMarkdownContentForFeature(feature) {
   return content;
 }
 
-export function buildIssueComment(featureData) {
+function buildIssueComment(featureData) {
   let content = "_This comment was automatically generated based on the information you provided. Please don't edit it._\n\n";
 
   if (featureData.length === 0) {
@@ -308,7 +308,7 @@ export function buildIssueComment(featureData) {
   return `${content}\n${HIDDEN_COMMENT_IN_ISSUE}`;
 }
 
-export async function getReferencedIssue(octokit, repository, issueNumber) {
+async function getReferencedIssue(octokit, repository, issueNumber) {
   const response = await octokit.request("GET /repos/{owner}/{repo}/issues/{issue_number}", {
     ...repository,
     issue_number: issueNumber,
@@ -329,7 +329,7 @@ export async function listOpenProposalIssues(octokit, repository) {
   return issues.filter(issue => !issue.pull_request && shouldProcessIssue(issue));
 }
 
-async function listBotComments(octokit, repository, issueNumber) {
+function listBotComments(octokit, repository, issueNumber) {
   const comments = await octokit.paginate("GET /repos/{owner}/{repo}/issues/{issue_number}/comments", {
     ...repository,
     issue_number: issueNumber,
@@ -341,7 +341,7 @@ async function listBotComments(octokit, repository, issueNumber) {
     .sort((a, b) => a.id - b.id);
 }
 
-async function removeDuplicateBotComments(octokit, repository, botComments) {
+function removeDuplicateBotComments(octokit, repository, botComments) {
   const [commentToKeep, ...duplicates] = botComments;
 
   for (const duplicate of duplicates) {
@@ -422,7 +422,7 @@ export async function processIssue(issue, {
   octokit,
   repository,
   fetchImpl = fetch,
-  featureCatalog = webFeatures,
+  featureCatalog,
 } = {}) {
   if (!shouldProcessIssue(issue)) {
     console.log(`Skipping issue #${issue.number}: it is not an open ${REQUIRED_LABEL} issue.`);
@@ -433,19 +433,19 @@ export async function processIssue(issue, {
   const featureIds = findFeaturesInIssue(issue, featureCatalog);
 
   // Handle moved and split features by redirecting to the target(s) in the catalog.
-  const processedFeatureIds = [];
+  const processedFeatureIds = new Set();
   for (const id of featureIds) {
     if (featureCatalog[id].kind === "moved") {
-      processedFeatureIds.push(featureCatalog[id].redirect_target);
+      processedFeatureIds.add(featureCatalog[id].redirect_target);
     } else if (featureCatalog[id].kind === "split") {
-      processedFeatureIds.push(...featureCatalog[id].redirect_targets);
+      processedFeatureIds.add(...featureCatalog[id].redirect_targets);
     } else {
-      processedFeatureIds.push(id);
+      processedFeatureIds.add(id);
     }
   }
 
   // Fetch feature data for each identified feature, and build the comment content.
-  const featureData = await Promise.all(processedFeatureIds.map(async id => {
+  const featureData = await Promise.all([...processedFeatureIds].map(async id => {
     try {
       return await getFeatureData(id, fetchImpl);
     } catch (error) {
@@ -544,14 +544,17 @@ async function parseArguments(args) {
     .parse();
 }
 
-export async function main(args = hideBin(process.argv), {
-  octokit = new Octokit({ auth: process.env.GITHUB_TOKEN }),
-  fetchImpl = fetch,
-  featureCatalog = webFeatures,
-} = {}) {
-  const argv = await parseArguments(args);
+async function main() {
+  const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN }),
+  const argv = await parseArguments(hideBin(process.argv));
   const repository = parseRepository(argv.repo);
-  const options = { octokit, repository, fetchImpl, featureCatalog };
+
+  const options = {
+    octokit,
+    repository,
+    fetchImpl: fetch,
+    featureCatalog: webFeatures
+  };
 
   if (argv.allOpenProposals) {
     await processAllOpenProposals(options);
