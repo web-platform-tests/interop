@@ -41,6 +41,84 @@ test("explicit feature IDs take precedence over URL matches", () => {
   assert.deepEqual(findFeaturesInIssue(issue, featureCatalog), ["explicit"]);
 });
 
+test("spec URLs match array entries and respect fragments", () => {
+  const featureCatalog = {
+    "whole-spec": { spec: "https://example.com/specification" },
+    "matching-section": {
+      spec: [
+        "https://other.example/specification",
+        "https://example.com/specification#matching-section",
+      ],
+    },
+    "different-section": {
+      spec: "https://example.com/specification#different-section",
+    },
+  };
+  const issue = proposal(1, {
+    body: "https://example.com/specification#matching-section",
+  });
+
+  assert.deepEqual(findFeaturesInIssue(issue, featureCatalog), [
+    "whole-spec",
+    "matching-section",
+  ]);
+});
+
+test("explorer URLs identify features and take precedence over other URL matches", () => {
+  const featureCatalog = {
+    "explorer-feature": {},
+    "spec-feature": { spec: "https://example.com/specification" },
+    "wpt-feature": {},
+  };
+  const issue = proposal(1, {
+    body: [
+      "https://example.com/specification",
+      "https://wpt.fyi/results/?q=feature%3Awpt-feature",
+      "https://web-platform-dx.github.io/web-features-explorer/features/explorer-feature.json",
+    ].join("\n"),
+  });
+
+  assert.deepEqual(findFeaturesInIssue(issue, featureCatalog), ["explorer-feature"]);
+});
+
+test("spec and WPT URL matches are combined without duplicates", () => {
+  const featureCatalog = {
+    "shared-feature": { spec: "https://example.com/shared" },
+    "wpt-only-feature": {},
+  };
+  const issue = proposal(1, {
+    body: [
+      "https://example.com/shared",
+      "https://wpt.fyi/results/?q=feature%3Ashared-feature",
+      "https://wpt.fyi/results/?q=feature%3Awpt-only-feature",
+    ].join("\n"),
+  });
+
+  assert.deepEqual(findFeaturesInIssue(issue, featureCatalog), [
+    "shared-feature",
+    "wpt-only-feature",
+  ]);
+});
+
+test("web-features sections identify multiple feature IDs", () => {
+  const featureCatalog = {
+    "first-feature": {},
+    "second-feature": {},
+  };
+  const issue = proposal(1, {
+    body: [
+      "### web-features",
+      "first-feature",
+      "second-feature",
+    ].join("\r\n"),
+  });
+
+  assert.deepEqual(findFeaturesInIssue(issue, featureCatalog), [
+    "first-feature",
+    "second-feature",
+  ]);
+});
+
 test("a newly available feature ID becomes detectable", () => {
   const issue = proposal(1, { body: "web-features: newly-added" });
 
