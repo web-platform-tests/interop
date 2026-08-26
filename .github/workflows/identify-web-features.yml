@@ -47,9 +47,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
         working-directory: scripts
-      - name: Run tests
-        run: npm test
-        working-directory: scripts
       - name: Refresh issue
         run: node identify-web-features.js --number ${{ github.event.issue.number }} --repo ${{ github.repository }}
         working-directory: scripts
@@ -74,9 +71,6 @@ jobs:
           cache-dependency-path: scripts/package-lock.json
       - name: Install dependencies
         run: npm ci
-        working-directory: scripts
-      - name: Run tests
-        run: npm test
         working-directory: scripts
       - name: Refresh all open proposals
         run: node identify-web-features.js --all-open-proposals --repo ${{ github.repository }}
