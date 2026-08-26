@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     concurrency:
       group: identify-web-features-issue-${{ github.event.issue.number }}
-      cancel-in-progress: false
+      cancel-in-progress: true
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -62,7 +62,7 @@ jobs:
     runs-on: ubuntu-latest
     concurrency:
       group: identify-web-features-all-open-proposals
-      cancel-in-progress: false
+      cancel-in-progress: true
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
