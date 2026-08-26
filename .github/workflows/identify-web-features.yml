@@ -23,7 +23,14 @@ jobs:
 
   # This job runs when a single issue is opened, edited, etc.
   process-issue:
-    if: github.event_name == 'issues'
+    if: >-
+      github.event_name == 'issues' &&
+      (
+        github.event.action == 'opened' ||
+        github.event.action == 'edited' ||
+        github.event.action == 'reopened' ||
+        (github.event.action == 'labeled' && github.event.label.name == 'focus-area-proposal')
+      )
     runs-on: ubuntu-latest
     concurrency:
       group: identify-web-features-issue-${{ github.event.issue.number }}
