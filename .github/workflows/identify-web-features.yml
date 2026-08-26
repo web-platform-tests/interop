@@ -1,18 +1,19 @@
-# This GitHub Actions workflow identifies web-features in new and edited issues.
-# Identified features are posted as a comment on the issue.
+# This GitHub Actions workflow identifies web-features in new and edited focus-area-proposal issues.
+# Identified web-features are listed as a comment on the issue.
 name: Identify web-features in focus area proposals
 
 on:
-  # Trigger either when a single issue is opened or modified.
+  # Trigger the workflow either when a single issue is opened, edited, reopened, or labeled.
+  # The labeled trigger only applies when the label is 'focus-area-proposal'.
   issues:
     types: [opened, edited, labeled, reopened]
-  # Or when we update the package.json file (web-features dependency).
+  # Trigger the workflow when we update the package.json file (web-features dependency).
   push:
     branches: [main]
     paths:
       - scripts/package.json
       - scripts/package-lock.json
-  # Or manually.
+  # Lets us trigger the job manually.
   workflow_dispatch:
 
 permissions:
@@ -21,7 +22,7 @@ permissions:
 
 jobs:
 
-  # This job runs when a single issue is opened, edited, etc.
+  # The process-issue job runs when a single issue is opened, edited, reopened or labeled.
   process-issue:
     if: >-
       github.event_name == 'issues' &&
@@ -32,6 +33,8 @@ jobs:
         (github.event.action == 'labeled' && github.event.label.name == 'focus-area-proposal')
       )
     runs-on: ubuntu-latest
+    # Concurrency is used to ensure that only one job per issue runs at a time, with newer
+    # jobs canceling older ones.
     concurrency:
       group: identify-web-features-issue-${{ github.event.issue.number }}
       cancel-in-progress: true
@@ -53,10 +56,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  # This job runs when the package.json file is changed (or manually), and updates all issues.
+  # The process-all-open-proposals job runs when the package.json file is changed, and updates all issues.
+  # This is used to refresh all open proposals when the web-features dependency is updated.
+  # The job can also be triggered manually.
   process-all-open-proposals:
     if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
+    # Concurrency is used to ensure that only one job per repository runs at a time, with newer
+    # jobs canceling older ones.
     concurrency:
       group: identify-web-features-all-open-proposals
       cancel-in-progress: true
