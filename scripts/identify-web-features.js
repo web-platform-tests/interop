@@ -329,7 +329,7 @@ export async function listOpenProposalIssues(octokit, repository) {
   return issues.filter(issue => !issue.pull_request && shouldProcessIssue(issue));
 }
 
-function listBotComments(octokit, repository, issueNumber) {
+async function listBotComments(octokit, repository, issueNumber) {
   const comments = await octokit.paginate("GET /repos/{owner}/{repo}/issues/{issue_number}/comments", {
     ...repository,
     issue_number: issueNumber,
@@ -341,7 +341,7 @@ function listBotComments(octokit, repository, issueNumber) {
     .sort((a, b) => a.id - b.id);
 }
 
-function removeDuplicateBotComments(octokit, repository, botComments) {
+async function removeDuplicateBotComments(octokit, repository, botComments) {
   const [commentToKeep, ...duplicates] = botComments;
 
   for (const duplicate of duplicates) {
@@ -362,6 +362,28 @@ function removeDuplicateBotComments(octokit, repository, botComments) {
   return commentToKeep;
 }
 
+async function postComment(octokit, repository, issueNumber, markdown) {
+  console.log(`Posting a new comment on issue #${issueNumber}...`);
+  const response = await octokit.request("POST /repos/{owner}/{repo}/issues/{issue_number}/comments", {
+    ...repository,
+    issue_number: issueNumber,
+    body: markdown,
+    headers: getGitHubHeaders(),
+  });
+
+  return response.data;
+}
+
+async function updateComment(octokit, repository, commentId, markdown) {
+  console.log(`Updating comment #${commentId}...`);
+  await octokit.request("PATCH /repos/{owner}/{repo}/issues/comments/{comment_id}", {
+    ...repository,
+    comment_id: commentId,
+    body: markdown,
+    headers: getGitHubHeaders(),
+  });
+}
+
 export async function postOrUpdateComment(octokit, repository, issueNumber, markdown) {
   const existingComment = await removeDuplicateBotComments(
     octokit,
@@ -371,33 +393,25 @@ export async function postOrUpdateComment(octokit, repository, issueNumber, mark
 
   if (!existingComment) {
     console.log(`Posting a new comment on issue #${issueNumber}...`);
-    const response = await octokit.request("POST /repos/{owner}/{repo}/issues/{issue_number}/comments", {
-      ...repository,
-      issue_number: issueNumber,
-      body: markdown,
-      headers: getGitHubHeaders(),
-    });
+    const newCommentData = await postComment(octokit, repository, issueNumber, markdown);
 
     const commentToKeep = await removeDuplicateBotComments(
       octokit,
       repository,
       await listBotComments(octokit, repository, issueNumber),
     );
+
     if (!commentToKeep) {
       return "created";
     }
+
     if (commentToKeep.id !== response.data.id) {
       console.log(`Another run created comment #${commentToKeep.id}; kept that comment instead.`);
       if (commentToKeep.body === markdown) {
         return "unchanged";
       }
 
-      await octokit.request("PATCH /repos/{owner}/{repo}/issues/comments/{comment_id}", {
-        ...repository,
-        comment_id: commentToKeep.id,
-        body: markdown,
-        headers: getGitHubHeaders(),
-      });
+      await updateComment(octokit, repository, commentToKeep.id, markdown);
       return "updated";
     }
     return "created";
@@ -409,12 +423,7 @@ export async function postOrUpdateComment(octokit, repository, issueNumber, mark
   }
 
   console.log(`Updating comment #${existingComment.id} on issue #${issueNumber}...`);
-  await octokit.request("PATCH /repos/{owner}/{repo}/issues/comments/{comment_id}", {
-    ...repository,
-    comment_id: existingComment.id,
-    body: markdown,
-    headers: getGitHubHeaders(),
-  });
+  await updateComment(octokit, repository, existingComment.id, markdown);
   return "updated";
 }
 
