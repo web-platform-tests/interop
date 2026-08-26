@@ -253,10 +253,14 @@ test("single-issue processing skips closed and unlabeled issues", async () => {
 
 test("single-issue processing fetches feature data and creates a comment", async () => {
   const requests = [];
+  let createdComment;
   const octokit = {
-    paginate: async () => [],
+    paginate: async () => createdComment ? [createdComment] : [],
     request: async (route, parameters) => {
       requests.push([route, parameters]);
+      if (route.startsWith("POST")) {
+        createdComment = { id: 10, body: parameters.body };
+      }
       return { data: { id: 10 } };
     },
   };
@@ -291,10 +295,14 @@ test("single-issue processing fetches feature data and creates a comment", async
 test("single-issue processing redirects moved features to their target", async () => {
   const requests = [];
   const fetchedIds = [];
+  let createdComment;
   const octokit = {
-    paginate: async () => [],
+    paginate: async () => createdComment ? [createdComment] : [],
     request: async (route, parameters) => {
       requests.push([route, parameters]);
+      if (route.startsWith("POST")) {
+        createdComment = { id: 10, body: parameters.body };
+      }
       return { data: { id: 10 } };
     },
   };
@@ -338,10 +346,14 @@ test("single-issue processing redirects moved features to their target", async (
 test("single-issue processing redirects split features to every target", async () => {
   const requests = [];
   const fetchedIds = [];
+  let createdComment;
   const octokit = {
-    paginate: async () => [],
+    paginate: async () => createdComment ? [createdComment] : [],
     request: async (route, parameters) => {
       requests.push([route, parameters]);
+      if (route.startsWith("POST")) {
+        createdComment = { id: 10, body: parameters.body };
+      }
       return { data: { id: 10 } };
     },
   };
@@ -386,6 +398,7 @@ test("single-issue processing redirects split features to every target", async (
 
 test("bulk processing continues after an issue failure and reports it at the end", async () => {
   const requests = [];
+  const createdComments = new Map();
   const octokit = {
     paginate: async (route, parameters) => {
       if (route === "GET /repos/{owner}/{repo}/issues") {
@@ -394,12 +407,16 @@ test("bulk processing continues after an issue failure and reports it at the end
       if (parameters.issue_number === 2) {
         throw new Error("Comment lookup failed");
       }
-      return [];
+      const comment = createdComments.get(parameters.issue_number);
+      return comment ? [comment] : [];
     },
     request: async (route, parameters) => {
       requests.push([route, parameters]);
       if (route === "GET /repos/{owner}/{repo}/issues/{issue_number}") {
         return { data: proposal(parameters.issue_number) };
+      }
+      if (route.startsWith("POST")) {
+        createdComments.set(parameters.issue_number, { id: 10, body: parameters.body });
       }
       return { data: { id: 10 } };
     },

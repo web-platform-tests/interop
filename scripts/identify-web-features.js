@@ -329,6 +329,8 @@ export async function listOpenProposalIssues(octokit, repository) {
   return issues.filter(issue => !issue.pull_request && shouldProcessIssue(issue));
 }
 
+// List all bot comments in an issue, and sort them by ID (oldest first).
+// This is used to identify duplicates.
 async function listBotComments(octokit, repository, issueNumber) {
   const comments = await octokit.paginate("GET /repos/{owner}/{repo}/issues/{issue_number}/comments", {
     ...repository,
@@ -341,7 +343,8 @@ async function listBotComments(octokit, repository, issueNumber) {
     .sort((a, b) => a.id - b.id);
 }
 
-async function removeDuplicateBotComments(octokit, repository, botComments) {
+// Keep only the first bot comment and delete any duplicates.
+async function keepOnlyFirstBotComment(octokit, repository, botComments) {
   const [commentToKeep, ...duplicates] = botComments;
 
   for (const duplicate of duplicates) {
@@ -384,28 +387,33 @@ async function updateComment(octokit, repository, commentId, markdown) {
   });
 }
 
+// This function is intended to maintain exactly one bot comment per issue, 
+// including when two scripts runs race each other.
+// Races can happen in theory when the process-issue and process-all-open-proposals
+// jobs in identify-web-features.yml run concurrently.
 export async function postOrUpdateComment(octokit, repository, issueNumber, markdown) {
-  const existingComment = await removeDuplicateBotComments(
+  // Check if there is already an existing bot comment in the issue.
+  // Delete any duplicate at the same time, and keep only the first one.
+  const existingComment = await keepOnlyFirstBotComment(
     octokit,
     repository,
     await listBotComments(octokit, repository, issueNumber),
   );
 
   if (!existingComment) {
-    console.log(`Posting a new comment on issue #${issueNumber}...`);
+    // If there is no existing comment, post a new one.
     const newCommentData = await postComment(octokit, repository, issueNumber, markdown);
 
-    const commentToKeep = await removeDuplicateBotComments(
+    // List bot comments again, and delete duplicates in case another run created
+    // a comment at the same time.
+    const commentToKeep = await keepOnlyFirstBotComment(
       octokit,
       repository,
       await listBotComments(octokit, repository, issueNumber),
     );
 
-    if (!commentToKeep) {
-      return "created";
-    }
-
-    if (commentToKeep.id !== response.data.id) {
+    // If another run had created a comment in the meantime, update it with the new content.
+    if (commentToKeep.id !== newCommentData.id) {
       console.log(`Another run created comment #${commentToKeep.id}; kept that comment instead.`);
       if (commentToKeep.body === markdown) {
         return "unchanged";
@@ -414,6 +422,7 @@ export async function postOrUpdateComment(octokit, repository, issueNumber, mark
       await updateComment(octokit, repository, commentToKeep.id, markdown);
       return "updated";
     }
+
     return "created";
   }
 
@@ -447,7 +456,9 @@ export async function processIssue(issue, {
     if (featureCatalog[id].kind === "moved") {
       processedFeatureIds.add(featureCatalog[id].redirect_target);
     } else if (featureCatalog[id].kind === "split") {
-      processedFeatureIds.add(...featureCatalog[id].redirect_targets);
+      for (const target of featureCatalog[id].redirect_targets) {
+        processedFeatureIds.add(target);
+      }
     } else {
       processedFeatureIds.add(id);
     }
@@ -554,7 +565,7 @@ async function parseArguments(args) {
 }
 
 async function main() {
-  const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN }),
+  const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
   const argv = await parseArguments(hideBin(process.argv));
   const repository = parseRepository(argv.repo);
 
