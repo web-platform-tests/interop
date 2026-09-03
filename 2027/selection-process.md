@@ -9,7 +9,7 @@ team of representatives from companies that make substantial
 contributions to browser rendering engines (including Apple, 
 Google, Igalia, Microsoft, and Mozilla).
 
-Please see the [Interop 2026 Dashboard](https://wpt.fyi/interop-2027)
+Please see the [Interop 2026 Dashboard](https://wpt.fyi/interop-2026)
 and [Interop 2026
 README](https://github.com/web-platform-tests/interop/blob/main/2026/README.md)
 for the current iteration of the project.

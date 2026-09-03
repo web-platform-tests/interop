@@ -31,11 +31,11 @@ We encourage you to read the guide in its entirety for the latest guidance.
 
 Submit a proposal using one of the following links:
 
-- [Propose an Interop 2026 Focus
+- [Propose an Interop 2027 Focus
   Area](https://github.com/web-platform-tests/interop/issues/new?template=focus-area-proposal.yml)
   – for features that already have high quality specifications and
   tests, but aren't implemented by all browsers.
-- [Propose an Interop 2026 Investigation
+- [Propose an Interop 2027 Investigation
   Effort](https://github.com/web-platform-tests/interop/issues/new?template=investigation-effort-proposal.yml)
   – for features that lack a high quality specification or tests.
 
