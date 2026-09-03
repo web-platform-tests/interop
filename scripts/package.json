@@ -7,6 +7,6 @@
   "devDependencies": {
     "octokit": "^5.0.3",
     "web-features": "^3.34.2",
-    "yargs": "^18.0.0"
+    "yargs": "^18.1.0"
   }
 }
