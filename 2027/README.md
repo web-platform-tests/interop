@@ -1,5 +1,7 @@
 # Interop 2027
 
+**Interop 2027 is now [open](https://github.com/web-platform-tests/interop/issues/new/choose) for proposals!** See the [proposal guide](../proposal_guide.md) for details, and how to give your proposal the best chance of success.
+
 Interop 2027 is an effort to increase the interoperability of key features of the web platform across browsers. More details on the project are available in the [Interop Project README](https://github.com/web-platform-tests/interop/blob/main/README.md).
 
 ## Timeline
