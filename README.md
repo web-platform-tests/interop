@@ -4,6 +4,10 @@ Welcome to the Interop Project, an ongoing effort to make the web more interoper
 
 Please see the [Interop 2026 Dashboard](https://wpt.fyi/interop-2026) and [Interop 2026 README](./2026/README.md) for the current iteration of the project!
 
+## Proposing a focus area for 2027
+
+**Interop 2027 is now [open](https://github.com/web-platform-tests/interop/issues/new/choose) for proposals!** See the [proposal guide](./proposal_guide.md) for details, and how to give your proposal the best chance of success.
+
 ## The Purpose of the Interop Project
 
 *Improve interoperability significantly for the benefit of users and web developers.*
