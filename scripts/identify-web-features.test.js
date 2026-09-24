@@ -119,6 +119,31 @@ test("web-features sections identify multiple feature IDs", () => {
   ]);
 });
 
+test("web-features sections identify multiple IDs, including comma-separated ones", () => {
+  const featureCatalog = {
+    "first-feature": {},
+    "second-feature": {},
+    "third-feature": {},
+    "fourth-feature": {},
+  };
+  const issue = proposal(1, {
+    body: [
+      "### web-features",
+      "first-feature, second-feature",
+      "\n",
+      "third-feature",
+      "fourth-feature"
+    ].join("\n"),
+  });
+
+  assert.deepEqual(findFeaturesInIssue(issue, featureCatalog), [
+    "first-feature",
+    "second-feature",
+    "third-feature",
+    "fourth-feature",
+  ]);
+});
+
 test("a newly available feature ID becomes detectable", () => {
   const issue = proposal(1, { body: "web-features: newly-added" });
 

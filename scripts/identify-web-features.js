@@ -116,14 +116,14 @@ function gatherFeaturesFromExplicitMentions(issueBody, featureCatalog) {
     }
   }
 
-  const sectionMentions = issueBody.match(/###\s*web-features?\s*([\r\n]+[ \t]*[a-z0-9-]+)+/gi) || [];
+  const sectionMentions = issueBody.match(/###\s*web-features?\s*([\r\n]+[ \t]*[a-z0-9-]+(?:[ \t]*,[ \t]*[a-z0-9-]+)*)+/gi) || [];
   for (const section of sectionMentions) {
-    const lines = section.split(/[\r\n]+/)
-      .map(line => line.trim())
-      .filter(line => line && !line.startsWith("###"));
-    for (const line of lines) {
-      if (featureCatalog[line]) {
-        gatheredFeatures.add(line);
+    const featureIds = section.split(/[\r\n,]+/)
+      .map(featureId => featureId.trim())
+      .filter(featureId => featureId && !featureId.startsWith("###"));
+    for (const featureId of featureIds) {
+      if (featureCatalog[featureId]) {
+        gatheredFeatures.add(featureId);
       }
     }
   }
