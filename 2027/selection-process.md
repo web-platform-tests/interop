@@ -53,11 +53,12 @@ proposal selection process.
 
 The Interop team will develop a non-exhaustive set of signals/criteria
 that are considered important when assessing proposals. These will be
-made available to proposal authors, and used later in the process when
-championing and assessing different proposals. However they are not
-binding on any specific participant i.e. participants are free to
-consider additional criteria (such as individual resource constraints)
-and weigh the shared criteria as they choose.
+shared with proposal authors so they can make their proposals stronger,
+and used later in the process when championing and assessing different
+proposals. However they are not binding on any specific participant
+i.e. participants are free to consider additional criteria (such as
+individual resource constraints) and weigh the shared criteria as they
+choose.
 
 ### Proposal Submission
 
