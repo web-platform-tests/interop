@@ -1,0 +1,16 @@
+/html/semantics/disabled-elements/disabled-event-dispatch.tentative.html
+/html/semantics/disabled-elements/event-propagate-disabled.tentative.html
+/html/user-activation/activation-trigger-pointerevent.html?mouse
+/pointerevents/capturing_boundary_event_handler_at_ua_shadowdom.html?mouse
+/pointerevents/pointerevent_after_target_removed.html?mouse
+/pointerevents/pointerevent_attributes_hoverable_pointers.html?mouse
+/pointerevents/pointerevent_attributes_nohover_pointers.html
+/pointerevents/pointerevent_disabled_form_control.html?mouse
+/pointerevents/pointerevent_hit_test_scroll_visible_descendant.html
+/pointerevents/pointerevent_movementxy.html?mouse
+/pointerevents/pointerevent_pointercancel_touch.html
+/pointerevents/pointerevent_pointercapture_in_frame.html?mouse
+/pointerevents/pointerup_after_pointerdown_target_removed.html?mouse
+/uievents/mouse/attributes.html
+/uievents/mouse/cancel-mousedown-in-subframe.html
+/uievents/mouse/mousemove_prevent_default_action.tentative.html
